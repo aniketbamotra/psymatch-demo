@@ -1,0 +1,142 @@
+{
+	"test_structure": {
+		"description": "DSM-5 Social Anxiety Disorder Diagnostic Test",
+		"test_metadata": {
+			"super_test_name": "DSM-5 Social Anxiety Diagnostic Test",
+			"test_name": "Social Anxiety Diagnostic Test",
+			"test_code": "social_anxiety_test",
+			"display_text_before_questions": "Please indicate whether you have experienced the following in the past 30 days or less:"
+		},
+		"questions": {
+			"question_template": [
+				{
+					"id": "q1",
+					"description_for_subsequent_question": "",
+					"text": "Do you feel fear or anxiety in social situations, such as in conversations, meeting new people, or eating in front of others, where you might be judged, evaluated, or scrutinized by others?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q2",
+					"description_for_subsequent_question": "",
+					"text": "Do you feel anxious that you might appear or act anxious, or show anxiety in a way that would be embarrassing or humiliating in front of others?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q3",
+					"description_for_subsequent_question": "",
+					"text": "Do social situations almost always provoke fear or anxiety?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q4",
+					"description_for_subsequent_question": "",
+					"text": "Do you avoid social situations or endure them with intense anxiety?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q5",
+					"description_for_subsequent_question": "",
+					"text": "Is the fear of social situations out of proportion to the actual threat in these social situations ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q6",
+					"description_for_subsequent_question": "",
+					"text": "Does the fear, anxiety or the avoidance cause significant distress, or impairment in social, occupational or other areas of your functioning ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q7",
+					"description_for_subsequent_question": "",
+					"text": "Has this anxiety been persistent and present for six months or more ?",
+					"text_voice_over_url": "",
+					"answer_type": "boolean",
+					"answer_values": "['Yes','No']",
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q8",
+					"description_for_subsequent_question": "",
+					"text": "Does this anxiety only occur when public speaking or performing ?",
+					"text_voice_over_url": "",
+					"answer_type": "boolean",
+					"answer_values": "['Yes','No']",
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				}
+			]
+		},
+		"question_display_logic": {
+			"description": "Logic for displaying questions",
+			"logic_template": []
+		},
+		"implementation_notes": [
+			"Question_description is general description for upcoming few questions, this can be stayed at the top while only questions can change. ",
+			"questions for these types are small such as nervousness ?, feeling sad? etc",
+			"for question no 7 and 8 for boolean values I have used condition > 0 so I assumed yes:1 and no:0 Check the criteria of social anxiety test for question 7 and 8 there > 0 means yes"
+		]
+	}
+}

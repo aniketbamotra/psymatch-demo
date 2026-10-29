@@ -1,0 +1,368 @@
+{
+	"Auth": {
+		"Layout": {
+			"image_alt": "eerw"
+		},
+		"Login": {
+			"email_label": "Email",
+			"email_placeholder": "johndoe@gmail.com",
+			"password_label": "Password",
+			"password_placeholder": "******************",
+			"remember_me": "Remember me",
+			"forgot_password": "Forgot password?",
+			"recaptcha_error": "reCAPTCHA verification failed. Please try again.",
+			"submit_button": "Log In",
+			"submit_loading": "Logging in..."
+		},
+		"Forget": {
+			"email_label": "Email",
+			"email_placeholder": "johndoe@gmail.com",
+			"recaptcha_error": "reCAPTCHA verification failed. Please try again.",
+			"back_to_login": "Back to login",
+			"submit_button": "Get a reset link",
+			"submit_loading": "Sending link...",
+			"submit_success": "Link sent!"
+		}
+	},
+	"Nav": {
+		"home": "Home",
+		"updates": "Updates",
+		"settings": "Settings",
+		"logout": "Logout",
+		"patient_list": "Patient List",
+		"patient_intake": "Patient Intake",
+		"interview_admin": "Interview Admin",
+		"reports": "Reports",
+		"quick_actions": "Quick Actions",
+		"director_mode": "Director Mode",
+		"view_admins": "View Admins",
+		"add_admin": "Add Admin",
+		"reorder_interviews": "Reorder Interviews"
+	},
+	"Patient": {
+		"Home": {
+			"access_denied": "Access denied. You must be a patient to view this page.",
+			"load_tests_error": "Failed to load allocated tests. Please try again later.",
+			"load_user_error": "Failed to load user data. Please try logging in again.",
+			"unexpected_error": "An unexpected error occurred. Please try again later."
+		}
+	},
+	"Admin": {
+		"Home": {
+			"select_patient_error": "Please select a patient",
+			"allocate_success": "Tests allocated successfully",
+			"allocate_error": "Failed to allocate tests",
+			"allocate_unexpected_error": "An error occurred while allocating tests",
+			"active_patients": "Active Patients",
+			"loading": "Loading..."
+		},
+		"ViewAdmins": {
+			"remove_confirm": "Are you sure you want to remove this admin?"
+		},
+		"ViewPatients": {
+			"remove_confirm": "Are you sure you want to remove this patient? This will also remove all their followups, responses, and assignments."
+		},
+		"PatientDetails": {
+			"remove_test_confirm": "Are you sure you want to remove this test?",
+			"summary_error": "Something went wrong, please try generating summary report again"
+		}
+	},
+	"Questionnaire": {
+		"Card": {
+			"complete_interview_prompt": "Please_complete_the_following_interview",
+			"assigned_on": "Assigned On",
+			"questions": "Questions",
+			"loading": "Loading...",
+			"continue": "Continue",
+			"completed": "Completed",
+			"start": "Start",
+			"locked": "Locked"
+		},
+		"About": {
+			"save_and_exit": "Save and Exit",
+			"autoplay": "Autoplay",
+			"welcome_title": "Welcome to the Ottawa Centre for Cognitive Therapy (OCCT).",
+			"welcome_text": "At OCCT, we're dedicated to providing you with the most effective and efficient therapy experience. To ensure the best possible match, we'll carefully review your needs and connect you with one of our highly experienced psychologists who specializes in your area of concern.",
+			"doctor_name": "I’m Dr. Jane Blouin,",
+			"doctor_bio": "Dr. Jane Blouin. I began my career as a psychologist conducting research at the National Institute of Mental Health in Bethesda, Maryland. Upon my return to Canada over 35 years ago, I joined the Department of Psychiatry at the University of Ottawa, where I developed innovative clinical programs while conducting research and teaching. For the past 30 years, I have served as the Director of the Centre for Cognitive Therapy, dedicating my time to advancing cognitive therapy and being an active cognitive therapist.",
+			"quick_guide_title": "Quick Guide",
+			"quick_guide_text": "Quick Guide; Next, we will begin with questions about your background. In the top right corner of your screen, you’ll notice a small speaker icon — that’s where you can turn Dr. Blouin’s voice on or off, depending on what feels most comfortable for you. Next to it, there’s a little switch that lets you choose whether the audio plays automatically for each question. You will also see an Exit and Save message. This allows you to take breaks during the interviews, and the system will save your responses so that you can return and pick up right where you left off. Take your time — you’re in control!",
+			"back": "Back",
+			"next": "Next"
+		},
+		"Config": {
+			"AdultBio": {
+				"gender": {
+					"options": ["Male", "Female", "Trans", "Non Binary"]
+				},
+				"pronouns": {
+					"options": ["he/him", "she/her", "they/them", "other"]
+				},
+				"insurance": {
+					"placeholder": "Insurance provider and policy number"
+				},
+				"referred_by": {
+					"options": [
+						"Self from CCT website",
+						"Self by VAC/RCMP",
+						"Self from external website (RateMD etc)",
+						"Self from friend/family recommendation",
+						"Self from doctor referral",
+						"Doctor referral (faxed to us)"
+					]
+				},
+				"education_level": {
+					"options": [
+						"High School",
+						"Some College",
+						"Associate's Degree",
+						"Bachelor's Degree",
+						"Master's Degree",
+						"Doctoral Degree",
+						"Other"
+					]
+				},
+				"work_hours": {
+					"options": ["Full Time", "Part Time", "Currently unemployed", "In school"]
+				},
+				"marital_status": {
+					"options": ["Single", "Married", "Divorced", "Separated", "Widowed", "Other"]
+				},
+				"spouse_occupation": {
+					"placeholder": "Spouse/Partner's current job/role"
+				},
+				"family_doctor": {
+					"placeholder": "Name of family physician"
+				},
+				"prescribed_for": {
+					"placeholder": "Conditions medications are prescribed for"
+				},
+				"major_illness_history": {
+					"placeholder": "Please describe major illnesses or injuries"
+				},
+				"psych_hospitalization": {
+					"reason_label": "Reason for hospitalization",
+					"reason_placeholder": "Enter reason",
+					"length_label": "Length of hospitalization",
+					"length_placeholder": "Duration"
+				},
+				"past_therapy": {
+					"reason_label": "Reason for Psychotherapy",
+					"length_label": "Length of Therapy",
+					"location_label": "Location"
+				},
+				"substance_use_header": "Substance Use",
+				"alcohol_use": {
+					"amount_label": "Number of drinks per occasion",
+					"frequency_label": "Number of days per week"
+				},
+				"family_at_occt": {
+					"placeholder": "Name and relationship of family member"
+				},
+				"reasons_for_cct": {
+					"options": [
+						"Anxiety",
+						"Mood/Depression",
+						"Trauma",
+						"Stress",
+						"Obsessive Compulsive",
+						"Dissociative",
+						"Eating/Food Intake",
+						"Weight Management",
+						"Body Image",
+						"Sleep / Wake",
+						"Anger",
+						"Alcohol-Related",
+						"Drug use Related",
+						"Sexual Issues",
+						"PTSD",
+						"Relationship Related",
+						"Family Related",
+						"General Adjustment",
+						"Health Anxiety Related",
+						"Personality Concerns",
+						"Grief-Related",
+						"ADHD Management",
+						"Sport Performance Anxiety",
+						"Chronic Pain",
+						"Bipolar/Psychosis",
+						"Autism Spectrum",
+						"Other"
+					]
+				},
+				"additional_details": {
+					"placeholder": "Please provide additional details"
+				},
+				"main_goals": {
+					"placeholder": "What are your main goals for therapy?"
+				},
+				"concerns_duration": {
+					"placeholder": "How long have these concerns been present?"
+				},
+				"motivation_level": {
+					"scale": [
+						"Extremely Motivated",
+						"Highly Motivated",
+						"Moderately Motivated",
+						"Mildly Motivated",
+						"Minimally Motivated"
+					]
+				},
+				"problems_worse": {
+					"placeholder": "What makes your problems worse?"
+				},
+				"problems_better": {
+					"placeholder": "What makes your problems better?"
+				},
+				"interests_hobbies": {
+					"placeholder": "List your interests, hobbies, and activities"
+				},
+				"exercise_days": {
+					"placeholder": "Number of days per week you exercise"
+				},
+				"exercise_duration": {
+					"placeholder": "Average time per exercise session"
+				},
+				"exercise_intensity": {
+					"options": ["Light", "Moderate", "Vigorous"]
+				},
+				"adopted": {
+					"age_label": "At age"
+				},
+				"siblings_count": {
+					"placeholder": "Number of siblings"
+				},
+				"religion": {
+					"options": [
+						"Atheist",
+						"Agnostic",
+						"Not Religious",
+						"Somewhat Religious",
+						"Highly Religious"
+					]
+				},
+				"significant_events": {
+					"placeholder": "Describe significant life events and their effects"
+				},
+				"other_info": {
+					"placeholder": "Any other relevant information"
+				}
+			},
+			"SpecificPhobia": {
+				"q2": {
+					"placeholder": "Please describe your specific phobia"
+				},
+				"q3": {
+					"placeholder": "Please describe how this phobia affects your daily life"
+				}
+			},
+			"Anorexia": {
+				"weight_label": "Weight",
+				"weight_placeholder": "Enter weight",
+				"unit_label": "Unit",
+				"height_label": "Height",
+				"height_placeholder": "Enter height"
+			},
+			"TherapistMatch": {
+				"preference_label": "Preference",
+				"importance_label": "Importance",
+				"energy_level": {
+					"options": [
+						"Very energetic and lively",
+						"Somewhat energetic and lively",
+						"Somewhat calm and quiet",
+						"Very calm and quiet"
+					]
+				},
+				"importance": {
+					"options": [
+						"extremely important",
+						"very important",
+						"somewhat important",
+						"not important"
+					]
+				},
+				"collaboration_style": {
+					"options": [
+						"Very Collaborative",
+						"Quite Collaborative",
+						"Somewhat Collaborative",
+						"Does what they think is best for me"
+					]
+				},
+				"directiveness": {
+					"options": [
+						"Very Directive, pushes me to make changes, do homework etc.",
+						"Fairly Directive and somewhat pushy",
+						"Somewhat Directive, a little Pushy",
+						"Not really Directive, or Pushy"
+					]
+				},
+				"compassion": {
+					"options": [
+						"Very Gentle and Compassionate",
+						"Fairly Gentle and Compassionate",
+						"Somewhat Gentle and Compassionate",
+						"Does not really express Compassion"
+					]
+				},
+				"cultural_background": {
+					"options": [
+						"Very similar cultural background to me",
+						"Somewhat similar cultural background to me",
+						"No preference for cultural background",
+						"A different cultural background to me"
+					]
+				},
+				"homework_approach": {
+					"options": [
+						"Very Pushy about getting me to do homework",
+						"Moderately encouraging of me to do homework",
+						"Is mildly encouraging of me to do homework",
+						"Suggests homework, but doesn't follow-up"
+					]
+				},
+				"age": {
+					"options": [
+						"Close in age to myself",
+						"Older, more experienced than me",
+						"Younger than I am",
+						"No preference regarding my therapist's age"
+					]
+				},
+				"gender": {
+					"options": ["Female", "Male", "No preference"]
+				},
+				"therapy_timing": {
+					"options": [
+						"It is extremely important to start as soon as possible",
+						"Somewhat important to start ASAP",
+						"can wait a few months for the best therapist for me",
+						"I Prefer to start in a few months due to personal comittmnents"
+					]
+				}
+			}
+		}
+	},
+	"PWA": {
+		"update_confirm": "New content is available. Reload to update?"
+	},
+	"PatientDetails": {
+		"summary_error": "Something went wrong, please try generating summary report again"
+	},
+	"Common": {
+		"ReCaptcha": {
+			"load_error": "Failed to load reCAPTCHA script",
+			"execution_error": "reCAPTCHA execution failed"
+		}
+	},
+	"Reports": {
+		"AdultBio": {
+			"exercise_routine": "Exercise Routine:",
+			"current_occupation": "Current Occupation:",
+			"primary_caregiver": "Primary Caregiver: ",
+			"secondary_caregiver": "Secondary Caregiver: ",
+			"siblings_count": "Number of children in family: "
+		}
+	}
+}

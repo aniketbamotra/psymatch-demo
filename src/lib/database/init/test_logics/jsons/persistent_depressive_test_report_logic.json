@@ -1,0 +1,582 @@
+{
+	"logical_operations": {
+		"description": "Defines all possible logical operations",
+		"comparison_operators": [">", "<", ">=", "<=", "==", "!="],
+		"logical_operators": ["&&", "||", "!"],
+		"count_operators": {
+			"description": "For counting operations over ranges",
+			"types": ["count_positive", "count_all", "count_range"]
+		}
+	},
+	"test_evaluation": {
+		"variables": [
+			{
+				"name": "Severity",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q2",
+						"end": "q7",
+						"operator": "count_all"
+					},
+					"operator": "/",
+					"right_operand": {
+						"type": "range",
+						"start": "q2",
+						"end": "q7",
+						"operator": "count_positive"
+					},
+					"thresholds": [
+						{
+							"max": 0.5,
+							"value": "Minimal"
+						},
+						{
+							"max": 1.5,
+							"value": "Mild"
+						},
+						{
+							"max": 2.5,
+							"value": "Moderate"
+						},
+						{
+							"default": "Severe"
+						}
+					]
+				}
+			}
+		],
+		"criteria": [
+			{
+				"id": "Criterion A",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q1"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Criterion B",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q2",
+						"end": "q7",
+						"operator": "count_positive"
+					},
+					"operator": ">=",
+					"right_operand": {
+						"type": "numerical",
+						"value": 2
+					}
+				}
+			},
+			{
+				"id": "Criterion C",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q8"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Criterion D",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q9"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			}
+		],
+		"report_title": "PsyMatch C-DIS-3",
+		"outcomes": [
+			{
+				"type": "Persistent Depressive Disorder Positive",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "criterion",
+												"value": "Criterion A"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "criterion",
+												"value": "Criterion B"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "criterion",
+										"value": "Criterion C"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criterion",
+								"value": "Criterion D"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Persistent Depressive Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Persistent Depressive Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 criteria for Persistent Depressive Disorder 300.4 (F34.1).",
+						"summary": true
+					},
+					{
+						"text": "{pronouns.subject} reports that {pronouns.subject} has experienced depressed mood most of the day for more days than not, for at least 2 years.",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"text": "During the periods of depressed mood {pronouns.subject} reports experiencing "
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Poor appetite or overeating"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Insomnia or hypersomnia"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Low energy or fatigue"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Low self esteem"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Poor concentration or difficulty making decisions"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling hopeless"
+							}
+						]
+					},
+					{
+						"text": "During the period of feeling depressed there was no period of 2 months or more when {pronouns.subject} did not experience any of these symptoms and {pronouns.subject} reports they caused significant distress or impairment in important areas of functioning."
+					},
+					{
+						"text": "The average severity of reported symptoms was",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "The diagnosis must not be better accounted for by MDD and not due to substance (drugs or medication) and not due to general medical condition."
+					}
+				]
+			},
+			{
+				"type": "Persistent Depressive Disorder Negative A",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q1"
+					},
+					"operator": "==",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Persistent Depressive Disorder Full Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"heading": "Persistent Depressive Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} does not meet DSM-5 criteria for Persistent Depressive Disorder 300.4 (F34.1). ",
+						"summary": true
+					},
+					{
+						"text": "{pronouns.subject} did not report 2 years of feeling depressed mood of the time.",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					}
+				]
+			},
+			{
+				"type": "Persistent Depressive Disorder Negative B",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criterion",
+								"value": "Criterion B"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Persistent Depressive Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Persistent Depressive Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} does not meet DSM-5 criteria for Persistent Depressive Disorder 300.4 (F34.1).",
+						"summary": true
+					},
+					{
+						"text": "{pronouns.subject} reported 2 years of feeling depressed mood most of the time.",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "range",
+								"start": "q2",
+								"end": "q7",
+								"operator": "count_positive"
+							},
+							"operator": "<",
+							"right_operand": {
+								"type": "numerical",
+								"value": 2
+							}
+						},
+						"text": " However, {pronouns.subject} did not meet the symptom criteria count.",
+						"continued": true
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "range",
+								"start": "q2",
+								"end": "q7",
+								"operator": "count_positive"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						},
+						"text": " The average symptom severity was ",
+						"continued": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q8"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						},
+						"text": "There was a period of more than 2 months when {pronouns.subject} did not experience any symptoms.",
+						"continued": true
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q9"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						},
+						"text": "{pronouns.subject} reported that the symptoms did not cause significant distress or impairment in important areas of functioning.",
+						"continued": true
+					}
+				]
+			}
+		]
+	}
+}

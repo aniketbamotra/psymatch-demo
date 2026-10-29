@@ -1,0 +1,781 @@
+{
+	"logical_operations": {
+		"description": "Defines all possible logical operations",
+		"comparison_operators": [">", "<", ">=", "<=", "==", "!="],
+		"logical_operators": ["&&", "||", "!"],
+		"count_operators": {
+			"description": "For counting operations over ranges",
+			"types": ["count_positive", "count_all", "count_range"]
+		}
+	},
+	"test_evaluation": {
+		"variables": [
+			{
+				"name": "Severity",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q3",
+						"end": "q14",
+						"operator": "count_all"
+					},
+					"operator": "/",
+					"right_operand": {
+						"type": "range",
+						"start": "q3",
+						"end": "q14",
+						"operator": "count_positive"
+					},
+					"thresholds": [
+						{
+							"max": 0.5,
+							"value": "Minimal"
+						},
+						{
+							"max": 1.5,
+							"value": "Mild"
+						},
+						{
+							"max": 2.5,
+							"value": "Moderate"
+						},
+						{
+							"default": "Severe"
+						}
+					]
+				}
+			},
+			{
+				"name": "count_positive_q3_q14_greater_than_3",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q3",
+						"end": "q14",
+						"operator": "count_positive"
+					},
+					"operator": ">=",
+					"right_operand": {
+						"type": "numerical",
+						"value": 4
+					}
+				}
+			}
+		],
+		"criteria": [
+			{
+				"id": "Criterion A",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q1"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Criterion B",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "count_positive_q3_q14_greater_than_3"
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q15"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		],
+		"report_title": "PsyMatch C-DIS-5",
+		"outcomes": [
+			{
+				"type": "Panic Positive",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Criterion A"
+					},
+					"operator": "&&",
+					"right_operand": {
+						"type": "criterion",
+						"value": "Criterion B"
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Panic Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Panic Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 criteria for Panic Disorder 300.01 (F41.0).",
+						"summary": true
+					},
+					{
+						"text": "{pronouns.subject} reported experiencing recurrent episodes of abrupt surge of intense fear, or intense discomfort, that reaches a peak within minutes. ",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"text": "During these episodes {first_name} reported experiencing below:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Palpitations or accelerated heart rate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Sweating"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Trembling or shaking"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Shortness of breath"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling choking"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Chest pain or discomfort"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Nausea or abdominal discomfort"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling dizzy, light headed or faint"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Chills or heat sensations"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q11"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Numbness or tingling"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q12"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "De-realization or feeling detached"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q13"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Fears of losing control or going crazy"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q14"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Fear of dying"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q15"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "{first_name} reports experiencing persistent worries about having another of these episodes and these worries lasted for a month or more."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "As a result of the panic, {first_name} has changed {pronouns.possessive} behaviour and has taken steps to avoid having another episode (such as avoiding exercise or avoiding unfamiliar situations)."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q17"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "{pronouns.subject} has indicated that the last panic attack occurred within the last few days"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q17"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "{pronouns.subject} has indicated that the last panic attack occurred within the last week"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q17"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "{pronouns.subject} has indicated that the last panic attack occurred within the last month"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q17"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "{pronouns.subject} has indicated that the last panic attack occurred within 6 months"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q17"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 5
+									}
+								},
+								"text": "{pronouns.subject} has indicated that the last panic attack occurred longer than 6 months ago"
+							}
+						]
+					},
+					{
+						"text": "The average severity of reported symptoms was",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			},
+			{
+				"type": "Panic Negative A",
+				"operation": {
+					"left_operand": {
+						"type": "criteria",
+						"value": "Criterion A"
+					},
+					"operator": "==",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Panic Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Panic Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} does not meet DSM-5 criteria for Panic Disorder 300.01 (F41.0).",
+						"italic": true
+					},
+					{
+						"text": "{pronouns.subject} reports that {pronouns.subject} has not experienced intense, sudden recurrent episodes of intense fear or discomfort.",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					}
+				]
+			},
+			{
+				"type": "Panic Negative B",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Criterion A"
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "count_positive_q3_q14_greater_than_3"
+							},
+							"operator": "<",
+							"right_operand": {
+								"type": "numerical",
+								"value": 1
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Panic Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Panic Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} does not meet DSM-5 criteria for Panic Disorder 300.01 (F41.0).",
+						"summary": "true"
+					},
+					{
+						"text": "{pronouns.subject} does not report having experienced intense, sudden recurrent episodes of intense fear or discomfort, but reported fewer than, 4 accompanying symptoms.",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"text": "The average symptom severity was ",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			},
+			{
+				"type": "Panic Negative C",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criteria",
+								"value": "Criterion A"
+							},
+							"operator": "<",
+							"right_operand": {
+								"type": "numerical",
+								"value": 1
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criteria",
+								"value": "Criterion B"
+							},
+							"operator": "<",
+							"right_operand": {
+								"type": "numerical",
+								"value": 1
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Panic Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Panic Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} does not meet DSM-5 criteria for Panic Disorder 300.01 (F41.0).",
+						"summary": "true"
+					},
+					{
+						"text": "{pronouns.subject} does not report having experienced intense, sudden recurrent episodes of intense fear or discomfort, but reported fewer than, 4 accompanying symptoms.",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"text": "The average symptom severity was ",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			}
+		]
+	}
+}

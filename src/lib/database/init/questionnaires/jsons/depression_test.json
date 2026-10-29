@@ -1,0 +1,572 @@
+{
+	"test_structure": {
+		"description": "DSM-5 Depression Diagnostic Test",
+		"test_metadata": {
+			"super_test_name": "DSM-5 Depression Diagnostic Test",
+			"test_name": "Depression Diagnostic Test",
+			"test_code": "depression_test",
+			"display_text_before_questions": "Please answer the following questions:"
+		},
+		"questions": {
+			"question_template": [
+				{
+					"id": "q1",
+					"description_for_subsequent_question": "",
+					"text": "Have you felt depressed, sad, empty, or hopeless nearly every day for most of the day over a two-week period or more ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q2",
+					"description_for_subsequent_question": "",
+					"text": "Have you or anyone you know ever noticed you felt a dip in enthusiasm for activities you usually love that lasted for two weeks or more ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q3",
+					"description_for_subsequent_question": "",
+					"text": "Have you or anyone around you ever realized that the activities that used to bring you joy just don’t spark the same excitement anymore lasting for a 2 week period or more ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q4",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever experienced significant weight loss or gain without dieting, and that was not due to medication or medical reasons ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q5",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever noticed a change in appetite, either an increase or decrease, that was not due to medication or a medical condition ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q6",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever experienced difficulties with insomnia or excessive sleep almost every day ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q7",
+					"description_for_subsequent_question": "",
+					"text": "Do you ever feel restless (pacing, tapping, or unable to sit still) or very sluggish nearly every day, something noticeable to others ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q8",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever felt considerable fatigue or loss of energy nearly every day ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q9",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever found yourself wrestling with feelings of worthlessness or drowning in a wave of guilt that feels unjustified ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q10",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever noticed a decrease in your ability to concentrate or an increase in indecisiveness almost every day ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q11",
+					"description_for_subsequent_question": "",
+					"text": "Have you experienced recurring thoughts of death, suicidal thoughts, or any suicide attempts or plans ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q12",
+					"description_for_subsequent_question": "",
+					"text": "You mentioned you recently experienced  if Q. > 0 1.low mood, 2.loss of interest, 3. weight or appetite change, 4. insomnia or too much sleep, 5. feeling restless or sluggish, 6. fatigue, 7. feeling worthless or guilty, 8. being indecisive or unable to concentrate, 9. suicidal thoughts or attempts.  Did these experiences cause significant problems for you in social or occupational functioning ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q13",
+					"description_for_subsequent_question": "",
+					"text": "Were these experiences present during the same 2 week period ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q14",
+					"description_for_subsequent_question": "",
+					"text": "Were these experiences a result of a medical condition, use of a substance or bereavement ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q15",
+					"description_for_subsequent_question": "",
+					"text": "Have you had more than one depressive episode when you experienced these symptoms in the same 2 week period ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Just one" },
+						{ "1": "Two" },
+						{ "2": "Three" },
+						{ "3": "More than three" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q16",
+					"description_for_subsequent_question": "",
+					"text": "How recently have you experienced these symptoms of depression ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Within the last few days" },
+						{ "1": "Within the last week" },
+						{ "2": "Within the last months" },
+						{ "3": "Within 6 months" },
+						{ "4": "Longer than 6 months" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q17",
+					"description_for_subsequent_question": "During the majority of the days when you were feeling depressed did you experience any of the following:",
+					"text": "Feeling keyed up or tense ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Within the last few days" },
+						{ "1": "Within the last week" },
+						{ "2": "Within the last months" },
+						{ "3": "Within 6 months" },
+						{ "4": "Longer than 6 months" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q18",
+					"description_for_subsequent_question": "During the majority of the days when you were feeling depressed did you experience any of the following:",
+					"text": "Feeling unusually restless ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Within the last few days" },
+						{ "1": "Within the last week" },
+						{ "2": "Within the last months" },
+						{ "3": "Within 6 months" },
+						{ "4": "Longer than 6 months" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q19",
+					"description_for_subsequent_question": "During the majority of the days when you were feeling depressed did you experience any of the following:",
+					"text": "Difficulty concentrating ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Within the last few days" },
+						{ "1": "Within the last week" },
+						{ "2": "Within the last months" },
+						{ "3": "Within 6 months" },
+						{ "4": "Longer than 6 months" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q20",
+					"description_for_subsequent_question": "During the majority of the days when you were feeling depressed did you experience any of the following:",
+					"text": "Fear that something awful might happen ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Within the last few days" },
+						{ "1": "Within the last week" },
+						{ "2": "Within the last months" },
+						{ "3": "Within 6 months" },
+						{ "4": "Longer than 6 months" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q21",
+					"description_for_subsequent_question": "During the majority of the days when you were feeling depressed did you experience any of the following:",
+					"text": "Feeling that you may lose control ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Within the last few days" },
+						{ "1": "Within the last week" },
+						{ "2": "Within the last months" },
+						{ "3": "Within 6 months" },
+						{ "4": "Longer than 6 months" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q22",
+					"description_for_subsequent_question": "",
+					"text": "During the toughest times, did you find it challenging to take pleasure in nearly every activity ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q23",
+					"description_for_subsequent_question": "",
+					"text": "During the most difficult period, were you unable to enjoy things that usually brought pleasure, not feeling good even when something positive happened ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q24",
+					"description_for_subsequent_question": "",
+					"text": "During your toughest times, did you ever find yourself engulfed in feelings of deep sadness, hopelessness, or a heavy gloom ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q25",
+					"description_for_subsequent_question": "",
+					"text": "Was the depression regularly worse in the morning ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q26",
+					"description_for_subsequent_question": "",
+					"text": "Did you experience early morning awakening (at least 2 hours before usual awakening) ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q27",
+					"description_for_subsequent_question": "",
+					"text": "During the worst period, did you feel the need to be excessively physically active, or the opposite, excessive difficulty moving at all ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q28",
+					"description_for_subsequent_question": "",
+					"text": "Did you experience significant weight loss or inability to eat ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q29",
+					"description_for_subsequent_question": "",
+					"text": "During the worst period were you overcome with excessive or inappropriate guilt ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q30",
+					"description_for_subsequent_question": "",
+					"text": "Has there been a regular pattern where the onset of the depression is present solely during a particular time of year (e.g. fall or winter) ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q31",
+					"description_for_subsequent_question": "",
+					"text": "When that time of year passes, does the depression always go away or even turn to feeling kind of manic ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q32",
+					"description_for_subsequent_question": "",
+					"text": "Have these seasonal episodes occurred during the past 2 years, with no other depressive episodes ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q33",
+					"description_for_subsequent_question": "",
+					"text": "In your lifetime have the seasonal episodes substantially outnumbered any depressive episode that may have occurred at any other time of the year ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q34",
+					"description_for_subsequent_question": "",
+					"text": "Have these seasonal patterns been in any way connected to other stress, like seasonal unemployment or other regular seasonal events ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				}
+			]
+		},
+		"question_display_logic": {
+			"description": "Array of objects defining when questions should be displayed",
+			"logic_template": [{}]
+		}
+	},
+	"implementation_notes": [
+		"for que 12 (summary kind) - for question  questions 1 to 9 only display the symptoms where the user's answer is greater than 0."
+	]
+}

@@ -1,0 +1,1500 @@
+{
+	"logical_operations": {
+		"description": "Defines all possible logical operations",
+		"comparison_operators": [
+			">",
+			"<",
+			">=",
+			"<=",
+			"==",
+			"!="
+		],
+		"logical_operators": [
+			"&&",
+			"||",
+			"!"
+		],
+		"count_operators": {
+			"description": "For counting operations over ranges",
+			"types": [
+				"count_positive",
+				"count_all",
+				"count_range"
+			]
+		}
+	},
+	"test_evaluation": {
+		"variables": [],
+		"criteria": [
+			{
+				"id": "Criterion A",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Criterion B",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q13"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Criterion C",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								}
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q12"
+									},
+									"operator": ">=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Criterion D",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q14"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Criterion E",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q15"
+					},
+					"operator": "==",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			}
+		],
+		"report_title": "PsyMatch C-DIS-5",
+		"outcomes": [
+			{
+				"type": "Insomnia Positive Report",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"left_operand": {
+									"operation": {
+										"left_operand": {
+											"type": "criterion",
+											"value": "Criterion A"
+										},
+										"operator": "&&",
+										"right_operand": {
+											"type": "criterion",
+											"value": "Criterion B"
+										}
+									}
+								},
+								"operator": "&&",
+								"right_operand": {
+									"type": "criterion",
+									"value": "Criterion C"
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"type": "criterion",
+								"value": "Criterion D"
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"type": "criterion",
+						"value": "Criterion E"
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Insomnia Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Insomnia Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 diagnostic criteria for Insomnia Disorder 780.52 (G47.00).",
+						"summary": true
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{pronouns.subject} reports frequently having trouble getting to sleep, and that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q3"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q3"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q3"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"addPeriod": true,
+								"continued": true
+							},
+							{
+								"text": "It normally takes about",
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "0-30 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "30-60 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "60-120 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 4
+											}
+										},
+										"text": "more than 120 minutes"
+									}
+								],
+								"continued": true,
+								"text_after": "to get to sleep.",
+								"addPeriod": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports having trouble staying asleep, waking up frequently, and that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q6"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q6"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q6"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"continued": true,
+								"addPeriod": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports waking up in the middle of the night and has trouble getting back to sleep, and that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q9"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q9"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q9"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"continued": true,
+								"addPeriod": true
+							},
+							{
+								"text": "It generally takes about"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "0-30 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "30-60 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "60-120 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 4
+											}
+										},
+										"text": "more than 120 minutes"
+									}
+								],
+								"continued": true,
+								"text_after": "to get back to sleep.",
+								"addPeriod": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports that {pronouns.subject} wakes up"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "up to an hour"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "one to two hours"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "two to three hours"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 4
+											}
+										},
+										"text": "more than three hours"
+									}
+								],
+								"continued": true
+							},
+							{
+								"text": "earlier than intended and cannot get back to sleep.that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q12"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q12"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q12"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"continued": true,
+								"addPeriod": true
+							}
+						]
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q13"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						},
+						"text": "{pronouns.subject} reports that these sleep-related problems have caused significant distress or difficulty functioning socially, at work, at school, or behaviorally",
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q13"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "a little"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q13"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "quite a bit"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q13"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "a lot"
+							}
+						],
+						"continued": true,
+						"addPeriod": true
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q14"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						},
+						"text": "{pronouns.subject} indicates that there are no exceptional circumstances, like frequent work-related emergency calls in the middle of the night or similar circumstances causing the sleep-related problems",
+						"addPeriod": true
+					}
+				]
+			},
+			{
+				"type": "Insomnia Negative A",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Criterion A"
+					},
+					"operator": "==",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Insomnia Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Insomnia Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} fails to meet DSM-5 diagnostic criteria for Insomnia Disorder (G47.00).",
+						"summary": true
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{pronouns.subject} reports that {pronouns.subject} doesn't have trouble getting enough sleep due to trouble getting sleep, staying asleep or waking too early.",
+								"summary": true
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "Insomnia Negative B",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criterion",
+								"value": "Criterion A"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "criterion",
+														"value": "Criterion B"
+													},
+													"operator": "==",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											},
+											"operator": "||",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "criterion",
+														"value": "Criterion C"
+													},
+													"operator": "==",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "||",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "criterion",
+												"value": "Criterion D"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "criterion",
+										"value": "Criterion E"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Insomnia Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Insomnia Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 diagnostic criteria for Insomnia Disorder 780.52 (G47.00).",
+						"summary": true
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{pronouns.subject} reports frequently having trouble getting to sleep, and that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q3"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q3"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q3"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"addPeriod": true,
+								"continued": true
+							},
+							{
+								"text": "It normally takes about",
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "0-30 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "30-60 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "60-120 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q4"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 4
+											}
+										},
+										"text": "more than 120 minutes"
+									}
+								],
+								"continued": true,
+								"text_after": "to get to sleep.",
+								"addPeriod": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports having trouble staying asleep, waking up frequently, and that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q6"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q6"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q6"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"continued": true,
+								"addPeriod": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports waking up in the middle of the night and has trouble getting back to sleep, and that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q9"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q9"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q9"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"continued": true,
+								"addPeriod": true
+							},
+							{
+								"text": "It generally takes about"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "0-30 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "30-60 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "60-120 minutes"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 4
+											}
+										},
+										"text": "more than 120 minutes"
+									}
+								],
+								"continued": true,
+								"text_after": "to get back to sleep.",
+								"addPeriod": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports that {pronouns.subject} wakes up"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										},
+										"text": "up to an hour"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one to two hours"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "two to three hours"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "more than three hours"
+									}
+								],
+								"continued": true
+							},
+							{
+								"text": "earlier than intended and cannot get back to sleep.that happens"
+							},
+							{
+								"single_word": [
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q12"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										},
+										"text": "one or two times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q12"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 2
+											}
+										},
+										"text": "three or four times a week"
+									},
+									{
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q12"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 3
+											}
+										},
+										"text": "five or more times a week"
+									}
+								],
+								"continued": true,
+								"addPeriod": true
+							}
+						]
+					},
+					{
+						"text": "{first_name} fails to meet DSM-5 diagnostic criteria for DSM-5 Insomnia Disorder 780.52 (G47.00).",
+						"summary": true
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "question",
+																"value": "q3"
+															},
+															"operator": "==",
+															"right_operand": {
+																"type": "question",
+																"value": 1
+															}
+														}
+													},
+													"operator": "&&",
+													"right_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "question",
+																"value": "q6"
+															},
+															"operator": "==",
+															"right_operand": {
+																"type": "question",
+																"value": 1
+															}
+														}
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q9"
+													},
+													"operator": "==",
+													"right_operand": {
+														"type": "question",
+														"value": 1
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q11"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "question",
+												"value": 1
+											}
+										}
+									}
+								},
+								"text": "The sleep problems occur less than three times a week."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q13"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The sleep problems are not causing significant distress or difficulty in other ways."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q14"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "There are external circumstances that are causing the sleep difficulties."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q15"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The sleep difficulties have been present for less than 3 months."
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

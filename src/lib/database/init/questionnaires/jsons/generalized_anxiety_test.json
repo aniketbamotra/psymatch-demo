@@ -1,0 +1,189 @@
+{
+	"test_structure": {
+		"description": "DSM-5 Generalized Anxiety Diagnostic Test",
+		"test_metadata": {
+			"super_test_name": "DSM-5 Generalized Anxiety Diagnostic Test",
+			"test_name": "Generalized Anxiety Diagnostic Test",
+			"test_code": "generalized_anxiety_test",
+			"display_text_before_questions": "Please answer the following questions:"
+		},
+		"questions": {
+			"question_template": [
+				{
+					"id": "q1",
+					"description_for_subsequent_question": "",
+					"text": "Have you experienced excessive anxiety and worry more days than not for at least 6 months? (These worries or anxiety could be about a number of events or activities like work or school performance)?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q2",
+					"description_for_subsequent_question": "",
+					"text": "Have you found it difficult to control the anxious worrying?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q3",
+					"description_for_subsequent_question": "Have you experienced any of the following more days than not for the past 6 months?",
+					"text": "Restlessness, or feeling keyed up or on edge",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q4",
+					"description_for_subsequent_question": "Have you experienced any of the following more days than not for the past 6 months?",
+					"text": "Being easily fatigued",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q5",
+					"description_for_subsequent_question": "Have you experienced any of the following more days than not for the past 6 months?",
+					"text": "Difficulty concentrating or mind going blank",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q6",
+					"description_for_subsequent_question": "Have you experienced any of the following more days than not for the past 6 months?",
+					"text": "Irritability",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q7",
+					"description_for_subsequent_question": "Have you experienced any of the following more days than not for the past 6 months?",
+					"text": "Muscle tension",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q8",
+					"description_for_subsequent_question": "",
+					"text": "Sleep Disturbance (Difficulty falling or staying asleep or restless unsatisfying sleep)",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q9",
+					"description_for_subsequent_question": "Have you experienced any of the following more days than not for the past 6 months?",
+					"text": "Did the anxiety interfere with social activities, work or other important areas ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q10",
+					"description_for_subsequent_question": "",
+					"text": "Have recently have you experienced excessive and worry?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "1": "Within the last few days" },
+						{ "2": "Within the last week" },
+						{ "3": "Within the last month" },
+						{ "4": "Within 6 months" },
+						{ "5": "Longer than 6 months" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				}
+			]
+		},
+		"question_display_logic": {
+			"description": "Logic for displaying questions",
+			"logic_template": []
+		},
+		"implementation_notes": [
+			"Question IDs are sequential (q1-q9)",
+			"Scale values are numeric (0-3) with text descriptions and last question the scale value was different from 1 to 5.",
+			"No conditional display logic is used for Generalized anxiety test",
+			"All questions are permanent",
+			"question_description is general description for upcoming 4 or 5 question so the description will be same but questions will be different. Description will be staying on screen while question will be changed",
+			"{pronouns.subject} is for subject He/she/them",
+			"{pronouns.possessive} is showing for possession for his/her/their"
+		]
+	}
+}

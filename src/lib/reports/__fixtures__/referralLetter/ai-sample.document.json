@@ -1,0 +1,303 @@
+{
+  "schemaVersion": "psymatch.referral_letter.v1",
+  "generatedAt": "2026-09-24T19:49:02.308Z",
+  "reportDate": "Thursday, 24 September 2026",
+  "layout": {
+    "letterheadDepthMm": 40,
+    "standardRevision": "September Revision 4",
+    "codeSystem": "DSM-5-TR / ICD-11"
+  },
+  "recipient": {
+    "name": "Dr. ⟦NAME_OF_REFERRER_SAMPLE01⟧",
+    "practice": "⟦PRACTICE_SAMPLE01⟧",
+    "street": "⟦STREET_ADDRESS_SAMPLE01⟧",
+    "locality": "⟦LOCALITY_SAMPLE01⟧"
+  },
+  "re": "Re: ⟦NAME_OF_PATIENT_SAMPLE01⟧ · DOB: ⟦DATE_OF_BIRTH_SAMPLE01⟧",
+  "patientId": "⟦PATIENT_ID_SAMPLE01⟧",
+  "assessmentDate": "⟦ASSESSMENT_DATE_SAMPLE01⟧",
+  "assessmentDateLabel": "Assessment date",
+  "salutation": "Dear Dr. ⟦NAME_OF_REFERRER_SAMPLE01⟧,",
+  "opening": "Thank you for referring ⟦NAME_OF_PATIENT_SAMPLE01⟧ for assessment and treatment. The following is a brief summary of the findings of our assessment conducted by PsyMatch, our structured online assessment interview reviewed by one of our senior Psychologists.",
+  "panelHeading": "PsyMatch Structured Diagnostic Interview Summary",
+  "treatmentIntroduction": "Treatment options below are selected on the basis of evidence. The evidence column names the guideline source and the strength of evidence for effectiveness.",
+  "medicationStatement": "PsyMatch provides general background information about medication considerations and does not make medication recommendations. All medication decisions must be made by a licensed healthcare professional with prescriptive authority in the applicable jurisdiction, acting within their authorized scope of practice.",
+  "footer": "Clinical decision support — findings require confirmation by the treating clinician.",
+  "signOff": "Yours sincerely,",
+  "signature": {
+    "name": "[Clinician name]",
+    "credentials": "[credentials]",
+    "title": "[Title]",
+    "clinic": "Centre for Cognitive Therapy"
+  },
+  "metadataLimitations": [],
+  "interviewsCompleted": [
+    "Generalized Anxiety Interview",
+    "Depression Interview",
+    "Sleep Interview",
+    "Trauma and PTSD Interview",
+    "Adult ADHD Interview",
+    "Comprehensive Suicide and Self-Harm Assessment",
+    "Medication History"
+  ],
+  "content": {
+    "identification": {
+      "name": "⟦NAME_OF_PATIENT_SAMPLE01⟧",
+      "age": "42",
+      "maritalStatus": "Married",
+      "children": "Two, ages 12 and 10",
+      "occupation": "Not reported",
+      "psychotherapyHistory": "Not reported",
+      "hospitalizations": "Not reported"
+    },
+    "interviewsCompleted": [
+      "gad",
+      "mdd",
+      "insomnia",
+      "ptsd",
+      "adhd",
+      "suicide",
+      "medications"
+    ],
+    "clinicalSnapshot": "⟦NAME_OF_PATIENT_SAMPLE01⟧ presents with a four-month history of low mood and loss of interest occurring alongside persistent, difficult-to-control worry. Anxiety and depressive symptoms are mutually reinforcing, with poor concentration and muscle tension compounding motivational decline. Sleep-onset difficulty adds further daytime fatigue, though treated obstructive sleep apnea may contribute independently. Functional impact is evident in sustained difficulty concentrating across work and home responsibilities.",
+    "diagnoses": [
+      {
+        "name": "Major Depressive Disorder, Single Episode",
+        "dsmCode": "F32.1",
+        "icd11Code": "6A70.1",
+        "severity": "moderate",
+        "rationale": "This diagnosis accounts for the sustained low mood and loss of interest over the past four months. These symptoms represent the core of the current presentation and the primary driver of functional decline.",
+        "id": "dx1",
+        "role": "primary",
+        "evidence": [
+          {
+            "interviewKey": "mdd",
+            "quote": "The patient meets DSM-5 criteria for Major Depressive Disorder, single episode, with moderate severity."
+          },
+          {
+            "interviewKey": "mdd",
+            "quote": "Low mood and loss of interest have been present for most of the last four months."
+          }
+        ],
+        "dsmEvidence": {
+          "interviewKey": "mdd",
+          "quote": "Major Depressive Disorder, single episode is recorded as DSM-5-TR F32.1 and ICD-11 6A70.1."
+        },
+        "icd11Evidence": {
+          "interviewKey": "mdd",
+          "quote": "Major Depressive Disorder, single episode is recorded as DSM-5-TR F32.1 and ICD-11 6A70.1."
+        }
+      },
+      {
+        "name": "Generalized Anxiety Disorder",
+        "dsmCode": "F41.1",
+        "icd11Code": "6B00",
+        "severity": "moderate",
+        "rationale": "This diagnosis accounts for the pervasive worry that is difficult to control. Accompanying muscle tension and poor concentration compound the depressive presentation and sustain functional impairment.",
+        "id": "dx2",
+        "role": "comorbid",
+        "evidence": [
+          {
+            "interviewKey": "gad",
+            "quote": "The patient meets DSM-5 criteria for Generalized Anxiety Disorder with moderate severity."
+          },
+          {
+            "interviewKey": "gad",
+            "quote": "Worry occurs on most days, is difficult to control and is accompanied by muscle tension and poor concentration."
+          }
+        ],
+        "dsmEvidence": {
+          "interviewKey": "gad",
+          "quote": "Generalized Anxiety Disorder is recorded as DSM-5-TR F41.1 and ICD-11 6B00."
+        },
+        "icd11Evidence": {
+          "interviewKey": "gad",
+          "quote": "Generalized Anxiety Disorder is recorded as DSM-5-TR F41.1 and ICD-11 6B00."
+        }
+      },
+      {
+        "name": "Insomnia Disorder",
+        "dsmCode": "G47.00",
+        "icd11Code": "7A00",
+        "severity": "mild",
+        "rationale": "This diagnosis accounts for the reported sleep difficulty. The patient also has obstructive sleep apnea currently treated with CPAP, which may independently contribute to sleep disruption and daytime fatigue.",
+        "id": "dx3",
+        "role": "comorbid",
+        "evidence": [
+          {
+            "interviewKey": "insomnia",
+            "quote": "The patient meets DSM-5 criteria for Insomnia Disorder with mild severity."
+          },
+          {
+            "interviewKey": "insomnia",
+            "quote": "The patient reports obstructive sleep apnea that is currently treated with CPAP."
+          }
+        ],
+        "dsmEvidence": {
+          "interviewKey": "insomnia",
+          "quote": "Insomnia Disorder is recorded as DSM-5-TR G47.00 and ICD-11 7A00."
+        },
+        "icd11Evidence": {
+          "interviewKey": "insomnia",
+          "quote": "Insomnia Disorder is recorded as DSM-5-TR G47.00 and ICD-11 7A00."
+        }
+      }
+    ],
+    "qualifiers": [
+      {
+        "text": "PTSD was ruled out. The patient reports exposure to a serious motor vehicle accident, meeting Criterion A for trauma exposure, but intrusion symptoms were not endorsed.",
+        "emphasis": [
+          "exposure to a serious motor vehicle accident, meeting Criterion A for trauma exposure"
+        ]
+      },
+      {
+        "text": "ADHD was ruled out. Although the patient meets DSM-5 symptom criteria for ADHD, the diagnosis was not confirmed because the symptoms were not identified before age 12.",
+        "emphasis": [
+          "meets DSM-5 symptom criteria for ADHD"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "domain": "Suicide and self-harm",
+        "level": "Low",
+        "note": "The patient denies current suicidal thoughts, denies any history of self-harm and reports no current urges to harm themself.",
+        "evidence": [
+          {
+            "interviewKey": "suicide",
+            "quote": "The patient denies current suicidal thoughts, denies any history of self-harm and reports no current urges to harm themself."
+          }
+        ]
+      },
+      {
+        "domain": "Medication interaction",
+        "level": "Not assessed",
+        "note": "The patient reports one current medication taken once daily but the medication name was not disclosed. Establish the name, indication and prescriber before prescribing.",
+        "evidence": [
+          {
+            "interviewKey": "medications",
+            "quote": "The patient reports one current medication taken once daily."
+          },
+          {
+            "interviewKey": "medications",
+            "quote": "The medication name was recorded as to be discussed in meetings."
+          }
+        ]
+      }
+    ],
+    "protectiveFactors": {
+      "text": "⟦NAME_OF_PATIENT_SAMPLE01⟧ identifies a supportive partner and regular contact with a close sibling.",
+      "evidence": [
+        {
+          "interviewKey": "suicide",
+          "quote": "The patient identifies a supportive partner and regular contact with a close sibling."
+        }
+      ]
+    },
+    "treatmentReference": [
+      {
+        "diagnosisId": "dx1",
+        "treatmentOptions": "Cognitive behavioural therapy (CBT); behavioural activation; interpersonal therapy",
+        "medicationClasses": "Selective serotonin reuptake inhibitors (SSRIs); serotonin–norepinephrine reuptake inhibitors (SNRIs)",
+        "planningConsiderations": "First line, psychological: cognitive behavioural therapy or behavioural activation. Medication is an alternative first line where therapy is declined, unavailable or insufficient.",
+        "evidenceStrength": "Strong",
+        "guidelineSource": "NICE",
+        "interactionFlag": true
+      },
+      {
+        "diagnosisId": "dx2",
+        "treatmentOptions": "Cognitive behavioural therapy (CBT); applied relaxation",
+        "medicationClasses": "Selective serotonin reuptake inhibitors (SSRIs); serotonin–norepinephrine reuptake inhibitors (SNRIs)",
+        "planningConsiderations": "First line, psychological: cognitive behavioural therapy. Medication is second line where psychological therapy is declined, unavailable or insufficient.",
+        "evidenceStrength": "Strong",
+        "guidelineSource": "NICE",
+        "interactionFlag": true
+      },
+      {
+        "diagnosisId": "dx3",
+        "treatmentOptions": "Cognitive behavioural therapy for insomnia (CBT-I); sleep hygiene psychoeducation",
+        "medicationClasses": "Short-acting hypnotics (short-term only)",
+        "planningConsiderations": "First line, psychological: cognitive behavioural therapy for insomnia. Medication is second line and short-term only. Confirm adequacy of CPAP treatment before attributing residual sleep difficulty to insomnia alone.",
+        "evidenceStrength": "Strong",
+        "guidelineSource": "AASM",
+        "interactionFlag": true
+      }
+    ],
+    "interactionNote": "The patient reports a current medication whose name was not disclosed. Any prescribing decision requires confirmation of this medication's identity, indication and prescriber — see the Medication interaction row in the risk table.",
+    "limitations": "Findings derive from a structured online assessment interview completed on ⟦ASSESSMENT_DATE_SAMPLE01⟧ and reflect self-report at that time. The patient declined to disclose the name of a current medication; this limits the assessment of medication interactions and should be clarified before any prescribing decision. Suicide risk is dynamic and this letter does not predict future behaviour. Occupation and psychotherapy history were not captured in the assessment data.",
+    "closing": "Thank you again for referring ⟦NAME_OF_PATIENT_SAMPLE01⟧. Please contact me directly if you would like to discuss these findings.",
+    "sourceReview": [
+      {
+        "interviewKey": "gad",
+        "disposition": "supported",
+        "diagnosisIds": [
+          "dx2"
+        ],
+        "evidenceQuotes": [
+          "The patient meets DSM-5 criteria for Generalized Anxiety Disorder with moderate severity.",
+          "Generalized Anxiety Disorder is recorded as DSM-5-TR F41.1 and ICD-11 6B00.",
+          "Worry occurs on most days, is difficult to control and is accompanied by muscle tension and poor concentration."
+        ]
+      },
+      {
+        "interviewKey": "mdd",
+        "disposition": "supported",
+        "diagnosisIds": [
+          "dx1"
+        ],
+        "evidenceQuotes": [
+          "The patient meets DSM-5 criteria for Major Depressive Disorder, single episode, with moderate severity.",
+          "Major Depressive Disorder, single episode is recorded as DSM-5-TR F32.1 and ICD-11 6A70.1.",
+          "Low mood and loss of interest have been present for most of the last four months."
+        ]
+      },
+      {
+        "interviewKey": "insomnia",
+        "disposition": "supported",
+        "diagnosisIds": [
+          "dx3"
+        ],
+        "evidenceQuotes": [
+          "The patient meets DSM-5 criteria for Insomnia Disorder with mild severity.",
+          "Insomnia Disorder is recorded as DSM-5-TR G47.00 and ICD-11 7A00.",
+          "The patient reports obstructive sleep apnea that is currently treated with CPAP."
+        ]
+      },
+      {
+        "interviewKey": "ptsd",
+        "disposition": "ruled_out",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient reports exposure to a serious motor vehicle accident, which meets Criterion A.",
+          "The patient does not meet DSM-5 criteria for Posttraumatic Stress Disorder because intrusion symptoms were not endorsed."
+        ]
+      },
+      {
+        "interviewKey": "adhd",
+        "disposition": "ruled_out",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "Although the patient meets DSM-5 symptom criteria for ADHD, the patient fails to meet the DSM-5 criteria for ADHD diagnosis because the symptoms were not identified before age 12."
+        ]
+      },
+      {
+        "interviewKey": "suicide",
+        "disposition": "non_diagnostic",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient denies current suicidal thoughts, denies any history of self-harm and reports no current urges to harm themself.",
+          "The patient identifies a supportive partner and regular contact with a close sibling."
+        ]
+      },
+      {
+        "interviewKey": "medications",
+        "disposition": "non_diagnostic",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient reports one current medication taken once daily.",
+          "The medication name was recorded as to be discussed in meetings."
+        ]
+      }
+    ]
+  }
+}

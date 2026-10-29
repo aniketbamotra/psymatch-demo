@@ -1,0 +1,492 @@
+{
+	"test_structure": {
+		"description": "DSM-5 Manic Episode",
+		"test_metadata": {
+			"super_test_name": "DSM-5 Depression Diagnostic Test",
+			"test_name": "Manic Episode Diagnostic Test",
+			"test_code": "manic_test",
+			"display_text_before_questions": "Please answer the following questions:"
+		},
+		"questions": {
+			"question_template": [
+				{
+					"id": "q1",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever felt a prolonged period of unusually high mood, where you experienced persistent euphoria or felt 'on top of the world' for a week or more ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q2",
+					"description_for_subsequent_question": "",
+					"text": "Have you ever gone through a distinct period of an abnormally and persistently expansive or very energized mood, in which you felt extremely excited to take on new projects ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q3",
+					"description_for_subsequent_question": "",
+					"text": "Have you experienced a distinct period of abnormally irritable mood, where instead of feeling on top of the world, you consistently feel irritated for about a week or more ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q4",
+					"description_for_subsequent_question": "",
+					"text": "Were the euphoric, highly energetic, or irritable feelings present for most of the day when you experienced those emotions ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q5",
+					"description_for_subsequent_question": "",
+					"text": "Did these feelings of euphoria, energy and increased activity, or irritability last for at least a week ?",
+					"text_voice_over_url": "",
+					"answer_type": "boolean",
+					"answer_values": "['Yes','No']",
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q6",
+					"description_for_subsequent_question": "",
+					"text": "Did these ‘high’ feelings, increased activity or irritability last for at least 4 consecutive days ?",
+					"text_voice_over_url": "",
+					"answer_type": "boolean",
+					"answer_values": "['Yes','No']",
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "2",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q7",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "Inflated self esteem or feeling grandiose, egotistical ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q8",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "Decreased need for sleep (e.g. felt rested after only 3 hours of sleep) ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q9",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "More talkative than usual or pressure to keep talking ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q10",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "Did you experience the feeling that your ideas were racing through your head without effort, even so fast that you could keep up with expressing them to others ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q11",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "Did you or others notice that your attention was too easily drawn to unimportant or irrelevant external things (Whether you noticed it or it was noticed by others) ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q12",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "Did you find yourself driven excessively toward new activities that were goal directed, or taking on major new projects, either related to work or school, socially, or sexually ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q13",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "Did you find yourself driven excessively toward new activities that really weren’t goal directed, but may be excessive like e-mailing, text messaging, or calling or going out with friends ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q14",
+					"description_for_subsequent_question": "During the mood disturbance and increased activity period, did you notice any of the following changes in your normal behavior or personality:",
+					"text": "Did you find yourself becoming involved in activities with a high potential for painful consequences (e.g. unrestrained buying sprees, sexual indiscretions or foolish business investments) ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q15",
+					"description_for_subsequent_question": "",
+					"text": "You mentioned that you experienced a period of Q1>0 feeling euphoric, Q2>0 high energy and increased activity or Q3>0 irritability which was accompanied by characteristics you mentioned like: Q&7>0 increased self esteem, Q8>0 decreased need for sleep, Q9>0 more talkative than usual, Q10>0 ideas racing through your head, Q11>0 attention drawn to unimportant things, Q12>0 driven to new activities with a goal, Q13>0 driven to new activities without a goal, Q14>0 involvement with high risk activities.  Was this period clearly uncharacteristic of your normal functioning ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q16",
+					"description_for_subsequent_question": "",
+					"text": "Were these changes in mood and behaviour sufficiency severe to cause marked impairment in social or occupational functioning ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q17",
+					"description_for_subsequent_question": "",
+					"text": "Did these changes in mood and behaviour necessitate hospitalization to prevent harm to yourself or others ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q18",
+					"description_for_subsequent_question": "",
+					"text": "Were these changes in mood and behaviour noticed by others ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q19",
+					"description_for_subsequent_question": "",
+					"text": "Were these experiences a result of a medical condition, or use of a substance ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Not at all"
+						},
+						{
+							"1": "A little"
+						},
+						{
+							"2": "Quite a bit"
+						},
+						{
+							"3": "A lot"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q20",
+					"description_for_subsequent_question": "",
+					"text": "How recently have you experienced these feelings of elevated mood and high energy ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"0": "Within the last few days"
+						},
+						{
+							"1": "Within the last week"
+						},
+						{
+							"2": "Within the last months"
+						},
+						{
+							"3": "Within 6 months"
+						},
+						{
+							"4": "Longer than 6 months"
+						}
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				}
+			]
+		},
+		"question_display_logic": {
+			"description": "Logic for displaying questions",
+			"logic_template": [
+				{
+					"logic_id": "1",
+					"condition": "(Q1 > 0) or (Q2 > 0) or (Q3 > 0)",
+					"next_question": "Q4",
+					"exit_action": "Leave Manic Episode"
+				},
+				{
+					"logic_id": "2",
+					"condition": "q5 == 0 ('NO')",
+					"next_question": "q6",
+					"exit_action": "Proceed to next question"
+				}
+			]
+		},
+		"implementation_notes": [
+			"for question 12(summary kind of question) - For questions 1 to 9, only display the symptoms where the user's answer is greater than 0."
+		]
+	}
+}

@@ -1,0 +1,893 @@
+{
+	"logical_operations": {
+		"description": "Defines all possible logical operations",
+		"comparison_operators": [">", "<", ">=", "<=", "==", "!="],
+		"logical_operators": ["&&", "||", "!"],
+		"count_operators": {
+			"description": "For counting operations over ranges",
+			"types": ["count_positive", "count_all", "count_range"]
+		}
+	},
+	"test_evaluation": {
+		"variables": [
+			{
+				"name": "Severity",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q1",
+						"end": "q5",
+						"operator": "count_all"
+					},
+					"operator": "/",
+					"right_operand": {
+						"type": "range",
+						"start": "q1",
+						"end": "q5",
+						"operator": "count_positive"
+					},
+					"thresholds": [
+						{
+							"max": 0.5,
+							"value": "Minimal"
+						},
+						{
+							"max": 1.5,
+							"value": "Mild"
+						},
+						{
+							"max": 2.5,
+							"value": "Moderate"
+						},
+						{
+							"default": "Severe"
+						}
+					]
+				}
+			},
+			{
+				"name": "count_positive_q1-q6",
+				"operation": {
+					"type": "range",
+					"start": "q1",
+					"end": "q6",
+					"operator": "count_positive"
+				}
+			}
+		],
+		"criteria": [
+			{
+				"id": "Criterion A",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "count_positive_q1-q6"
+					},
+					"operator": "==",
+					"right_operand": {
+						"type": "numerical",
+						"value": 6
+					}
+				}
+			},
+			{
+				"id": "Criterion B",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q7"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 1
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q8"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Criterion C",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Criterion D",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			}
+		],
+		"report_title": "PsyMatch C-DIS-5",
+		"outcomes": [
+			{
+				"type": "Social Anxiety Positive",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Criterion A"
+					},
+					"operator": "&&",
+					"right_operand": {
+						"type": "criterion",
+						"value": "Criterion B"
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Social Anxiety Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Social Anxiety Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 diagnostic criteria for Social Anxiety Disorder 313.23 (F40.10).",
+						"summary": true,
+						"italic": true
+					},
+					{
+						"text": "{first_name} reported following symptoms:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported that {pronouns.subject} experiences marked anxiety in one or more social situations in which {pronouns.subject} may be scrutinized by others.",
+								"Summary": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{pronouns.subject} fears that {pronouns.subject} would act in a way, or show anxiety, that would be negatively evaluated by others and be embarrassing.",
+								"Summary": true
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports that social situations almost always provoke fear or anxiety."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{pronouns.subject} avoids these social situations, or endures them with intense anxiety. "
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The fear is reported to be out of proportion to the actual threat in these social situations."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "The fear, anxiety, or avoidance causes significant distress or impairment in social, occupational, or other areas of functioning."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "The social anxiety has been persistent and present for six months or more."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The social anxiety has not been persistent and it is not present for six months or more."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "It is not restricted to public speaking."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "It is restricted to public speaking."
+							}
+						]
+					},
+					{
+						"text": "The average symptom severity was ",
+						"summary": true
+					},
+					{
+						"single_world": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			},
+			{
+				"type": "Social Anxiety Negative A",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criterion",
+								"value": "Criterion C"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criterion",
+								"value": "Criterion D"
+							},
+							"operator": "<",
+							"right_operand": {
+								"type": "numerical",
+								"value": 1
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Social Anxiety Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Social Anxiety Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} fails to meet DSM-5 diagnostic criteria for Social Anxiety Disorder 313.23 (F40.10).",
+						"summary": true,
+						"italic": true
+					},
+					{
+						"text": "{pronouns.subject} reported following symptoms:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported that {pronouns.subject} experiences marked anxiety in one or more social situations in which {pronouns.subject} may be scrutinized by others."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{pronouns.subject} did not report marked anxiety in one or more social situations in which {pronouns.subject} may be scrutinized by others."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q1"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q2"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								},
+								"text": "{pronouns.subject} reported that {pronouns.subject} experiences fears that {pronouns.subject} would act in a way, or show anxiety, that would be negatively evaluated by others."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reports that social situations almost always provoke fear or anxiety."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{pronouns.subject} avoids these social situations, or endures them with intense anxiety. "
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The fear is reported to be out of proportion to the actual threat in these social situations."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "The fear, anxiety, or avoidance causes significant distress or impairment in social, occupational, or other areas of functioning."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q1"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											},
+											"operator": "||",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q2"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q7"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								},
+								"text": "Social anxiety has not been present for six months."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q1"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											},
+											"operator": "||",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q2"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q7"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									}
+								},
+								"text": "Social anxiety has been persistent and present for six months or more."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q1"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											},
+											"operator": "||",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q2"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									}
+								},
+								"text": "It is restricted to public speaking."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q1"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											},
+											"operator": "||",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q2"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q8"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								},
+								"text": "It is not restricted to public speaking."
+							}
+						]
+					},
+					{
+						"text": "The average symptom severity was ",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			},
+			{
+				"type": "Social Anxiety Negative B",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Criterion D"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Social Anxiety Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Social Anxiety Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} fails to meet DSM-5 diagnostic criteria for Social Anxiety Disorder 313.23 (F40.10).",
+						"summary": true,
+						"italic": true
+					},
+					{
+						"text": "{first_name} reported {pronouns.subject} does not experience marked anxiety in one or more social situations in which {pronouns.subject} may be scrutinized by others, and doesn't generally fear that {pronouns.subject} would act in a way, or show anxiety, that would be negatively evaluated by others.",
+						"summary": true,
+						"italic": true
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,813 @@
+{
+	"logical_operations": {
+		"description": "Defines all possible logical operations",
+		"comparison_operators": [">", "<", ">=", "<=", "==", "!="],
+		"logical_operators": ["&&", "||", "!"],
+		"count_operators": {
+			"description": "For counting operations over ranges",
+			"types": ["count_positive", "count_all", "count_range"]
+		}
+	},
+	"test_evaluation": {
+		"variables": [
+			{
+				"name": "Severity",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q1",
+						"end": "q9",
+						"operator": "count_all"
+					},
+					"operator": "/",
+					"right_operand": {
+						"type": "range",
+						"start": "q1",
+						"end": "q9",
+						"operator": "count_positive"
+					},
+					"thresholds": [
+						{
+							"max": 0.5,
+							"value": "Minimal"
+						},
+						{
+							"max": 1.5,
+							"value": "Mild"
+						},
+						{
+							"max": 2.5,
+							"value": "Moderate"
+						},
+						{
+							"default": "Severe"
+						}
+					]
+				}
+			},
+			{
+				"name": "count_positive_q3_q8_greater_than_3",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q3",
+						"end": "q8",
+						"operator": "count_positive"
+					},
+					"operator": ">=",
+					"right_operand": {
+						"type": "numerical",
+						"value": 4
+					}
+				}
+			},
+			{
+				"name": "q1_greater_than_0_and_q2_is_0",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			}
+		],
+		"criteria": [
+			{
+				"id": "Criterion A",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Criterion B",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "count_positive_q3_q8_greater_than_3"
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q9"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Negative A",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Negative_A_edgecase",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Negative_B",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "q1_greater_than_0_and_q2_is_0"
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "criterion",
+										"value": "Criterion A"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "criterion",
+										"value": "Criterion B"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		],
+		"report_title": "PsyMatch C-DIS-5",
+		"outcomes": [
+			{
+				"type": "Generalized anxiety positive",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Criterion A"
+					},
+					"operator": "&&",
+					"right_operand": {
+						"type": "criterion",
+						"value": "Criterion B"
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Generalized Anxiety Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Generalized Anxiety Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 criteria for Generalized Anxiety Disorder 300.02 (F41.1).",
+						"summary": true
+					},
+					{
+						"text": "{pronouns.subject} reports that {pronouns.subject} has experienced excessive anxiety and worry more days than not for at least 6 months and found it difficult to control this anxiety and worry.",
+						"italic": true,
+						"summary": true
+					},
+					{
+						"text": "The following were reported to have been experienced more days than not for the past 6 months:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Restlessness or feeling on edge."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling easily fatigued."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Difficulty concentrating or {pronouns.possessive} mind going blank. "
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Irritability."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Muscle tension."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Sleep disturbance."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The anxiety resulted in interfering with social, work or other important activities."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "{pronouns.subject} has indicated that {pronouns.subject} has experienced excessive anxiety and worry within last few days."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "{pronouns.subject} has indicated that {pronouns.subject} has experienced excessive anxiety and worry within the last week."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "{pronouns.subject} has indicated that {pronouns.subject} has experienced excessive anxiety and worry within within the last month."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "{pronouns.subject} has indicated that {pronouns.subject} has experienced excessive anxiety and worry within 6 months."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 5
+									}
+								},
+								"text": "{pronouns.subject} has indicated that {pronouns.subject} has experienced excessive anxiety and worry longer than 6 months ago."
+							}
+						]
+					},
+					{
+						"text": "The average average symptom severity was ",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			},
+			{
+				"type": "Generalized Anxiety Negative A",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Negative A"
+					},
+					"operator": "||",
+					"right_operand": {
+						"type": "criterion",
+						"value": "Negative_A_edgecase"
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Generalized Anxiety Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Generalized Anxiety Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} does not meet DSM-5 criteria for Generalized Anxiety Disorder 300.02 (F41.1).",
+						"summary": true,
+						"italic": true
+					}
+				]
+			},
+			{
+				"type": "Generalized Anxiety Negative B",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Negative_B"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Generalized Anxiety Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Generalized Anxiety Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} does not meet DSM-5 criteria for Generalized Anxiety Disorder 300.02 (F41.1).",
+						"summary": true
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q1"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q2"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								},
+								"text": "{pronouns.subject} reports excessive anxiety and worry for at least 6 months, but does not report difficulty controlling the worries."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported restlessness or feeling on edge."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported easily fatigued."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported difficulty in concentrating or {pronouns.possessive} mind going blank."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported irritability."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported muscle tension."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported sleep disturbance."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "It was reported that the anxiety resulted in interference with social, work or other important activities."
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The anxiety does not interfere with social, work or other important activities."
+							}
+						]
+					},
+					{
+						"text": "The average severity of reported symptoms was",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			}
+		]
+	}
+}

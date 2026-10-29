@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Inter Display';
+	src:
+		url('/fonts/inter-display/InterVariable.ttf') format('truetype-variations'),
+		url('/fonts/inter-display/InterVariable-Italic.ttf') format('truetype-variations'),
+		url('/fonts/inter-display/Inter.ttc') format('truetype');
+	font-weight: 100 900;
+	font-display: swap;
+}
+.grecaptcha-badge {
+	bottom: 10rem !important;
+	z-index: 9999 !important;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

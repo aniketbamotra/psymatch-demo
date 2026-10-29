@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "psymatch.referral_letter.v1",
+  "generatedAt": "2026-09-24T19:49:02.452Z",
+  "reportDate": "Thursday, 24 September 2026",
+  "layout": {
+    "letterheadDepthMm": 40,
+    "standardRevision": "September Revision 4",
+    "codeSystem": "DSM-5-TR / ICD-11"
+  },
+  "recipient": {
+    "name": "Dr. ⟦NAME_OF_REFERRER_RISK⟧",
+    "practice": "⟦PRACTICE_RISK⟧",
+    "street": "⟦STREET_ADDRESS_RISK⟧",
+    "locality": "⟦LOCALITY_RISK⟧"
+  },
+  "re": "Re: ⟦NAME_OF_PATIENT_RISK⟧ · DOB: not supplied in case materials",
+  "patientId": "⟦PATIENT_ID_RISK⟧",
+  "assessmentDate": "Not supplied in case materials",
+  "assessmentDateLabel": "Assessment date",
+  "salutation": "Dear Dr. ⟦NAME_OF_REFERRER_RISK⟧,",
+  "opening": "Thank you for referring ⟦NAME_OF_PATIENT_RISK⟧ for assessment and treatment. The following is a brief summary of the findings of our assessment conducted by PsyMatch, our structured online assessment interview reviewed by one of our senior Psychologists.",
+  "panelHeading": "PsyMatch Structured Diagnostic Interview Summary",
+  "treatmentIntroduction": "Treatment options below are selected on the basis of evidence. The evidence column names the guideline source and the strength of evidence for effectiveness.",
+  "medicationStatement": "PsyMatch provides general background information about medication considerations and does not make medication recommendations. All medication decisions must be made by a licensed healthcare professional with prescriptive authority in the applicable jurisdiction, acting within their authorized scope of practice.",
+  "footer": "Clinical decision support — findings require confirmation by the treating clinician.",
+  "signOff": "Yours sincerely,",
+  "signature": {
+    "name": "[Clinician name]",
+    "credentials": "[credentials]",
+    "title": "[Title]",
+    "clinic": "Centre for Cognitive Therapy"
+  },
+  "metadataLimitations": [
+    "Placeholders are used for date of birth because these were not supplied.",
+    "The assessment date was not supplied in the case materials."
+  ],
+  "interviewsCompleted": [
+    "Adult ADHD Interview",
+    "Depression Interview",
+    "Comprehensive Suicide and Self-Harm Assessment",
+    "Medication History"
+  ],
+  "content": {
+    "identification": {
+      "name": "⟦NAME_OF_PATIENT_RISK⟧",
+      "age": "34",
+      "maritalStatus": "Married",
+      "children": "None",
+      "occupation": "Not reported",
+      "psychotherapyHistory": "Not reported",
+      "hospitalizations": "Not reported"
+    },
+    "interviewsCompleted": [
+      "adhd",
+      "mdd",
+      "suicide",
+      "medications"
+    ],
+    "clinicalSnapshot": "⟦NAME_OF_PATIENT_RISK⟧ presents with a two-month recurrent depressive episode of severe intensity, marked by persistent low mood, anhedonia, early waking, poor appetite and pronounced fatigue. Functional decline is substantial: the patient has been absent from work for the past three weeks. Passive suicidal ideation is present several times a week, though without plan or intent. Regular evening alcohol use alongside current antidepressant treatment is a concurrent management consideration. A prior self-harm episode four years ago, now in the context of active passive ideation, warrants close monitoring.",
+    "diagnoses": [
+      {
+        "name": "Major Depressive Disorder, Recurrent Episode",
+        "dsmCode": "F33.2",
+        "icd11Code": "6A71.3",
+        "severity": "severe",
+        "rationale": "This diagnosis accounts for the persistent low mood, anhedonia, early waking, poor appetite and marked fatigue over the past two months. The episode has produced substantial functional impairment, with three weeks of work absence.",
+        "id": "dx1",
+        "role": "primary",
+        "evidence": [
+          {
+            "interviewKey": "mdd",
+            "quote": "The patient meets DSM-5 criteria for Major Depressive Disorder, recurrent episode, with severe severity."
+          },
+          {
+            "interviewKey": "mdd",
+            "quote": "The patient reports persistent low mood, loss of interest, early waking, poor appetite and marked fatigue for the past two months."
+          },
+          {
+            "interviewKey": "mdd",
+            "quote": "The patient has stopped attending work for the last three weeks."
+          }
+        ],
+        "dsmEvidence": {
+          "interviewKey": "mdd",
+          "quote": "Major Depressive Disorder, recurrent episode is recorded as DSM-5-TR F33.2 and ICD-11 6A71.3."
+        },
+        "icd11Evidence": {
+          "interviewKey": "mdd",
+          "quote": "Major Depressive Disorder, recurrent episode is recorded as DSM-5-TR F33.2 and ICD-11 6A71.3."
+        }
+      }
+    ],
+    "qualifiers": [
+      {
+        "text": "ADHD was ruled out. The patient meets DSM-5 symptom criteria for ADHD, including difficulty sustaining attention at work over the past three years. However, the diagnosis was not confirmed because the symptoms were not identified before age 12, which is a required diagnostic criterion.",
+        "emphasis": [
+          "The patient meets DSM-5 symptom criteria for ADHD, including difficulty sustaining attention at work over the past three years"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "domain": "Suicide and self-harm",
+        "level": "Moderate",
+        "note": "Current passive suicidal ideation reported several times a week, described as wishing not to wake up. No plan or intent endorsed. One episode of self-harm by cutting four years ago. Protective factors include the patient's spouse and weekly faith community, both identified as reasons for living.",
+        "evidence": [
+          {
+            "interviewKey": "suicide",
+            "quote": "The patient reports current passive suicidal thoughts, described as wishing not to wake up, occurring several times a week."
+          },
+          {
+            "interviewKey": "suicide",
+            "quote": "The patient denies a plan or intent and denies any past suicide attempt."
+          },
+          {
+            "interviewKey": "suicide",
+            "quote": "The patient reports one episode of self-harm by cutting four years ago."
+          },
+          {
+            "interviewKey": "suicide",
+            "quote": "The patient identifies a spouse and a weekly faith community as reasons for living."
+          }
+        ]
+      },
+      {
+        "domain": "Medication interaction",
+        "level": "Moderate",
+        "note": "The patient reports taking sertraline 100 mg once daily and drinking alcohol on most evenings, approximately three drinks each time. Regular alcohol use alongside an SSRI antidepressant is a clinically relevant co-occurrence that may affect treatment response and carries additive central nervous system depressant risk. Confirm current alcohol intake, discuss the interaction, and assess whether a formal alcohol-use evaluation is warranted.",
+        "evidence": [
+          {
+            "interviewKey": "medications",
+            "quote": "The patient reports taking sertraline 100 mg once daily, prescribed by the family physician for the past six months."
+          },
+          {
+            "interviewKey": "medications",
+            "quote": "The patient reports drinking alcohol on most evenings, about three drinks each time."
+          }
+        ]
+      },
+      {
+        "domain": "Occupational functioning",
+        "level": "High",
+        "note": "The patient has been absent from work for three weeks in the context of a severe depressive episode.",
+        "evidence": [
+          {
+            "interviewKey": "mdd",
+            "quote": "The patient has stopped attending work for the last three weeks."
+          }
+        ]
+      }
+    ],
+    "protectiveFactors": {
+      "text": "The patient identifies a spouse and a weekly faith community as reasons for living. Marital support and active community engagement provide relational anchors during this episode.",
+      "evidence": [
+        {
+          "interviewKey": "suicide",
+          "quote": "The patient identifies a spouse and a weekly faith community as reasons for living."
+        }
+      ]
+    },
+    "treatmentReference": [
+      {
+        "diagnosisId": "dx1",
+        "treatmentOptions": "Cognitive behavioural therapy (CBT); behavioural activation; interpersonal therapy (IPT); antidepressant pharmacotherapy",
+        "medicationClasses": "Selective serotonin reuptake inhibitors (SSRIs); serotonin–norepinephrine reuptake inhibitors (SNRIs)",
+        "planningConsiderations": "First line, psychological: cognitive behavioural therapy or interpersonal therapy. Medication is a concurrent first-line option for severe episodes and may be combined with psychological therapy. Regular alcohol use should be addressed alongside treatment, as it may diminish antidepressant efficacy.",
+        "evidenceStrength": "Strong",
+        "guidelineSource": "NICE (CG90/CG91); APA Practice Guidelines",
+        "interactionFlag": true
+      }
+    ],
+    "interactionNote": "The patient reports regular evening alcohol use (approximately three drinks on most evenings) alongside a current SSRI. See the Medication interaction row in the Risk table for detail.",
+    "limitations": "These findings are based on a structured self-report interview completed on a single occasion and reflect the patient's presentation at the time of assessment. Suicide risk is dynamic and can change rapidly; this letter does not predict future behaviour. Occupation, psychotherapy history and hospitalisation history were not captured in the case materials. Regular alcohol consumption was reported but a formal alcohol-use disorder screen was not administered.",
+    "closing": "Thank you again for referring ⟦NAME_OF_PATIENT_RISK⟧. Please contact me directly if you would like to discuss these findings or coordinate ongoing care.",
+    "sourceReview": [
+      {
+        "interviewKey": "mdd",
+        "disposition": "supported",
+        "diagnosisIds": [
+          "dx1"
+        ],
+        "evidenceQuotes": [
+          "The patient meets DSM-5 criteria for Major Depressive Disorder, recurrent episode, with severe severity.",
+          "Major Depressive Disorder, recurrent episode is recorded as DSM-5-TR F33.2 and ICD-11 6A71.3."
+        ]
+      },
+      {
+        "interviewKey": "adhd",
+        "disposition": "ruled_out",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "Although the patient meets DSM-5 symptom criteria for ADHD, the patient fails to meet the DSM-5 criteria for ADHD diagnosis because the symptoms were not identified before age 12."
+        ]
+      },
+      {
+        "interviewKey": "suicide",
+        "disposition": "non_diagnostic",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient reports current passive suicidal thoughts, described as wishing not to wake up, occurring several times a week.",
+          "The patient denies a plan or intent and denies any past suicide attempt.",
+          "The patient reports one episode of self-harm by cutting four years ago.",
+          "The patient identifies a spouse and a weekly faith community as reasons for living."
+        ]
+      },
+      {
+        "interviewKey": "medications",
+        "disposition": "non_diagnostic",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient reports taking sertraline 100 mg once daily, prescribed by the family physician for the past six months.",
+          "The patient reports drinking alcohol on most evenings, about three drinks each time."
+        ]
+      }
+    ]
+  }
+}

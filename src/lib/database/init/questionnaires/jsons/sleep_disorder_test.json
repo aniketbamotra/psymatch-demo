@@ -1,0 +1,269 @@
+{
+	"test_structure": {
+		"description": "DSM-5 Sleep Disorder Diagnostic Test",
+		"test_metadata": {
+			"super_test_name": "DSM-5 Sleep Disorder Diagnostic Test",
+			"test_name": "Sleep Disorder Diagnostic Test",
+			"test_code": "sleep_disorder_test",
+			"display_text_before_questions": "Please answer the following questions:"
+		},
+		"questions": {
+			"question_template": [
+				{
+					"id": "q1",
+					"description_for_subsequent_question": "",
+					"text": "Do you find that you have trouble getting enough sleep, because of trouble getting to sleep, staying asleep or waking too early ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q2",
+					"description_for_subsequent_question": "",
+					"text": "Do you frequently have trouble getting to sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q3",
+					"description_for_subsequent_question": "",
+					"text": "How many nights a week do you have trouble getting to sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [{ "0": "One or Two" }, { "1": "Three or Four" }, { "2": "Five or more" }],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "2"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q4",
+					"description_for_subsequent_question": "",
+					"text": "How long does it normally take you to get to sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "0 to 30 minutes" },
+						{ "1": "30 to 60 minutes" },
+						{ "2": "60 to 120 minutes" },
+						{ "3": "More than 120 minutes" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "2"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q5",
+					"description_for_subsequent_question": "",
+					"text": "Do you have trouble staying asleep, waking up frequently ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q6",
+					"description_for_subsequent_question": "",
+					"text": "How many nights a week would waking up frequently disrupt your sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [{ "0": "One or Two" }, { "1": "Three or Four" }, { "2": "Five or more" }],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "3"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q7",
+					"description_for_subsequent_question": "",
+					"text": "Do you wake up in the middle of the night and have trouble getting back to sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "3"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q8",
+					"description_for_subsequent_question": "",
+					"text": "If you wake up during the middle of the night how long will it take to get back to sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "0-30 minutes" },
+						{ "1": "30-60 minutes" },
+						{ "2": "60-120 minutes" },
+						{ "3": "More than 120 minutes" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "3", "4"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q9",
+					"description_for_subsequent_question": "",
+					"text": "How many nights a week will you wake up in the middle of the night and have difficulty getting back to sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [{ "0": "One or Two" }, { "1": "Three or Four" }, { "2": "Five or more" }],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "4"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q10",
+					"description_for_subsequent_question": "",
+					"text": "Do you wake up early in the morning, unable to get back to sleep ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q11",
+					"description_for_subsequent_question": "",
+					"text": "How much time before you intended waking will you normally wake up when this is a problem ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Up to an hour" },
+						{ "1": "1-2 Hours" },
+						{ "2": "2-3 Hours" },
+						{ "3": "More than 3 hours" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "5", "6"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q12",
+					"description_for_subsequent_question": "",
+					"text": "How many times a week do you wake up too early ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [{ "0": "One or Two" }, { "1": "Three or Four" }, { "2": "Five or more" }],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "5", "6"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q13",
+					"description_for_subsequent_question": "",
+					"text": "You mentioned that you Q2>0 have difficulty getting to seep, Q5>0 awaken frequently Q7>0 wake up in the night and can’t get back to sleep, Q10 and/or awaken early.  Have these sleep problems caused significant distress or difficulty functioning in social, occupational educational or behavioural parts of your life ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "5", "6"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q14",
+					"description_for_subsequent_question": "",
+					"text": "Have these sleep related problems been present for at least 3 months ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [{ "0": "No" }, { "1": "Yes, more than 3 months" }],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "5"],
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q15",
+					"description_for_subsequent_question": "",
+					"text": "Are there been any circumstances (like frequent middle of the night work-related emergency calls or shiftwork) or other similar factors that are always the cause of these sleep related problems ?",
+					"text_voice_over_url": "",
+					"answer_type": "boolean",
+					"answer_values": "['Yes','No']",
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": ["1", "5"],
+					"is_a_permanent_question": "No"
+				}
+			]
+		},
+		"question_display_logic": {
+			"description": "Array of objects defining when questioning should be displayed",
+			"logic_template": [
+				{
+					"logic_id": "1",
+					"condition": "q1 == 0",
+					"next_question": "skip the test all questions",
+					"exit_action": "continue the test"
+				},
+				{
+					"logic_id": "2",
+					"condition": "(q2 == 0)",
+					"next_question": "skip the question 3 and 4 , display from que 5",
+					"exit_action": "continue the test"
+				},
+				{
+					"logic_id": "3",
+					"condition": "(q5 == 0)",
+					"next_question": "skip the question 6 and 7 , display from que 8 ",
+					"exit_action": "continue the test"
+				},
+				{
+					"logic_id": "4",
+					"condition": "(q7 == 0)",
+					"next_question": "skip the question 8 and 9, display from que 10",
+					"exit_action": "continue the test"
+				},
+				{
+					"logic_id": "5",
+					"condition": "(q10 == 0 ) & (q2 == 0) & (q5 == 0) & (q7 == 0)",
+					"next_question": "skip the test all questions",
+					"exit_action": "continue the test"
+				},
+				{
+					"logic_id": "6",
+					"condition": "(q10 == 0 ) & (q2 > 0) & (q5 > 0) & (q7 > 0)",
+					"next_question": "skip the questions 11, 12 and 13 , display from q14",
+					"exit_action": "continue the test"
+				}
+			]
+		}
+	},
+	"implementation_notes": [
+		"for question 13 (summary kind of question) - for questions 2 , 5 , 7, 10, only display the symptoms where the user's answer is greater than 0."
+	]
+}

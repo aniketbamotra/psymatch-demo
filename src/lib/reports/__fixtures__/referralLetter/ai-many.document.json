@@ -1,0 +1,340 @@
+{
+  "schemaVersion": "psymatch.referral_letter.v1",
+  "generatedAt": "2026-09-24T19:49:02.487Z",
+  "reportDate": "Thursday, 24 September 2026",
+  "layout": {
+    "letterheadDepthMm": 40,
+    "standardRevision": "September Revision 4",
+    "codeSystem": "DSM-5-TR / ICD-11"
+  },
+  "recipient": {
+    "name": "[Referring clinician name]",
+    "practice": "[Practice or clinic]",
+    "street": "[Street address]",
+    "locality": "[City, province, postal code]"
+  },
+  "re": "Re: ⟦NAME_OF_PATIENT_MANY⟧ · DOB: not supplied in case materials",
+  "patientId": "⟦PATIENT_ID_MANY⟧",
+  "assessmentDate": "Not supplied in case materials",
+  "assessmentDateLabel": "Assessment date",
+  "salutation": "Dear Dr. [Referring clinician],",
+  "opening": "Thank you for referring ⟦NAME_OF_PATIENT_MANY⟧ for assessment and treatment. The following is a brief summary of the findings of our assessment conducted by PsyMatch, our structured online assessment interview reviewed by one of our senior Psychologists.",
+  "panelHeading": "PsyMatch Structured Diagnostic Interview Summary",
+  "treatmentIntroduction": "Treatment options below are selected on the basis of evidence. The evidence column names the guideline source and the strength of evidence for effectiveness.",
+  "medicationStatement": "PsyMatch provides general background information about medication considerations and does not make medication recommendations. All medication decisions must be made by a licensed healthcare professional with prescriptive authority in the applicable jurisdiction, acting within their authorized scope of practice.",
+  "footer": "Clinical decision support — findings require confirmation by the treating clinician.",
+  "signOff": "Yours sincerely,",
+  "signature": {
+    "name": "[Clinician name]",
+    "credentials": "[credentials]",
+    "title": "[Title]",
+    "clinic": "Centre for Cognitive Therapy"
+  },
+  "metadataLimitations": [
+    "Placeholders are used for referring clinician details and date of birth because these were not supplied.",
+    "The assessment date was not supplied in the case materials."
+  ],
+  "interviewsCompleted": [
+    "Panic Disorder Interview",
+    "Social Anxiety Interview",
+    "Obsessive-Compulsive Interview",
+    "Trauma and PTSD Interview",
+    "Depression Interview",
+    "Alcohol Use Interview",
+    "Sleep Interview",
+    "Comprehensive Suicide and Self-Harm Assessment",
+    "Medication History"
+  ],
+  "content": {
+    "identification": {
+      "name": "⟦NAME_OF_PATIENT_MANY⟧",
+      "age": "46",
+      "maritalStatus": "Common-law",
+      "children": "Three, ages 16, 13 and 9",
+      "occupation": "Not reported",
+      "psychotherapyHistory": "Not reported",
+      "hospitalizations": "Not reported"
+    },
+    "interviewsCompleted": [
+      "panic",
+      "social",
+      "ocd",
+      "ptsd",
+      "mdd",
+      "alcohol",
+      "sleep",
+      "suicide",
+      "medications"
+    ],
+    "clinicalSnapshot": "⟦NAME_OF_PATIENT_MANY⟧ presents with recurrent unexpected panic attacks approximately twice weekly, accompanied by avoidance of highway driving and reluctance to speak at work. Anxiety symptoms are the dominant feature, with mild social anxiety compounding occupational functioning. Alcohol use beyond intended limits on weekends, with two failed attempts to cut down, suggests a developing pattern of misuse that may interact with current benzodiazepine use. The patient maintains a stable common-law relationship and close friendships, which serve as meaningful supports. No depressive episode, trauma history or suicidal ideation was identified on structured assessment.",
+    "diagnoses": [
+      {
+        "name": "Panic Disorder",
+        "dsmCode": "F41.0",
+        "icd11Code": "6B01",
+        "severity": "moderate",
+        "rationale": "This diagnosis accounts for the central presenting complaint of recurrent unexpected panic attacks with palpitations, breathlessness and fear of dying. Highway driving avoidance reflects the behavioural impact. Attacks occur approximately twice weekly.",
+        "id": "dx1",
+        "role": "primary",
+        "evidence": [
+          {
+            "interviewKey": "panic",
+            "quote": "The patient meets DSM-5 criteria for Panic Disorder with moderate severity."
+          },
+          {
+            "interviewKey": "panic",
+            "quote": "The patient reports unexpected panic attacks about twice a week with palpitations, breathlessness and fear of dying, and avoids driving on highways."
+          }
+        ],
+        "dsmEvidence": {
+          "interviewKey": "panic",
+          "quote": "Panic Disorder is recorded as DSM-5-TR F41.0 and ICD-11 6B01."
+        },
+        "icd11Evidence": {
+          "interviewKey": "panic",
+          "quote": "Panic Disorder is recorded as DSM-5-TR F41.0 and ICD-11 6B01."
+        }
+      },
+      {
+        "name": "Social Anxiety Disorder",
+        "dsmCode": "not supplied in case materials",
+        "icd11Code": "not supplied in case materials",
+        "severity": "mild",
+        "rationale": "Fear of judgement in meetings and avoidance of speaking at work adds a second anxiety diagnosis that compounds occupational difficulty. Symptoms are mild but functionally relevant.",
+        "id": "dx2",
+        "role": "comorbid",
+        "evidence": [
+          {
+            "interviewKey": "social",
+            "quote": "The patient meets DSM-5 criteria for Social Anxiety Disorder with mild severity."
+          },
+          {
+            "interviewKey": "social",
+            "quote": "The patient reports fear of being judged in meetings and avoids speaking up at work."
+          }
+        ],
+        "dsmEvidence": null,
+        "icd11Evidence": null
+      },
+      {
+        "name": "Alcohol Use Disorder",
+        "dsmCode": "F10.10",
+        "icd11Code": "6C40.1",
+        "severity": "mild",
+        "rationale": "Weekend drinking beyond intended amounts and two unsuccessful attempts to reduce intake meet criteria for a mild alcohol use disorder. This pattern is clinically relevant given concurrent benzodiazepine use.",
+        "id": "dx3",
+        "role": "comorbid",
+        "evidence": [
+          {
+            "interviewKey": "alcohol",
+            "quote": "The patient meets DSM-5 criteria for Alcohol Use Disorder with mild severity."
+          },
+          {
+            "interviewKey": "alcohol",
+            "quote": "The patient reports drinking more than intended on weekends and two unsuccessful attempts to cut down."
+          }
+        ],
+        "dsmEvidence": {
+          "interviewKey": "alcohol",
+          "quote": "Alcohol Use Disorder is recorded as DSM-5-TR F10.10 and ICD-11 6C40.1."
+        },
+        "icd11Evidence": {
+          "interviewKey": "alcohol",
+          "quote": "Alcohol Use Disorder is recorded as DSM-5-TR F10.10 and ICD-11 6C40.1."
+        }
+      }
+    ],
+    "qualifiers": [
+      {
+        "text": "Obsessive-Compulsive Disorder was ruled out. Checking behaviour was endorsed but does not occupy more than one hour daily and does not cause marked distress, falling below the clinical threshold.",
+        "emphasis": [
+          "Checking behaviour was endorsed"
+        ]
+      },
+      {
+        "text": "Posttraumatic Stress Disorder was ruled out. No exposure to a traumatic event meeting Criterion A was identified.",
+        "emphasis": []
+      },
+      {
+        "text": "Major Depressive Disorder was ruled out. Low mood on some days was endorsed, but loss of interest was absent, and full criteria were not met.",
+        "emphasis": [
+          "Low mood on some days was endorsed"
+        ]
+      },
+      {
+        "text": "Insomnia Disorder was ruled out. The sleep interview noted a physician-diagnosed hypothyroidism treated with levothyroxine (reported by history, not a PsyMatch diagnostic finding).",
+        "emphasis": []
+      }
+    ],
+    "risks": [
+      {
+        "domain": "Suicide and self-harm",
+        "level": "Low",
+        "note": "The patient denies current suicidal thoughts, denies any history of self-harm and reports no current urges to harm themself.",
+        "evidence": [
+          {
+            "interviewKey": "suicide",
+            "quote": "The patient denies current suicidal thoughts, denies any history of self-harm and reports no current urges to harm themself."
+          }
+        ]
+      },
+      {
+        "domain": "Medication interaction",
+        "level": "Moderate",
+        "note": "The patient takes lorazepam as needed for panic attacks (prescribed by a walk-in clinic) alongside regular weekend alcohol use. The combination of a benzodiazepine with alcohol carries a risk of additive sedation. Confirm current lorazepam dose, frequency and ongoing clinical oversight before prescribing.",
+        "evidence": [
+          {
+            "interviewKey": "medications",
+            "quote": "The patient reports taking lorazepam as needed for panic attacks, prescribed by a walk-in clinic."
+          },
+          {
+            "interviewKey": "alcohol",
+            "quote": "The patient reports drinking more than intended on weekends and two unsuccessful attempts to cut down."
+          }
+        ]
+      },
+      {
+        "domain": "Other domains assessed",
+        "level": "Not assessed",
+        "note": "Substance use, occupational functioning and psychosocial stressors were not formally assessed beyond the modules listed. No additional risk indicators emerged from the administered interviews.",
+        "evidence": []
+      }
+    ],
+    "protectiveFactors": {
+      "text": "Supportive common-law partner and close friendships identified by the patient. Stable family unit with three children. No history of self-harm or suicidal ideation.",
+      "evidence": [
+        {
+          "interviewKey": "suicide",
+          "quote": "The patient identifies a supportive partner and close friendships."
+        },
+        {
+          "interviewKey": "suicide",
+          "quote": "The patient denies current suicidal thoughts, denies any history of self-harm and reports no current urges to harm themself."
+        }
+      ]
+    },
+    "treatmentReference": [
+      {
+        "diagnosisId": "dx1",
+        "treatmentOptions": "Cognitive behavioural therapy (CBT) with interoceptive exposure; psychoeducation and graded in-vivo exposure for agoraphobic avoidance",
+        "medicationClasses": "Selective serotonin reuptake inhibitors; serotonin-norepinephrine reuptake inhibitors",
+        "planningConsiderations": "First line, psychological: cognitive behavioural therapy with panic-focused exposure. Medication is second line and may be considered where therapy alone is declined, unavailable or insufficient.",
+        "evidenceStrength": "Strong",
+        "guidelineSource": "NICE CG113; APA Practice Guidelines",
+        "interactionFlag": true
+      },
+      {
+        "diagnosisId": "dx2",
+        "treatmentOptions": "Cognitive behavioural therapy (CBT) including graded exposure to feared social situations",
+        "medicationClasses": "Selective serotonin reuptake inhibitors; serotonin-norepinephrine reuptake inhibitors",
+        "planningConsiderations": "First line, psychological: cognitive behavioural therapy with social-exposure components. Medication is second line where psychological treatment is insufficient or unavailable.",
+        "evidenceStrength": "Strong",
+        "guidelineSource": "NICE CG159; APA Practice Guidelines",
+        "interactionFlag": false
+      },
+      {
+        "diagnosisId": "dx3",
+        "treatmentOptions": "Motivational interviewing; brief interventions; cognitive behavioural relapse prevention",
+        "medicationClasses": "Opioid antagonists; acamprosate",
+        "planningConsiderations": "First line, psychological: motivational interviewing and brief intervention for mild alcohol use disorder. Medication is generally reserved for moderate-to-severe presentations. Address concurrent benzodiazepine-alcohol co-use as a safety priority.",
+        "evidenceStrength": "Moderate",
+        "guidelineSource": "NICE CG115; APA Practice Guidelines",
+        "interactionFlag": true
+      }
+    ],
+    "interactionNote": "The patient reports current lorazepam use alongside regular alcohol consumption. This co-occurrence is flagged in the Medication interaction risk row. Confirm lorazepam dose, frequency and prescriber oversight before initiating any additional pharmacotherapy for Panic Disorder or Alcohol Use Disorder.",
+    "limitations": "Findings are based on structured self-report interviews completed on the assessment date and reflect the patient's presentation at that time. Suicide risk is dynamic and this letter does not predict future behaviour. Occupation, psychotherapy history and hospitalisation history were not reported in the case materials. The lorazepam dose and frequency were not specified; confirm these details with the prescribing clinic.",
+    "closing": "Thank you again for referring ⟦NAME_OF_PATIENT_MANY⟧ for assessment. Please contact me directly if you would like to discuss these findings or the treatment reference information provided.",
+    "sourceReview": [
+      {
+        "interviewKey": "panic",
+        "disposition": "supported",
+        "diagnosisIds": [
+          "dx1"
+        ],
+        "evidenceQuotes": [
+          "The patient meets DSM-5 criteria for Panic Disorder with moderate severity.",
+          "Panic Disorder is recorded as DSM-5-TR F41.0 and ICD-11 6B01.",
+          "The patient reports unexpected panic attacks about twice a week with palpitations, breathlessness and fear of dying, and avoids driving on highways."
+        ]
+      },
+      {
+        "interviewKey": "social",
+        "disposition": "supported",
+        "diagnosisIds": [
+          "dx2"
+        ],
+        "evidenceQuotes": [
+          "The patient meets DSM-5 criteria for Social Anxiety Disorder with mild severity.",
+          "The patient reports fear of being judged in meetings and avoids speaking up at work."
+        ]
+      },
+      {
+        "interviewKey": "ocd",
+        "disposition": "ruled_out",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient does not meet DSM-5 criteria for Obsessive-Compulsive Disorder.",
+          "Checking behaviour is reported but takes less than one hour a day and does not cause marked distress."
+        ]
+      },
+      {
+        "interviewKey": "ptsd",
+        "disposition": "ruled_out",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient reports no exposure to a traumatic event meeting Criterion A.",
+          "The patient does not meet DSM-5 criteria for Posttraumatic Stress Disorder."
+        ]
+      },
+      {
+        "interviewKey": "mdd",
+        "disposition": "ruled_out",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient does not meet DSM-5 criteria for Major Depressive Disorder.",
+          "The patient reports low mood on some days but no loss of interest."
+        ]
+      },
+      {
+        "interviewKey": "alcohol",
+        "disposition": "supported",
+        "diagnosisIds": [
+          "dx3"
+        ],
+        "evidenceQuotes": [
+          "The patient meets DSM-5 criteria for Alcohol Use Disorder with mild severity.",
+          "Alcohol Use Disorder is recorded as DSM-5-TR F10.10 and ICD-11 6C40.1.",
+          "The patient reports drinking more than intended on weekends and two unsuccessful attempts to cut down."
+        ]
+      },
+      {
+        "interviewKey": "sleep",
+        "disposition": "ruled_out",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient does not meet DSM-5 criteria for Insomnia Disorder.",
+          "The patient reports that a physician previously diagnosed hypothyroidism, which is treated with levothyroxine."
+        ]
+      },
+      {
+        "interviewKey": "suicide",
+        "disposition": "non_diagnostic",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient denies current suicidal thoughts, denies any history of self-harm and reports no current urges to harm themself.",
+          "The patient identifies a supportive partner and close friendships."
+        ]
+      },
+      {
+        "interviewKey": "medications",
+        "disposition": "non_diagnostic",
+        "diagnosisIds": [],
+        "evidenceQuotes": [
+          "The patient reports taking levothyroxine once daily for hypothyroidism.",
+          "The patient reports taking lorazepam as needed for panic attacks, prescribed by a walk-in clinic."
+        ]
+      }
+    ]
+  }
+}

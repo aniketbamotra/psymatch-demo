@@ -1,0 +1,1364 @@
+{
+	"skip_logic_rules": {
+		"ADULT_BIO": [
+			{
+				"question_to_evaluate": 14,
+				"condition": {
+					"question": 14,
+					"operator": "==",
+					"value": "Single"
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 16,
+				"preserve_values": [14],
+				"custom_skip_values": {
+					"15": "None"
+				}
+			}
+		],
+		"bulimia_interview": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [2, 3, 4, 5],
+				"condition": {
+					"question": 2,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 6
+			}
+		],
+		"anorexia_test": [
+			{
+				"question_to_evaluate": [8, 9],
+				"condition": {
+					"question": 8,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 10
+			}
+		],
+		"social_anxiety_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+		"generalized_anxiety_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": ">",
+					"value": 0
+				},
+				"action_if_true": "display",
+				"action_if_false": "exit_test"
+			}
+		],
+		"panic_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": ">",
+					"value": 0
+				},
+				"action_if_true": "display",
+				"action_if_false": "exit_test"
+			}
+		],
+		"manic_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [5, 6],
+				"condition": {
+					"question": 5,
+					"operator": "==",
+					"value": 1
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 5, "operator": "==", "value": 0 },
+						{ "question": 6, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [14, 15, 16, 17, 18, 19, 20],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 },
+						{ "question": 10, "operator": ">", "value": 0 },
+						{ "question": 11, "operator": ">", "value": 0 },
+						{ "question": 12, "operator": ">", "value": 0 },
+						{ "question": 13, "operator": ">", "value": 0 },
+						{ "question": 14, "operator": ">", "value": 0 }
+					],
+					"count_operator": "<",
+					"threshold": 3
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+		"adult_adhd_test": [
+			{
+				"question_to_evaluate": [9, 10, 11, 12, 13],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">",
+					"threshold": 5
+				},
+				"action_if_true": "continue",
+				"action_if_false": "skip",
+				"next_if_skip": 14
+			},
+			{
+				"question_to_evaluate": [22, 23, 24, 25, 26, 27, 28],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 14, "operator": ">", "value": 0 },
+						{ "question": 15, "operator": ">", "value": 0 },
+						{ "question": 16, "operator": ">", "value": 0 },
+						{ "question": 17, "operator": ">", "value": 0 },
+						{ "question": 18, "operator": ">", "value": 0 },
+						{ "question": 19, "operator": ">", "value": 0 },
+						{ "question": 20, "operator": ">", "value": 0 },
+						{ "question": 21, "operator": ">", "value": 0 },
+						{ "question": 22, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">",
+					"threshold": 5
+				},
+				"action_if_true": "continue",
+				"action_if_false": "exit_test"
+			}
+		],
+		"persistent_depressive_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [7, 8],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">",
+					"threshold": 2
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip",
+				"next_if_skip": 9
+			}
+		],
+
+		"sleep_disorder_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [3, 4],
+				"condition": {
+					"question": 2,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 5
+			},
+			{
+				"question_to_evaluate": [6, 7],
+				"condition": {
+					"question": 5,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 8
+			},
+			{
+				"question_to_evaluate": [8, 9],
+				"condition": {
+					"question": 7,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 10
+			},
+			{
+				"question_to_evaluate": [11, 12, 13, 14, 15],
+				"condition": {
+					"question": 10,
+					"type": "and",
+					"rules": [
+						{ "question": 10, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 5, "operator": "==", "value": 0 },
+						{ "question": 7, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [11, 12, 13],
+				"condition": {
+					"question": 10,
+					"type": "and",
+					"rules": [
+						{ "question": 10, "operator": "==", "value": 0 },
+						{
+							"type": "or",
+							"rules": [
+								{ "question": 2, "operator": ">", "value": 0 },
+								{ "question": 5, "operator": ">", "value": 0 },
+								{ "question": 7, "operator": ">", "value": 0 }
+							]
+						}
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 14
+			}
+		],
+
+		"PTSD_test": [
+			{
+				"question_to_evaluate": [3, 4, 5],
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "continue",
+				"next_if_skip": 6
+			},
+			{
+				"question_to_evaluate": [6, 7, 8, 9],
+				"condition": {
+					"question": 6,
+					"operator": ">",
+					"value": 0
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip",
+				"next_if_skip": 10
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 },
+						{ "question": 6, "operator": "==", "value": 0 },
+						{ "question": 10, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [10, 11, 12],
+				"condition": {
+					"type": "and",
+					"rules": [
+						{
+							"type": "or",
+							"rules": [
+								{ "question": 1, "operator": ">", "value": 0 },
+								{ "question": 2, "operator": ">", "value": 0 },
+								{ "question": 3, "operator": ">", "value": 0 },
+								{ "question": 6, "operator": ">", "value": 0 }
+							]
+						},
+						{ "question": 10, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "continue",
+				"next_if_skip": 13
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 },
+						{ "question": 6, "operator": "==", "value": 0 },
+						{ "question": 12, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 },
+						{ "question": 6, "operator": "==", "value": 0 },
+						{ "question": 11, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [11, 12],
+				"condition": {
+					"type": "and",
+					"rules": [
+						{
+							"type": "or",
+							"rules": [
+								{ "question": 1, "operator": ">", "value": 0 },
+								{ "question": 2, "operator": ">", "value": 0 },
+								{ "question": 3, "operator": ">", "value": 0 },
+								{ "question": 6, "operator": ">", "value": 0 }
+							]
+						},
+						{ "question": 11, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "continue",
+				"next_if_skip": 13
+			},
+			{
+				"question_to_evaluate": [5, 6],
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 4, "operator": "==", "value": 0 },
+						{ "question": 5, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "continue",
+				"next_if_skip": 7
+			}
+		],
+
+		"adjustment_test": [
+			{
+				"question_to_evaluate": 19,
+				"condition": {
+					"question": 18,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display"
+			},
+			{
+				"question_to_evaluate": 20,
+				"condition": {
+					"question": 19,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "display"
+			}
+		],
+
+		"ocd_test": [
+			{
+				"question_to_evaluate": [1, 2],
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 3
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [3, 4, 5, 6],
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 7
+			}
+		],
+
+		"bulimia_nervosa_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": 3,
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 1 },
+						{ "question": 2, "operator": "==", "value": 1 }
+					]
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"specific_phobia_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"agoraphobia_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 },
+						{ "question": 4, "operator": "==", "value": 0 },
+						{ "question": 5, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"prolonged_grief_disorder": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"somatic_symptom_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"dissociative_identity_test": [
+			{
+				"question_to_evaluate": 9,
+				"condition": {
+					"type": "sum",
+					"questions": [1, 2, 3, 4, 5, 6, 7, 8],
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display"
+			}
+		],
+
+		"dissociative_identity": [
+			{
+				"question_to_evaluate": 9,
+				"condition": {
+					"type": "sum",
+					"questions": [1, 2, 3, 4, 5, 6, 7, 8],
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display"
+			}
+		],
+
+		"depersonalization_disorder_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"depersonalization_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"dissociative_amnesia_disorder_test": [
+			{
+				"question_to_evaluate": 3,
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 4
+			},
+			{
+				"question_to_evaluate": [5, 6],
+				"condition": {
+					"type": "all_equal",
+					"questions": [1, 2, 3, 4],
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display"
+			}
+		],
+
+		"dissociative_amnesia_test": [
+			{
+				"question_to_evaluate": 3,
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 4
+			},
+			{
+				"question_to_evaluate": [5, 6],
+				"condition": {
+					"type": "all_equal",
+					"questions": [1, 2, 3, 4],
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display"
+			}
+		],
+
+		"delusional_disorder_test": [
+			{
+				"question_to_evaluate": [7, 8, 9, 10, 11, 12, 13, 14, 15],
+				"condition": {
+					"type": "all_equal",
+					"questions": [1, 2, 3, 4, 5, 6],
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"delusional_disorder": [
+			{
+				"question_to_evaluate": [7, 8, 9, 10, 11, 12, 13, 14, 15],
+				"condition": {
+					"type": "all_equal",
+					"questions": [1, 2, 3, 4, 5, 6],
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"alcohol_use_disorder_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 17,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 18,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"cannabis_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 16,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 17,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"pcp_use_disorder": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"hallucinogen_use_disorder": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"opioid_use_disorder": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 17,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"sedative_hypnotic_anxiolytic_use_disorder": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 14,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 15,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"stimulant_use_disorder": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [15, 16, 17, 18, 19, 20, 21, 22, 23],
+				"condition": {
+					"question": 14,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [16, 17, 18, 19, 20, 21, 22, 23],
+				"condition": {
+					"question": 15,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		],
+
+		"avoidant_personality_test": [
+			{
+				"question_to_evaluate": 8,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 5
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"paranoid_personality_disorder_test": [
+			{
+				"question_to_evaluate": 8,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 4
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"paranoid_test": [
+			{
+				"question_to_evaluate": 8,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 4
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"schizoid_personality_disorder_test": [
+			{
+				"question_to_evaluate": [8, 9],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 4
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"schizoid_personality_test": [
+			{
+				"question_to_evaluate": [8, 9],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 4
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"schizotypal_personality_disorder_test": [
+			{
+				"question_to_evaluate": [10, 11],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 4
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			},
+			{
+				"question_to_evaluate": 11,
+				"condition": {
+					"type": "user_attribute",
+					"attribute": "age",
+					"operator": "<",
+					"value": 24
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display"
+			}
+		],
+
+		"histrionic_personality_disorder_test": [
+			{
+				"question_to_evaluate": 10,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 5
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"histrionic_personality_test": [
+			{
+				"question_to_evaluate": 10,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 5
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"antisocial_personality_test": [
+			{
+				"question_to_evaluate": 2,
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 3
+			},
+			{
+				"question_to_evaluate": [3, 4],
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 5
+			},
+			{
+				"question_to_evaluate": [10, 11, 12, 13, 14, 15],
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 },
+						{ "question": 10, "operator": ">", "value": 0 },
+						{ "question": 11, "operator": ">", "value": 0 },
+						{ "question": 12, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 3
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"borderline_personality_disorder_test": [
+			{
+				"question_to_evaluate": 2,
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 3
+			},
+			{
+				"question_to_evaluate": 4,
+				"condition": {
+					"question": 3,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 5
+			}
+		],
+
+		"border_personality_test": [
+			{
+				"question_to_evaluate": 2,
+				"condition": {
+					"question": 1,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 3
+			},
+			{
+				"question_to_evaluate": 4,
+				"condition": {
+					"question": 3,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "skip",
+				"action_if_false": "display",
+				"next_if_skip": 5
+			}
+		],
+
+		"narcissistic_personality_disorder_test": [
+			{
+				"question_to_evaluate": 14,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 },
+						{ "question": 10, "operator": ">", "value": 0 },
+						{ "question": 11, "operator": ">", "value": 0 },
+						{ "question": 12, "operator": ">", "value": 0 },
+						{ "question": 13, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 5
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"narcissistic_personality_test": [
+			{
+				"question_to_evaluate": 14,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 },
+						{ "question": 9, "operator": ">", "value": 0 },
+						{ "question": 10, "operator": ">", "value": 0 },
+						{ "question": 11, "operator": ">", "value": 0 },
+						{ "question": 12, "operator": ">", "value": 0 },
+						{ "question": 13, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 5
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"obsessive_compulsive_personality_test": [
+			{
+				"question_to_evaluate": 9,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 4
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"dependent_personality_disorder": [
+			{
+				"question_to_evaluate": 9,
+				"condition": {
+					"type": "count",
+					"rules": [
+						{ "question": 1, "operator": ">", "value": 0 },
+						{ "question": 2, "operator": ">", "value": 0 },
+						{ "question": 3, "operator": ">", "value": 0 },
+						{ "question": 4, "operator": ">", "value": 0 },
+						{ "question": 5, "operator": ">", "value": 0 },
+						{ "question": 6, "operator": ">", "value": 0 },
+						{ "question": 7, "operator": ">", "value": 0 },
+						{ "question": 8, "operator": ">", "value": 0 }
+					],
+					"count_operator": ">=",
+					"threshold": 5
+				},
+				"action_if_true": "display",
+				"action_if_false": "skip"
+			}
+		],
+
+		"depression_test": [
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"type": "and",
+					"rules": [
+						{ "question": 1, "operator": "==", "value": 0 },
+						{ "question": 2, "operator": "==", "value": 0 },
+						{ "question": 3, "operator": "==", "value": 0 }
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": [
+					11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+					33, 34
+				],
+				"condition": {
+					"type": "and",
+					"rules": [
+						{
+							"type": "or",
+							"rules": [
+								{ "question": 1, "operator": ">", "value": 0 },
+								{ "question": 2, "operator": ">", "value": 0 }
+							]
+						},
+						{
+							"type": "count",
+							"rules": [
+								{ "question": 1, "operator": ">", "value": 0 },
+								{ "question": 2, "operator": ">", "value": 0 },
+								{ "question": 4, "operator": ">", "value": 0 },
+								{ "question": 5, "operator": ">", "value": 0 },
+								{ "question": 6, "operator": ">", "value": 0 },
+								{ "question": 7, "operator": ">", "value": 0 },
+								{ "question": 8, "operator": ">", "value": 0 },
+								{ "question": 9, "operator": ">", "value": 0 },
+								{ "question": 10, "operator": ">", "value": 0 },
+								{ "question": 11, "operator": ">", "value": 0 }
+							],
+							"count_operator": "<",
+							"threshold": 5
+						}
+					]
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			},
+			{
+				"question_to_evaluate": "all",
+				"condition": {
+					"question": 30,
+					"operator": "==",
+					"value": 0
+				},
+				"action_if_true": "exit_test",
+				"action_if_false": "continue"
+			}
+		]
+	}
+}

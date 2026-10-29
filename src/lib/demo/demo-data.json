@@ -1,0 +1,668 @@
+{
+	"_readme": "Synthetic demo data. Every person, email and note here is fictional. Dates are relative (days before the seed runs) so the dashboard always looks current. Answer 'profile' picks how high scale answers lean: severe | moderate | mild | minimal. 'answered' is the fraction of questions answered for in_progress assignments.",
+	"admins": [
+		{
+			"email": "director@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Dr. Maya Chen",
+			"gender": "She",
+			"isDirector": true
+		},
+		{
+			"email": "staff@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Daniel Okafor",
+			"gender": "He",
+			"isDirector": false
+		}
+	],
+	"patients": [
+		{
+			"email": "patient@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Alex Morgan",
+			"gender": "They",
+			"phoneNumber": "416-555-0101",
+			"preferredCommunication": "Email",
+			"preferredLanguage": "en",
+			"fileMakerId": "DEMO-1001",
+			"intakeBy": "director@example.com",
+			"intakeNote": "Self-referred. Reports low mood and worry over the past few months. Demo account for the patient walkthrough.",
+			"createdDaysAgo": 1,
+			"tosAccepted": false,
+			"assignments": [
+				{
+					"test": "depression_test",
+					"assignedDaysAgo": 1,
+					"progress": "not_started"
+				},
+				{
+					"test": "generalized_anxiety_test",
+					"assignedDaysAgo": 1,
+					"progress": "not_started"
+				},
+				{
+					"test": "social_anxiety_test",
+					"assignedDaysAgo": 1,
+					"progress": "not_started"
+				}
+			]
+		},
+		{
+			"email": "jordan.lee@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Jordan Lee",
+			"gender": "He",
+			"phoneNumber": "416-555-0102",
+			"preferredCommunication": "Both",
+			"preferredLanguage": "en",
+			"fileMakerId": "DEMO-1002",
+			"intakeBy": "staff@example.com",
+			"intakeNote": "Referred by family physician for assessment of mood and sleep.",
+			"createdDaysAgo": 9,
+			"tosAccepted": true,
+			"notes": [
+				{
+					"by": "staff@example.com",
+					"note": "Called to confirm the interview link arrived.",
+					"daysAgo": 8
+				}
+			],
+			"assignments": [
+				{
+					"test": "depression_test",
+					"assignedDaysAgo": 9,
+					"progress": "completed",
+					"profile": "moderate",
+					"completedDaysAgo": 6,
+					"answers": {
+						"q1": "2",
+						"q2": "2",
+						"q3": "2",
+						"q4": "3",
+						"q5": "2",
+						"q6": "2",
+						"q7": "2",
+						"q8": "0",
+						"q9": "2",
+						"q10": "2",
+						"q11": "2",
+						"q12": "1",
+						"q13": "0",
+						"q14": "2",
+						"q15": "1",
+						"q16": "2",
+						"q17": "3",
+						"q18": "1",
+						"q19": "3",
+						"q20": "0",
+						"q21": "3",
+						"q22": "2",
+						"q23": "1",
+						"q24": "2",
+						"q25": "3",
+						"q26": "2",
+						"q27": "2",
+						"q28": "2",
+						"q29": "2",
+						"q30": "0",
+						"q31": "1",
+						"q32": "1",
+						"q33": "2",
+						"q34": "2"
+					}
+				},
+				{
+					"test": "manic_test",
+					"assignedDaysAgo": 9,
+					"progress": "completed",
+					"profile": "minimal",
+					"completedDaysAgo": 7,
+					"answers": {
+						"q1": "1",
+						"q2": "0",
+						"q3": "0",
+						"q4": "0",
+						"q5": 0,
+						"q6": 0,
+						"q7": "0",
+						"q8": "1",
+						"q9": "0",
+						"q10": "0",
+						"q11": "0",
+						"q12": "0",
+						"q13": "0",
+						"q14": "1",
+						"q15": "0",
+						"q16": "0",
+						"q17": "0",
+						"q18": "1",
+						"q19": "1",
+						"q20": "1"
+					}
+				},
+				{
+					"test": "generalized_anxiety_test",
+					"assignedDaysAgo": 9,
+					"progress": "in_progress",
+					"profile": "moderate",
+					"answered": 0.6,
+					"answers": {
+						"q1": "0",
+						"q2": "1",
+						"q3": "2",
+						"q4": "1",
+						"q5": "2",
+						"q6": "2"
+					}
+				},
+				{
+					"test": "sleep_disorder_test",
+					"assignedDaysAgo": 9,
+					"progress": "not_started"
+				}
+			]
+		},
+		{
+			"email": "priya.sharma@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Priya Sharma",
+			"gender": "She",
+			"phoneNumber": "647-555-0103",
+			"preferredCommunication": "Email",
+			"preferredLanguage": "en",
+			"fileMakerId": "DEMO-1003",
+			"intakeBy": "director@example.com",
+			"intakeNote": "Ongoing low mood, reduced energy and panic episodes at work.",
+			"createdDaysAgo": 21,
+			"tosAccepted": true,
+			"notes": [
+				{
+					"by": "director@example.com",
+					"note": "All interviews complete. Book a feedback session.",
+					"daysAgo": 3
+				}
+			],
+			"assignments": [
+				{
+					"test": "depression_test",
+					"assignedDaysAgo": 21,
+					"progress": "completed",
+					"profile": "severe",
+					"completedDaysAgo": 18,
+					"answers": {
+						"q1": "3",
+						"q2": "3",
+						"q3": "2",
+						"q4": "3",
+						"q5": "3",
+						"q6": "0",
+						"q7": "2",
+						"q8": "2",
+						"q9": "2",
+						"q10": "3",
+						"q11": "0",
+						"q12": "0",
+						"q13": "3",
+						"q14": "0",
+						"q15": "0",
+						"q16": "3",
+						"q17": "0",
+						"q18": "0",
+						"q19": "0",
+						"q20": "0",
+						"q21": "4",
+						"q22": "0",
+						"q23": "0",
+						"q24": "3",
+						"q25": "3",
+						"q26": "2",
+						"q27": "0",
+						"q28": "2",
+						"q29": "0",
+						"q30": "0",
+						"q31": "3",
+						"q32": "3",
+						"q33": "0",
+						"q34": "2"
+					}
+				},
+				{
+					"test": "manic_test",
+					"assignedDaysAgo": 21,
+					"progress": "completed",
+					"profile": "minimal",
+					"completedDaysAgo": 17,
+					"answers": {
+						"q1": "0",
+						"q2": "0",
+						"q3": "1",
+						"q4": "0",
+						"q5": 0,
+						"q6": 0,
+						"q7": "0",
+						"q8": "0",
+						"q9": "1",
+						"q10": "0",
+						"q11": "0",
+						"q12": "0",
+						"q13": "1",
+						"q14": "1",
+						"q15": "0",
+						"q16": "0",
+						"q17": "0",
+						"q18": "0",
+						"q19": "1",
+						"q20": "0"
+					}
+				},
+				{
+					"test": "generalized_anxiety_test",
+					"assignedDaysAgo": 21,
+					"progress": "completed",
+					"profile": "moderate",
+					"completedDaysAgo": 15,
+					"answers": {
+						"q1": "2",
+						"q2": "2",
+						"q3": "3",
+						"q4": "3",
+						"q5": "3",
+						"q6": "3",
+						"q7": "2",
+						"q8": "1",
+						"q9": "2",
+						"q10": "4"
+					}
+				},
+				{
+					"test": "panic_test",
+					"assignedDaysAgo": 21,
+					"progress": "completed",
+					"profile": "mild",
+					"completedDaysAgo": 4,
+					"answers": {
+						"q1": "0",
+						"q2": "0",
+						"q3": "0",
+						"q4": "1",
+						"q5": "2",
+						"q6": "2",
+						"q7": "1",
+						"q8": "1",
+						"q9": "0",
+						"q10": "1",
+						"q11": "0",
+						"q12": "0",
+						"q13": "0",
+						"q14": "2",
+						"q15": 0,
+						"q16": 0,
+						"q17": "3"
+					}
+				}
+			]
+		},
+		{
+			"email": "samuel.rivera@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Samuel Rivera",
+			"gender": "He",
+			"phoneNumber": "905-555-0104",
+			"preferredCommunication": "Phone",
+			"preferredLanguage": "en",
+			"fileMakerId": "DEMO-1004",
+			"intakeBy": "staff@example.com",
+			"intakeNote": "Avoids social situations; university counselling referral.",
+			"createdDaysAgo": 35,
+			"tosAccepted": true,
+			"assignments": [
+				{
+					"test": "social_anxiety_test",
+					"assignedDaysAgo": 35,
+					"progress": "downloaded",
+					"profile": "severe",
+					"completedDaysAgo": 30,
+					"downloadedDaysAgo": 28,
+					"answers": {
+						"q1": "2",
+						"q2": "3",
+						"q3": "3",
+						"q4": "3",
+						"q5": "2",
+						"q6": "3",
+						"q7": 1,
+						"q8": 0
+					}
+				},
+				{
+					"test": "generalized_anxiety_test",
+					"assignedDaysAgo": 35,
+					"progress": "downloaded",
+					"profile": "moderate",
+					"completedDaysAgo": 29,
+					"downloadedDaysAgo": 28,
+					"answers": {
+						"q1": "2",
+						"q2": "2",
+						"q3": "1",
+						"q4": "2",
+						"q5": "2",
+						"q6": "2",
+						"q7": "2",
+						"q8": "2",
+						"q9": "1",
+						"q10": "3"
+					}
+				}
+			]
+		},
+		{
+			"email": "taylor.brooks@example.com",
+			"password": null,
+			"fullName": "Taylor Brooks",
+			"gender": "They",
+			"phoneNumber": "416-555-0105",
+			"preferredCommunication": "Email",
+			"preferredLanguage": "en",
+			"fileMakerId": "DEMO-1005",
+			"intakeBy": "staff@example.com",
+			"intakeNote": "New intake today. Invitation sent; account not activated yet.",
+			"createdDaysAgo": 0,
+			"tosAccepted": false,
+			"assignments": [
+				{
+					"test": "depression_test",
+					"assignedDaysAgo": 0,
+					"progress": "not_started"
+				},
+				{
+					"test": "panic_test",
+					"assignedDaysAgo": 0,
+					"progress": "not_started"
+				}
+			]
+		},
+		{
+			"email": "chris.nguyen@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Chris Nguyen",
+			"gender": "He",
+			"phoneNumber": "647-555-0106",
+			"preferredCommunication": "Email",
+			"preferredLanguage": "en",
+			"fileMakerId": "DEMO-1006",
+			"intakeBy": "director@example.com",
+			"intakeNote": "Started the depression interview, then stopped responding to follow-ups.",
+			"createdDaysAgo": 60,
+			"tosAccepted": true,
+			"inactive": true,
+			"lastActivityDaysAgo": 41,
+			"notes": [
+				{
+					"by": "staff@example.com",
+					"note": "Left voicemail, no response.",
+					"daysAgo": 30
+				}
+			],
+			"assignments": [
+				{
+					"test": "depression_test",
+					"assignedDaysAgo": 60,
+					"progress": "in_progress",
+					"profile": "mild",
+					"answered": 0.3,
+					"answers": {
+						"q1": "0",
+						"q2": "0",
+						"q3": "0",
+						"q4": "0",
+						"q5": "1",
+						"q6": "0",
+						"q7": "0",
+						"q8": "0",
+						"q9": "1",
+						"q10": "0"
+					}
+				}
+			]
+		},
+		{
+			"email": "fatima.haddad@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Fatima Haddad",
+			"gender": "She",
+			"phoneNumber": "514-555-0107",
+			"preferredCommunication": "Both",
+			"preferredLanguage": "fr",
+			"fileMakerId": "DEMO-1007",
+			"intakeBy": "director@example.com",
+			"intakeNote": "French-speaking patient. Long-standing low mood and poor sleep.",
+			"createdDaysAgo": 12,
+			"tosAccepted": true,
+			"assignments": [
+				{
+					"test": "persistent_depressive_test",
+					"assignedDaysAgo": 12,
+					"progress": "completed",
+					"profile": "moderate",
+					"completedDaysAgo": 10,
+					"answers": {
+						"q1": "2",
+						"q2": "2",
+						"q3": "3",
+						"q4": "2",
+						"q5": "3",
+						"q6": "2",
+						"q7": "2",
+						"q8": 1,
+						"q9": 1
+					}
+				},
+				{
+					"test": "sleep_disorder_test",
+					"assignedDaysAgo": 12,
+					"progress": "in_progress",
+					"profile": "severe",
+					"answered": 0.5,
+					"answers": {
+						"q1": "0",
+						"q2": "2",
+						"q3": "0",
+						"q4": "0",
+						"q5": "3",
+						"q6": "0",
+						"q7": "2",
+						"q8": "0"
+					}
+				}
+			]
+		},
+		{
+			"email": "noah.williams@example.com",
+			"password": "PsyMatchDemo!",
+			"fullName": "Noah Williams",
+			"gender": "He",
+			"phoneNumber": "416-555-0108",
+			"preferredCommunication": "Email",
+			"preferredLanguage": "en",
+			"fileMakerId": "DEMO-1008",
+			"intakeBy": "staff@example.com",
+			"intakeNote": "Recurrent panic attacks and difficulty sleeping.",
+			"createdDaysAgo": 16,
+			"tosAccepted": true,
+			"assignments": [
+				{
+					"test": "panic_test",
+					"assignedDaysAgo": 16,
+					"progress": "completed",
+					"profile": "severe",
+					"completedDaysAgo": 12,
+					"answers": {
+						"q1": "2",
+						"q2": "0",
+						"q3": "3",
+						"q4": "0",
+						"q5": "0",
+						"q6": "2",
+						"q7": "0",
+						"q8": "3",
+						"q9": "3",
+						"q10": "2",
+						"q11": "0",
+						"q12": "2",
+						"q13": "3",
+						"q14": "2",
+						"q15": 1,
+						"q16": 1,
+						"q17": "1"
+					}
+				},
+				{
+					"test": "manic_test",
+					"assignedDaysAgo": 16,
+					"progress": "completed",
+					"profile": "minimal",
+					"completedDaysAgo": 3,
+					"answers": {
+						"q1": "0",
+						"q2": "0",
+						"q3": "1",
+						"q4": "0",
+						"q5": 0,
+						"q6": 0,
+						"q7": "0",
+						"q8": "0",
+						"q9": "1",
+						"q10": "0",
+						"q11": "0",
+						"q12": "0",
+						"q13": "0",
+						"q14": "0",
+						"q15": "0",
+						"q16": "0",
+						"q17": "0",
+						"q18": "0",
+						"q19": "1",
+						"q20": "1"
+					}
+				},
+				{
+					"test": "sleep_disorder_test",
+					"assignedDaysAgo": 16,
+					"progress": "completed",
+					"profile": "moderate",
+					"completedDaysAgo": 11,
+					"answers": {
+						"q1": "0",
+						"q2": "2",
+						"q3": "2",
+						"q4": "3",
+						"q5": "3",
+						"q6": "0",
+						"q7": "2",
+						"q8": "0",
+						"q9": "2",
+						"q10": "2",
+						"q11": "0",
+						"q12": "0",
+						"q13": "3",
+						"q14": "1",
+						"q15": 0
+					}
+				},
+				{
+					"test": "depression_test",
+					"assignedDaysAgo": 16,
+					"progress": "completed",
+					"profile": "mild",
+					"completedDaysAgo": 2,
+					"answers": {
+						"q1": "1",
+						"q2": "1",
+						"q3": "0",
+						"q4": "0",
+						"q5": "1",
+						"q6": "0",
+						"q7": "0",
+						"q8": "0",
+						"q9": "0",
+						"q10": "0",
+						"q11": "0",
+						"q12": "2",
+						"q13": "1",
+						"q14": "0",
+						"q15": "1",
+						"q16": "0",
+						"q17": "0",
+						"q18": "1",
+						"q19": "0",
+						"q20": "0",
+						"q21": "0",
+						"q22": "2",
+						"q23": "2",
+						"q24": "1",
+						"q25": "0",
+						"q26": "0",
+						"q27": "0",
+						"q28": "1",
+						"q29": "1",
+						"q30": "1",
+						"q31": "0",
+						"q32": "0",
+						"q33": "0",
+						"q34": "0"
+					}
+				}
+			]
+		}
+	],
+	"sets": [
+		{
+			"set_name": "Mood screening",
+			"status": "active",
+			"tests": [
+				"depression_test",
+				"persistent_depressive_test",
+				"manic_test"
+			]
+		},
+		{
+			"set_name": "Anxiety screening",
+			"status": "active",
+			"tests": [
+				"generalized_anxiety_test",
+				"social_anxiety_test",
+				"panic_test"
+			]
+		},
+		{
+			"set_name": "Full intake",
+			"status": "active",
+			"tests": [
+				"depression_test",
+				"manic_test",
+				"generalized_anxiety_test",
+				"panic_test",
+				"social_anxiety_test",
+				"sleep_disorder_test"
+			]
+		},
+		{
+			"set_name": "Sleep (pilot)",
+			"status": "disabled",
+			"tests": [
+				"sleep_disorder_test"
+			]
+		}
+	],
+	"questionnaireOrder": [
+		"depression_test",
+		"persistent_depressive_test",
+		"manic_test",
+		"generalized_anxiety_test",
+		"panic_test",
+		"social_anxiety_test",
+		"sleep_disorder_test"
+	]
+}

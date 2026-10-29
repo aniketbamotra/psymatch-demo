@@ -1,0 +1,1352 @@
+{
+    "Auth": {
+        "Layout": {
+            "image_alt": "Images de couverture"
+        },
+        "Login": {
+            "email_label": "Courriel",
+            "email_placeholder": "johndoe@gmail.com",
+            "password_label": "Mot de passe",
+            "remember_me": "Se souvenir de moi",
+            "forgot_password": "Mot de passe oublié ?",
+            "recaptcha_error": "La vérification reCAPTCHA a échoué. Veuillez réessayer.",
+            "submit_button": "Se connecter",
+            "submit_loading": "Connexion en cours…",
+            "title": "Bienvenue chez Psymatch Interviewing",
+            "admin_title": "Bienvenue dans Psymatch Admin",
+            "admin_link": "Pour les administrateurs →",
+            "error": "Identifiants non valides",
+            "error_generic": "Échec de la connexion. Veuillez réessayer.",
+            "error_unexpected": "Une erreur s'est produite. Veuillez réessayer.",
+            "failed_redirect": "Échec de la redirection. Veuillez réessayer.",
+            "password_placeholder": "******************"
+        },
+        "Forget": {
+            "email_label": "Courriel",
+            "email_placeholder": "johndoe@gmail.com",
+            "recaptcha_error": "La vérification reCAPTCHA a échoué. Veuillez réessayer.",
+            "back_to_login": "Retour à la connexion",
+            "submit_button": "Obtenir un lien de réinitialisation",
+            "submit_loading": "Envoi du lien…",
+            "submit_success": "Lien envoyé !",
+            "title": "Mot de passe oublié ?",
+            "description": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+            "success_title": "Vérifiez votre messagerie électronique",
+            "success_message": "Nous vous avons envoyé un lien pour réinitialiser votre mot de passe. Le lien expirera dans 1 heure.",
+            "error_title": "E-mail manquant",
+            "error_message": "Veuillez saisir votre adresse e-mail associée à psymatch"
+        },
+        "ResetPassword": {
+            "title_reset": "Réinitialiser votre mot de passe",
+            "title_create": "Créez votre mot de passe",
+            "title_token_expired": "Jeton expiré",
+            "title_token_regenerated": "Jeton régénéré",
+            "welcome_message": "Bienvenue sur PsyMatch ! Veuillez créer votre mot de passe pour commencer.",
+            "token_expired_message": "Votre lien de réinitialisation de mot de passe a expiré. Souhaitez-vous en générer un nouveau ?",
+            "token_regenerated_message": "Un nouveau lien de réinitialisation a été envoyé à",
+            "generate_link_button": "Générer un nouveau lien de réinitialisation",
+            "generating_link": "Génération d'un nouveau lien…",
+            "name_label": "Nom",
+            "email_label": "Courriel",
+            "new_password_label": "Nouveau mot de passe",
+            "new_password_placeholder": "Entrez votre nouveau mot de passe",
+            "confirm_password_label": "Confirmer le mot de passe",
+            "confirm_password_placeholder": "Confirmez votre nouveau mot de passe",
+            "submit_reset": "Réinitialiser le mot de passe",
+            "submit_create": "Créer un mot de passe",
+            "submitting": "Définition du mot de passe…",
+            "success_message": "Le mot de passe a été défini. Redirection vers la page de connexion…",
+            "error_fetch_user": "Erreur lors de la récupération des informations utilisateur",
+            "error_regenerate": "Erreur lors de la régénération du jeton",
+            "error_process": "Erreur lors du traitement de la demande",
+            "error_fill_all": "Veuillez remplir tous les champs",
+            "error_mismatch": "Les mots de passe ne correspondent pas",
+            "error_token_invalid": "Le jeton de réinitialisation du mot de passe n'est pas valide ou a expiré",
+            "error_reset": "Erreur lors de la réinitialisation du mot de passe",
+            "password_strength_strong": "Fort",
+            "password_strength_enter": "Entrez le mot de passe",
+            "recaptcha_error": "La vérification reCAPTCHA a échoué. Veuillez réessayer."
+        }
+    },
+    "Nav": {
+        "home": "Accueil",
+        "updates": "mises à jour",
+        "settings": "Paramètres",
+        "logout": "Déconnexion",
+        "patient_list": "Liste des patients",
+        "patient_intake": "Admission des patients",
+        "interview_admin": "Entretien Admin",
+        "reports": "Rapports",
+        "quick_actions": "Actions rapides",
+        "director_mode": "Mode Directeur",
+        "view_admins": "Afficher les administrateurs",
+        "add_admin": "Ajouter un administrateur",
+        "reorder_interviews": "Réorganiser les entretiens",
+        "sets": "Ensembles",
+        "legals": "Juridique"
+    },
+    "Patient": {
+        "Home": {
+            "access_denied": "Accès refusé. Vous devez être un patient pour consulter cette page.",
+            "load_tests_error": "Échec du chargement des tests alloués. Veuillez réessayer plus tard.",
+            "load_user_error": "Échec du chargement des données utilisateur. Veuillez vous reconnecter.",
+            "unexpected_error": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard."
+        }
+    },
+    "Admin": {
+        "Home": {
+            "select_patient_error": "Veuillez sélectionner un patient",
+            "allocate_success": "Tests attribués avec succès",
+            "allocate_error": "Échec de l'allocation des tests",
+            "allocate_unexpected_error": "Une erreur s'est produite lors de l'attribution des tests",
+            "active_patients": "Patients actifs",
+            "loading": "Chargement…"
+        },
+        "ViewAdmins": {
+            "confirm_remove": "Êtes-vous sûr de vouloir supprimer cet administrateur ?",
+            "title": "Gestion administrative",
+            "search_placeholder": "Rechercher des administrateurs…",
+            "table": {
+                "name": "Nom",
+                "email": "Courriel",
+                "role": "Rôle",
+                "remove": "Supprimer"
+            },
+            "role": {
+                "director": "Directeur",
+                "admin": "Admin"
+            }
+        },
+        "ViewPatients": {
+            "confirm_remove": "Êtes-vous sûr de vouloir supprimer ce patient ? Cela supprimera également tous ses suivis, réponses et affectations.",
+            "title": "Liste des patients",
+            "search_placeholder": "Rechercher des patients…",
+            "table": {
+                "name": "Nom",
+                "email": "Courriel",
+                "date_of_reg": "Date d'enregistrement",
+                "last_activity": "Dernière activité",
+                "phone": "Numéro de téléphone",
+                "inspect": "Inspecter",
+                "not_provided": "Non fourni",
+                "view": "Afficher"
+            }
+        },
+        "PatientDetails": {
+            "remove_test_confirm": "Êtes-vous sûr de vouloir supprimer ce test ?",
+            "summary_error": "Une erreur s'est produite, veuillez réessayer de générer le rapport récapitulatif",
+            "field": {
+                "name": "Nom",
+                "email": "Courriel",
+                "phone": "Numéro de téléphone",
+                "preferred_comms": "Communications préférées",
+                "preferred_comms_placeholder": "Appel, SMS, etc.",
+                "date_of_reg": "Date d'enregistrement",
+                "last_activity": "Dernière activité"
+            }
+        },
+        "RearrangeInterviews": {
+            "title": "Réorganiser les entretiens",
+            "loading": "Chargement des questionnaires…",
+            "error_load": "Échec du chargement des questionnaires",
+            "confirm_changes": "Confirmer les modifications",
+            "changes_saved": "Modifications enregistrées !",
+            "cancel_changes": "Annuler les modifications"
+        },
+        "Sets": {
+            "delete_button": "Supprimer",
+            "modal": {
+                "error_generic": "Échec de l'enregistrement de la sélection. Veuillez réessayer.",
+                "interviews_label": "entretien",
+                "cancel_button": "annuler",
+                "saving_button": "sauvegarder",
+                "name_placeholder": "Entrez le nom de l'ensemble",
+                "edit_title": "Modifier l'ensemble",
+                "error_duplicate": "Un ensemble portant ce nom existe déjà",
+                "create_title": "Créer un nouvel ensemble",
+                "status_label": "Statut",
+                "error_name_required": "Le nom de l'ensemble est obligatoire",
+                "interviews_placeholder": "Une sélection d'entretiens…",
+                "name_label": "Nom de l'ensemble",
+                "save_button": "Enregistrer le jeu"
+            },
+            "title": "Ensembles",
+            "create_button": "Créer un nouvel ensemble",
+            "table": {
+                "sent": "Envoyé",
+                "status": "Statut",
+                "interviews": "Entretiens",
+                "set_names": "Noms des ensembles"
+            },
+            "status": {
+                "disabled": "désactiver",
+                "active": "Actif"
+            },
+            "search_placeholder": "Ensembles de recherche…",
+            "no_sets": "Aucun ensemble trouvé",
+            "no_selection": "Veuillez sélectionner au moins un ensemble",
+            "delete_success": "Le ou les ensembles ont été supprimés avec succès",
+            "change_status_button": "Modifier le statut",
+            "subtitle": "Gérer les ensembles de tests envoyés simultanément aux clients",
+            "status_updated": "Le statut a été mis à jour avec succès",
+            "confirm_status_change": "Êtes-vous sûr de vouloir modifier le statut du ou des ensembles sélectionnés ?",
+            "error_load": "Échec du chargement des ensembles",
+            "confirm_delete": "Êtes-vous sûr de vouloir supprimer le ou les ensembles sélectionnés ?",
+            "loading": "Chargement des ensembles…"
+        },
+        "PatientProfile": {
+            "error_download": "Erreur lors du téléchargement du rapport",
+            "success_note": "Note ajoutée avec succès !",
+            "section": {
+                "info": "Informations destinées aux patients",
+                "other_questionnaire": "Autres questionnaires",
+                "notes": "Remarques",
+                "intake_questionnaire": "Questionnaire d'admission"
+            },
+            "button": {
+                "remove": "Supprimer",
+                "add_note": "Ajouter une note",
+                "send_interviews": "Envoyer les entretiens",
+                "print": "Imprimer",
+                "download_reports": "Télécharger les rapports",
+                "confirm": "Confirmer les modifications"
+            },
+            "error_generic": "Une erreur s'est produite",
+            "field": {
+                "last_activity": "Dernière activité",
+                "preferred_comms": "Communications préférées",
+                "phone": "Numéro de téléphone",
+                "date_of_reg": "Date d'enregistrement",
+                "name": "Nom",
+                "email": "Courriel",
+                "preferred_language": "Langue préférée"
+            },
+            "confirm_remove_test": "Êtes-vous sûr de vouloir supprimer ce test?",
+            "tabs": {
+                "tests": "Tests",
+                "profile": "Profil"
+            },
+            "note": {
+                "intake_by": "Note d'admission par",
+                "placeholder": "Ajouter une note..."
+            },
+            "error_generate": "Erreur lors de la génération du rapport",
+            "success_changes": "Modifications enregistrées avec succès !",
+            "title": "Profil du patient",
+            "error_status": "État du rapport de vérification des erreurs"
+        }
+    },
+    "Questionnaire": {
+        "Card": {
+            "complete_interview_prompt": "Veuillez répondre aux questions suivantes",
+            "assigned_on": "Attribué le",
+            "questions": "Questions",
+            "loading": "Chargement…",
+            "continue": "Continuer",
+            "completed": "Terminé",
+            "start": "Commencer le test",
+            "locked": "Verrouillé"
+        },
+        "About": {
+            "save_and_exit": "Enregistrer et quitter",
+            "autoplay": "Lecture automatique",
+            "welcome_title": "Bienvenue au Centre de thérapie cognitive d'Ottawa (OCCT).",
+            "welcome_text": "Chez OCCT, nous nous engageons à vous offrir l'expérience thérapeutique la plus efficace et la plus efficiente possible. Afin de vous proposer la solution la mieux adaptée, nous examinerons attentivement vos besoins et vous mettrons en relation avec l'un de nos psychologues hautement expérimentés, spécialisé dans le domaine qui vous concerne.",
+            "doctor_name": "Je suis le Dr Jane Blouin,",
+            "doctor_bio": "Dre Jane Blouin. J'ai commencé ma carrière en tant que psychologue en menant des recherches à l'Institut national de la santé mentale à Bethesda, dans le Maryland. À mon retour au Canada il y a plus de 35 ans, j'ai rejoint le département de psychiatrie de l'Université d'Ottawa, où j'ai développé des programmes cliniques innovants tout en menant des recherches et en enseignant. Au cours des 30 dernières années, j'ai occupé le poste de directrice du Centre de thérapie cognitive, consacrant mon temps à pratiquer dand le domaine et à faire progresser la thérapie cognitive.",
+            "quick_guide_title": "Guide rapide",
+            "quick_guide_text": "Guide rapide ; Nous allons maintenant commencer par des questions sur votre parcours. Dans le coin supérieur droit de votre écran, vous remarquerez une petite icône représentant un haut-parleur. Elle vous permet d'activer ou de désactiver la voix du Dr Blouin, selon ce qui vous convient le mieux. À côté, un petit bouton vous permet de choisir si l'audio doit être lu automatiquement pour chaque question. Vous verrez également un message « Quitter et enregistrer ». Cela vous permet de faire des pauses pendant les entretiens, et le système enregistrera vos réponses afin que vous puissiez revenir et reprendre là où vous vous êtes arrêté. Prenez votre temps, c'est vous qui contrôlez !",
+            "back": "Retour",
+            "next": "Suivant"
+        },
+        "Navigation": {
+            "back": "Retour",
+            "next": "Suivant",
+            "loading": "Chargement..."
+        },
+        "Fields": {
+            "Commons": {
+                "yes": "Oui",
+                "no": "Non",
+                "details": "Détails",
+                "unit": "Unité"
+            },
+            "Name": {
+                "first_name_label": "Prénom",
+                "first_name_placeholder": "Prénom",
+                "middle_name_label": "Deuxième prénom",
+                "middle_name_placeholder": "Deuxième prénom (facultatif)",
+                "last_name_label": "Nom de famille",
+                "last_name_placeholder": "Nom de famille",
+                "validation_error": "Seuls les lettres, les espaces, les traits d'union et les apostrophes sont autorisés",
+                "required_error": "est requis"
+            },
+            "Address": {
+                "line1_label": "Ligne d'adresse 1",
+                "line1_placeholder": "Adresse de la rue",
+                "line2_label": "Ligne d'adresse 2",
+                "line2_placeholder": "Appartement, suite, etc. (facultatif)",
+                "city_label": "Ville",
+                "city_placeholder": "Ville",
+                "province_label": "Province",
+                "province_placeholder": "Province",
+                "state_province_label": "État/Province",
+                "state_province_placeholder": "État/Province",
+                "postal_code_label": "Code postal",
+                "postal_code_placeholder": "A1A 1A1",
+                "postal_zip_label": "Code postal/ZIP",
+                "postal_zip_placeholder": "Code postal/ZIP",
+                "country_label": "Pays",
+                "country_placeholder": "Pays",
+                "city_validation_error": "Seuls les lettres, les espaces, les traits d'union et les apostrophes sont autorisés",
+                "postal_code_validation_error": "Format de code postal invalide (ex. A1A 1A1)",
+                "zip_code_validation_error": "Code postal/ZIP invalide"
+            },
+            "Contact": {
+                "name_label": "Nom du contact",
+                "name_placeholder": "Nom complet",
+                "relationship_label": "Relation",
+                "relationship_placeholder": "ex. Conjoint, Parent, Ami",
+                "phone_label": "Numéro de téléphone",
+                "email_label": "Courriel",
+                "email_placeholder": "email@example.com",
+                "notes_label": "Notes supplémentaires",
+                "notes_placeholder": "Toute information supplémentaire",
+                "name_validation_error": "Seuls les lettres, les espaces, les traits d'union et les apostrophes sont autorisés",
+                "email_validation_error": "Format d'email invalide"
+            },
+            "Children": {
+                "add_button": "+ Ajouter un enfant",
+                "no_items_message": "Si vous n'avez pas d'enfants, cliquez sur le bouton Soumettre. Sinon, cliquez sur Ajouter un enfant pour ajouter les détails de l'enfant.",
+                "name_label": "Nom",
+                "name_placeholder": "Nom de l'enfant",
+                "gender_label": "Genre",
+                "gender_placeholder": "Sélectionner le genre",
+                "gender_options": {
+                    "male": "Homme",
+                    "female": "Femme",
+                    "non_binary": "Non-binaire",
+                    "prefer_not_to_say": "Préfère ne pas le dire"
+                },
+                "age_label": "Âge",
+                "age_placeholder": "Âge",
+                "details_label": "Détails supplémentaires",
+                "details_placeholder": "Toute information supplémentaire",
+                "name_validation_error": "Seuls les lettres, les espaces, les traits d'union et les apostrophes sont autorisés",
+                "age_validation_error": "L'âge doit être compris entre 0 et 100"
+            },
+            "Medication": {
+                "add_button": "+ Ajouter plus de médicaments",
+                "remove_button": "Supprimer",
+                "no_items_message": "Si vous ne prenez aucun médicament, cliquez sur le bouton Soumettre. Sinon, cliquez sur Ajouter plus de médicaments pour ajouter les détails du médicament.",
+                "name_label": "Nom du médicament",
+                "name_placeholder": "Entrez le nom du médicament",
+                "type_label": "Type/Catégorie",
+                "type_placeholder": "Sélectionner le type",
+                "type_options": {
+                    "prescription": "Ordonnance",
+                    "over_the_counter": "Vente libre",
+                    "supplement": "Complément",
+                    "herbal": "Plante médicinale",
+                    "other": "Autre"
+                },
+                "dosage_label": "Dosage",
+                "dosage_placeholder": "ex. 50mg, 5ml",
+                "frequency_label": "Fréquence",
+                "frequency_placeholder": "À quelle fréquence",
+                "frequency_options": {
+                    "once_daily": "Une fois par jour",
+                    "twice_daily": "Deux fois par jour",
+                    "three_times_daily": "Trois fois par jour",
+                    "four_times_daily": "Quatre fois par jour",
+                    "every_morning": "Chaque matin",
+                    "every_evening": "Chaque soir",
+                    "before_meals": "Avant les repas",
+                    "after_meals": "Après les repas",
+                    "as_needed": "Au besoin",
+                    "other": "Autre"
+                },
+                "doctor_label": "Prescrit par",
+                "doctor_placeholder": "Nom du médecin",
+                "prescribed_for_label": "Prescrit pour",
+                "prescribed_for_placeholder": "Instructions spéciales ou notes",
+                "dosage_validation_error": "Format de dosage invalide (ex. 50mg, 5ml)"
+            },
+            "Career": {
+                "trained_occupation_label": "Quelle profession avez-vous principalement apprise (ou êtes en train d'apprendre)?",
+                "trained_occupation_placeholder": "Entrez votre profession apprise",
+                "current_occupation_label": "Profession actuelle",
+                "current_occupation_placeholder": "Entrez votre profession actuelle",
+                "work_satisfaction_label": "Comment décririez-vous votre satisfaction au travail (école)?",
+                "satisfaction_scale": {
+                    "very_dissatisfied": "Très insatisfait",
+                    "dissatisfied": "Insatisfait",
+                    "neutral": "Neutre",
+                    "satisfied": "Satisfait",
+                    "very_satisfied": "Très satisfait"
+                }
+            },
+            "Caregiver": {
+                "primary_header": "Informations sur le soignant principal",
+                "primary_occupation_label": "Profession du soignant principal / parent pendant l'enfance",
+                "primary_occupation_placeholder": "Entrez la profession",
+                "primary_relationship_label": "Veuillez décrire la personnalité de votre soignant principal et comment vous vous entendiez",
+                "primary_relationship_placeholder": "Décrivez votre relation",
+                "secondary_header": "Informations sur le soignant secondaire",
+                "secondary_occupation_label": "Profession du soignant secondaire (facultatif)",
+                "secondary_occupation_placeholder": "Entrez la profession",
+                "secondary_relationship_label": "Veuillez décrire la personnalité de votre soignant secondaire et comment vous vous entendiez (facultatif)",
+                "secondary_relationship_placeholder": "Décrivez votre relation"
+            },
+            "Phone": {
+                "primary_label": "Numéro de téléphone principal",
+                "other_label": "Autre numéro de téléphone (facultatif)"
+            },
+            "Email": {
+                "primary_label": "Courriel principal",
+                "other_label_1": "Autre courriel 1",
+                "other_label_2": "Autre courriel 2",
+                "placeholder": "email@example.com",
+                "optional_placeholder": "email@example.com (facultatif)",
+                "validation_error": "Format d'email invalide"
+            },
+            "Social": {
+                "describe_label": "Comment décririez-vous vos interactions sociales ?",
+                "describe_placeholder": "Décrivez vos interactions sociales",
+                "close_friends_label": "Nombre d'amis proches",
+                "close_friends_placeholder": "Entrez le nombre",
+                "mid_friends_label": "Nombre de connaissances amicales",
+                "mid_friends_placeholder": "Entrez le nombre",
+                "frequency_label": "Fréquence des rencontres avec des amis",
+                "frequency_placeholder": "À quelle fréquence rencontrez-vous des amis ?"
+            },
+            "Religion": {
+                "religiosity_label": "À quel point êtes-vous religieux ?",
+                "religion_name_label": "Le cas échéant, veuillez indiquer votre appartenance religieuse",
+                "religion_name_placeholder": "Fournir des détails supplémentaires",
+                "options": {
+                    "atheist": "Athée",
+                    "agnostic": "Agnostique",
+                    "not_religious": "Non religieux",
+                    "somewhat_religious": "Plutôt religieux",
+                    "highly_religious": "Très religieux"
+                }
+            },
+            "HeightWeight": {
+                "header": "Entrez votre poids et votre taille",
+                "weight_label": "Poids",
+                "weight_placeholder": "Entrez votre poids",
+                "height_label": "Taille",
+                "height_placeholder": "Entrez votre taille",
+                "feet_label": "Pieds",
+                "feet_placeholder": "Pieds",
+                "inches_label": "Pouces",
+                "inches_placeholder": "Pouces",
+                "unit_label": "Unité"
+            }
+        },
+        "Config": {
+            "AdultBio": {
+                "gender": {
+                    "options": [
+                        "Homme",
+                        "Femme",
+                        "Trans",
+                        "Non binaire"
+                    ]
+                },
+                "pronouns": {
+                    "options": [
+                        "Masculin (il)",
+                        "Féminin (elle)",
+                        "Non-binaire (iel/ielle)",
+                        "autre"
+                    ]
+                },
+                "insurance": {
+                    "placeholder": "Assureur et numéro de police"
+                },
+                "referred_by": {
+                    "options": [
+                        "Self, tiré du site Web de CCT",
+                        "Self par VAC/GRC",
+                        "Provenant d'un site web externe (RateMD, etc.)",
+                        "Recommandation d'un ami/d'un membre de la famille",
+                        "Soi-même, sur recommandation d'un médecin",
+                        "Recommandation du médecin (envoyée par fax)"
+                    ]
+                },
+                "education_level": {
+                    "options": [
+                        "Lycée",
+                        "Quelques années d'études supérieures",
+                        "Diplôme d'associé",
+                        "Licence",
+                        "Maîtrise",
+                        "Doctorat",
+                        "Autre"
+                    ]
+                },
+                "work_hours": {
+                    "options": [
+                        "À temps plein",
+                        "Temps partiel",
+                        "Actuellement sans emploi",
+                        "À l'école"
+                    ]
+                },
+                "marital_status": {
+                    "options": [
+                        "Célibataire",
+                        "Marié",
+                        "Divorcé",
+                        "Séparé",
+                        "Veuve",
+                        "Autre"
+                    ]
+                },
+                "spouse_occupation": {
+                    "placeholder": "Emploi/fonction actuel(le) du conjoint/partenaire"
+                },
+                "family_doctor": {
+                    "placeholder": "Nom du médecin de famille"
+                },
+                "prescribed_for": {
+                    "placeholder": "Conditions pour lesquelles les médicaments sont prescrits"
+                },
+                "major_illness_history": {
+                    "placeholder": "Veuillez décrire les maladies ou blessures graves"
+                },
+                "psych_hospitalization": {
+                    "reason_label": "Motif de l'hospitalisation",
+                    "reason_placeholder": "Entrez la raison",
+                    "length_label": "Durée de l'hospitalisation",
+                    "length_placeholder": "Durée"
+                },
+                "past_therapy": {
+                    "reason_label": "Raison de la psychothérapie",
+                    "reason_placeholder": "Raison de la thérapie",
+                    "length_label": "Durée du traitement",
+                    "length_placeholder": "Durée de la thérapie",
+                    "location_label": "Emplacement",
+                    "location_placeholder": "Où avez-vous suivi une thérapie ?"
+                },
+                "substance_use_header": "Consommation de substances",
+                "alcohol_use": {
+                    "amount_label": "Nombre de boissons par occasion",
+                    "amount_placeholder": "Quantité",
+                    "frequency_label": "Nombre de jours par semaine",
+                    "frequency_placeholder": "Jours par semaine"
+                },
+                "family_at_occt": {
+                    "placeholder": "Nom et lien de parenté du membre de la famille"
+                },
+                "reasons_for_cct": {
+                    "options": [
+                        "Anxiété",
+                        "Humeur/Dépression",
+                        "Traumatisme",
+                        "Stress",
+                        "Obsessionnel compulsif",
+                        "Dissociatif",
+                        "Alimentation/Consommation alimentaire",
+                        "Gestion du poids",
+                        "Image corporelle",
+                        "Veille / Réveil",
+                        "Colère",
+                        "Lié à l'alcool",
+                        "Consommation de drogues Connexes",
+                        "Problèmes sexuels",
+                        "PTSD",
+                        "Liées aux relations",
+                        "Lié à la famille",
+                        "Ajustement général",
+                        "Anxiété liée à la santé",
+                        "Préoccupations liées à la personnalité",
+                        "Lié au deuil",
+                        "Gestion du TDAH",
+                        "Anxiété liée à la performance sportive",
+                        "Douleur chronique",
+                        "Bipolaire/Psychose",
+                        "Spectre de l'autisme",
+                        "Autre"
+                    ]
+                },
+                "additional_details": {
+                    "placeholder": "Veuillez fournir des détails supplémentaires"
+                },
+                "main_goals": {
+                    "placeholder": "Quels sont vos principaux objectifs pour la thérapie ?"
+                },
+                "concerns_duration": {
+                    "placeholder": "Depuis combien de temps ces préoccupations existent-elles ?"
+                },
+                "motivation_level": {
+                    "scale": [
+                        "Extrêmement motivé",
+                        "Très motivé",
+                        "Modérément motivé",
+                        "Légèrement motivé",
+                        "Motivation minimale"
+                    ]
+                },
+                "problems_worse": {
+                    "placeholder": "Qu'est-ce qui aggrave vos problèmes ?"
+                },
+                "problems_better": {
+                    "placeholder": "Qu'est-ce qui améliore vos problèmes ?"
+                },
+                "interests_hobbies": {
+                    "placeholder": "Énumérez vos centres d'intérêt, vos loisirs et vos activités"
+                },
+                "exercise_days": {
+                    "placeholder": "Nombre de jours par semaine où vous faites de l'exercice"
+                },
+                "exercise_duration": {
+                    "placeholder": "Durée moyenne par séance d'exercice"
+                },
+                "exercise_intensity": {
+                    "options": [
+                        "Lumière",
+                        "Modéré",
+                        "Vigoureux"
+                    ]
+                },
+                "adopted": {
+                    "age_label": "À l'âge de",
+                    "age_placeholder": "Entrez l'âge"
+                },
+                "siblings_count": {
+                    "placeholder": "Nombre de frères et sœurs"
+                },
+                "religion": {
+                    "options": [
+                        "Athée",
+                        "Agnostique",
+                        "Non religieux",
+                        "Plutôt religieux",
+                        "Très religieux"
+                    ]
+                },
+                "significant_events": {
+                    "placeholder": "Décrivez les événements marquants de votre vie et leurs conséquences"
+                },
+                "other_info": {
+                    "placeholder": "Toute autre information pertinente"
+                },
+                "marijuana_use": {
+                    "amount_label": "Quantité consommée par occasion",
+                    "amount_placeholder": "Fréquence par occasion",
+                    "frequency_label": "Nombre de jours par semaine",
+                    "frequency_placeholder": "Jours par semaine"
+                },
+                "stimulants_use": {
+                    "amount_label": "Quantité consommée par occasion",
+                    "amount_placeholder": "Fréquence par occasion",
+                    "frequency_label": "Nombre de jours par semaine",
+                    "frequency_placeholder": "Jours par semaine"
+                },
+                "non_stimulants_use": {
+                    "amount_label": "Quantité consommée par occasion",
+                    "amount_placeholder": "Fréquence par occasion",
+                    "frequency_label": "Nombre de jours par semaine",
+                    "frequency_placeholder": "Jours par semaine"
+                },
+                "current_therapy": {
+                    "location_placeholder": "Où suivez-vous votre thérapie ?",
+                    "reason_placeholder": "Motif du thérapie",
+                    "location_label": "Lieu",
+                    "reason_label": "Raison"
+                }
+            },
+            "SpecificPhobia": {
+                "q2": {
+                    "placeholder": "Veuillez décrire votre phobie spécifique"
+                },
+                "q3": {
+                    "placeholder": "Veuillez décrire comment cette phobie affecte votre vie quotidienne"
+                }
+            },
+            "Anorexia": {
+                "weight_label": "Poids",
+                "weight_placeholder": "Entrer le poids",
+                "unit_label": "Unité",
+                "height_label": "Hauteur",
+                "height_placeholder": "Entrer la hauteur"
+            },
+            "TherapistMatch": {
+                "preference_label": "Préférence",
+                "importance_label": "Importance",
+                "connector_which_is": "qui est",
+                "connector_to_me": "pour moi",
+                "both_required_message": "Les deux sélections sont requises",
+                "energy_level": {
+                    "options": [
+                        "Très énergique et plein de vie",
+                        "Plutôt énergique et vif",
+                        "Plutôt calme et tranquille",
+                        "Très calme et tranquille"
+                    ]
+                },
+                "importance": {
+                    "options": [
+                        "extrêmement important",
+                        "très important",
+                        "assez important",
+                        "sans importance"
+                    ]
+                },
+                "collaboration_style": {
+                    "options": [
+                        "Très collaboratif",
+                        "Tout à fait collaboratif",
+                        "Plutôt collaboratif",
+                        "Fait ce qu'il pense être le mieux pour moi"
+                    ]
+                },
+                "directiveness": {
+                    "options": [
+                        "Très directif, me pousse à faire des changements, à faire mes devoirs, etc.",
+                        "Assez directif et quelque peu insistant",
+                        "Un peu directif, un peu insistant",
+                        "Pas vraiment directif ou insistant"
+                    ]
+                },
+                "compassion": {
+                    "options": [
+                        "Très doux et compatissant",
+                        "Assez doux et compatissant",
+                        "Plutôt doux et compatissant",
+                        "N'exprime pas vraiment la compassion"
+                    ]
+                },
+                "cultural_background": {
+                    "options": [
+                        "Contexte culturel très similaire au mien",
+                        "Contexte culturel assez similaire au mien",
+                        "Aucune préférence pour le milieu culturel",
+                        "Un contexte culturel différent du mien"
+                    ]
+                },
+                "homework_approach": {
+                    "options": [
+                        "Très insistant pour que je fasse mes devoirs",
+                        "M'encourage modérément à faire mes devoirs",
+                        "M'encourage légèrement à faire mes devoirs",
+                        "Suggère des devoirs, mais n'assure pas le suivi"
+                    ]
+                },
+                "age": {
+                    "options": [
+                        "Proche de moi en âge",
+                        "Plus âgé, plus expérimenté que moi",
+                        "Plus jeune que moi",
+                        "Je n'ai aucune préférence quant à l'âge de mon thérapeute"
+                    ]
+                },
+                "gender": {
+                    "options": [
+                        "Femme",
+                        "Homme",
+                        "Aucune préférence"
+                    ]
+                },
+                "therapy_timing": {
+                    "options": [
+                        "Il est extrêmement important de commencer dès que possible",
+                        "Il est assez important de commencer dès que possible",
+                        "Je peux attendre quelques mois pour trouver le thérapeute qui me convient le mieux",
+                        "Je préfère commencer dans quelques mois en raison d'engagements personnels"
+                    ]
+                }
+            }
+        },
+        "Button": {
+            "continue": "Continuer",
+            "submit": "Soumettre",
+            "submitting": "Envoi…",
+            "saved": "Sauvé !",
+            "loading": "Chargement…"
+        },
+        "ThankYouPage": {
+            "save_and_exit": "Enregistrer et quitter",
+            "go_home": "Aller à la page d'accueil",
+            "interviews_left": "Entretiens restants",
+            "complete_interview": "Entretien complet",
+            "start_next_interview": "Commencer l'entretien suivant",
+            "back": "Retour"
+        },
+        "ThankYou": {
+            "title": "Merci d'avoir répondu au questionnaire !",
+            "message": "Vos réponses ont été enregistrées.",
+            "button": {
+                "dashboard": "Aller au tableau de bord"
+            },
+            "all_completed_title": "Toutes les interviews sont terminées !",
+            "section_completed_title": "Section terminée !",
+            "all_completed_message": "Merci d'avoir répondu à toutes les questions. Vos réponses ont été enregistrées.",
+            "section_completed_message": "Merci d'avoir rempli cette section. Veuillez passer à l'entretien suivant.",
+            "save_and_exit": "Enregistrer et quitter"
+        },
+        "CustomQuestionBuilder": {
+            "depression_test": {
+                "conditions": {
+                    "q1": "humeur dépressive",
+                    "q2": "perte d'intérêt",
+                    "q3": "perte d'enthousiasme",
+                    "q4": "perte ou gain de poids",
+                    "q5": "changement d'appétit",
+                    "q6": "insomnie ou sommeil excessif",
+                    "q7": "sentiment de lenteur ou d'agitation",
+                    "q8": "fatigue",
+                    "q9": "sentiment d'inutilité ou de culpabilité",
+                    "q10": "indécision ou incapacité à se concentrer",
+                    "q11": "pensées ou tentatives suicidaires"
+                },
+                "default_text": "Ces expériences ont-elles causé des problèmes importants dans votre fonctionnement social ou professionnel ?",
+                "template": "Vous avez mentionné que vous avez récemment vécu {conditions}. Ces expériences ont-elles causé des problèmes importants dans votre fonctionnement social ou professionnel ?"
+            },
+            "manic_test": {
+                "main_conditions": {
+                    "q1": "sentiment d'euphorie",
+                    "q2": "énergie élevée et activité accrue",
+                    "q3": "irritabilité"
+                },
+                "characteristics": {
+                    "q7": "estime de soi accrue",
+                    "q8": "besoin réduit de sommeil",
+                    "q9": "plus bavard que d'habitude",
+                    "q10": "idées qui défilent dans votre tête",
+                    "q11": "attention attirée par des choses sans importance",
+                    "q12": "motivé par de nouvelles activités avec un objectif",
+                    "q13": "motivé par de nouvelles activités sans objectif",
+                    "q14": "implication dans des activités à haut risque"
+                },
+                "default_text": "Cette période était-elle clairement inhabituelle par rapport à votre fonctionnement normal ?",
+                "template_prefix": "Vous avez mentionné que vous avez vécu une période de ",
+                "template_characteristics": " accompagnée de caractéristiques que vous avez mentionnées comme : ",
+                "template_suffix": ". Cette période était-elle clairement inhabituelle par rapport à votre fonctionnement normal ?"
+            },
+            "persistent_depressive_test": {
+                "conditions": {
+                    "q2": "aviez un faible appétit ou mangiez trop",
+                    "q3": "avez souffert d'insomnie ou d'hypersomnie",
+                    "q4": "avez ressenti un manque d'énergie ou de la fatigue",
+                    "q5": "faible estime de soi",
+                    "q6": "difficulté à se concentrer ou à prendre des décisions",
+                    "q7": "sentiments de désespoir"
+                },
+                "default_text": "Au cours des 2 années de dépression, y a-t-il eu une période de 2 mois ou plus pendant laquelle vous n'avez ressenti aucun de ces symptômes ?",
+                "template": "Au cours de la période d'au moins 2 ans pendant laquelle vous vous sentiez déprimé, vous avez signalé que vous {conditions}. Au cours des 2 années de dépression, y a-t-il eu une période de 2 mois ou plus pendant laquelle vous n'avez ressenti aucun de ces symptômes ?"
+            },
+            "sleep_disorder_test": {
+                "conditions": {
+                    "q2": "avez de la difficulté à vous endormir",
+                    "q5": "vous réveillez fréquemment",
+                    "q7": "vous réveillez la nuit et n'arrivez pas à vous rendormir",
+                    "q10": "vous réveillez tôt"
+                },
+                "default_text": "Ces problèmes de sommeil ont-ils causé une détresse importante ou des difficultés de fonctionnement dans les domaines social, professionnel, scolaire ou comportemental de votre vie ?",
+                "template": "Vous avez mentionné que vous {conditions}. Ces problèmes de sommeil ont-ils causé une détresse importante ou des difficultés de fonctionnement dans les domaines social, professionnel, scolaire ou comportemental de votre vie ?"
+            },
+            "agoraphobia_test": {
+                "conditions": {
+                    "q1": "peur des transports en commun",
+                    "q2": "peur des espaces ouverts",
+                    "q3": "peur des espaces clos",
+                    "q4": "peur de faire la queue ou d'être dans une foule",
+                    "q5": "anxiété à l'idée d'être seul à l'extérieur de la maison"
+                },
+                "default_text": "Cette peur, ou ces peurs, provoquent-elles presque toujours de la peur ou de l'anxiété ?",
+                "template": "Vous avez mentionné que vous avez {conditions}. Cette peur, ou ces peurs, provoquent-elles presque toujours de la peur ou de l'anxiété ?"
+            },
+            "delusional_disorder_test": {
+                "conditions": {
+                    "q1": "délires d'être suivi",
+                    "q2": "délires de persécution",
+                    "q3": "délires d'empoisonnement",
+                    "q4": "délires d'être aimé par quelqu'un",
+                    "q5": "délires d'avoir une maladie",
+                    "q6": "délires d'être sous contrôle extérieur"
+                },
+                "default_text": "Ces croyances délirantes ont-elles causé une détresse importante ou une altération de votre fonctionnement social ou professionnel ?",
+                "template": "Vous avez mentionné que vous avez vécu {conditions}. Ces croyances délirantes ont-elles causé une détresse importante ou une altération de votre fonctionnement social ou professionnel ?"
+            },
+            "alcohol_use_disorder_test": {
+                "conditions": {
+                    "q19": "augmentation du rythme cardiaque ou transpiration",
+                    "q20": "tremblement des mains",
+                    "q21": "insomnie",
+                    "q22": "nausées ou vomissements",
+                    "q23": "hallucinations ou illusions",
+                    "q24": "agitation physique ou motrice",
+                    "q25": "anxiété",
+                    "q26": "convulsions"
+                },
+                "default_text": "Ces symptômes ont-ils entraîné une détresse importante ou interféré avec le fonctionnement social, professionnel ou d'autres domaines importants de votre vie ?",
+                "template": "Après avoir cessé de boire de façon excessive, vous avez signalé avoir ressenti {conditions}. Ces symptômes ont-ils entraîné une détresse importante ou interféré avec le fonctionnement social, professionnel ou d'autres domaines importants de votre vie ?"
+            },
+            "cannabis_test": {
+                "conditions": {
+                    "q18": "irritabilité, colère ou agressivité",
+                    "q19": "nervosité ou anxiété",
+                    "q20": "insomnie après l'arrêt",
+                    "q21": "diminution de l'appétit ou perte de poids",
+                    "q22": "agitation",
+                    "q23": "humeur dépressive",
+                    "q24": "douleurs abdominales",
+                    "q25": "tremblements",
+                    "q26": "transpiration",
+                    "q27": "fièvre",
+                    "q28": "frissons",
+                    "q29": "maux de tête"
+                },
+                "default_text": "Ces symptômes ont-ils entraîné une détresse importante ou interféré avec le fonctionnement social, professionnel ou d'autres domaines importants de votre vie ?",
+                "template": "Après avoir cessé la consommation importante de cannabis, vous avez signalé avoir ressenti les symptômes suivants : {conditions}. Ces symptômes ont-ils entraîné une détresse importante ou interféré avec le fonctionnement social, professionnel ou d'autres domaines importants de votre vie ?"
+            },
+            "stimulant_use_disorder_test": {
+                "conditions": {
+                    "q16": "utilisation de stimulants plus que prévu",
+                    "q17": "efforts infructueux pour réduire la consommation de stimulants",
+                    "q18": "temps excessif consacré à l'obtention de stimulants",
+                    "q19": "fortes envies de stimulants",
+                    "q20": "usage de stimulants interférant avec les responsabilités",
+                    "q21": "poursuite de l'usage de stimulants malgré des problèmes interpersonnels",
+                    "q22": "réduction des activités importantes en raison de l'usage de stimulants"
+                },
+                "default_text": "Ces habitudes de consommation de stimulants ont-elles causé une détresse importante ou une altération de votre fonctionnement social, professionnel ou d'autres domaines importants de votre vie ?",
+                "template": "Vous avez signalé avoir ressenti les symptômes suivants liés à l'usage de stimulants : {conditions}. Ces habitudes de consommation de stimulants ont-elles causé une détresse importante ou une altération de votre fonctionnement social, professionnel ou d'autres domaines importants de votre vie ?"
+            },
+            "adult_adhd_test": {
+                "inattention": {
+                    "conditions": {
+                        "q1": "tendance à faire des erreurs d'inattention",
+                        "q2": "difficulté à rester concentré sur les tâches",
+                        "q3": "votre esprit vagabonde",
+                        "q4": "vous vous laissez distraire ou perdez le fil",
+                        "q5": "difficulté à organiser les choses",
+                        "q6": "réticence à entreprendre des tâches nécessitant un effort soutenu",
+                        "q7": "tendance à égarer les choses",
+                        "q8": "facilement distrait",
+                        "q9": "tendance à être oublieux"
+                    },
+                    "default_text": "Ces symptômes ont-ils persisté pendant une période d'au moins 6 mois au cours de votre vie ?",
+                    "template": "Vous avez mentionné que vous {conditions}. Ces symptômes ont-ils persisté pendant une période d'au moins 6 mois au cours de votre vie ?"
+                },
+                "hyperactivity": {
+                    "conditions": {
+                        "q14": "tendance à vous agiter",
+                        "q15": "tendance à quitter votre siège souvent",
+                        "q16": "agitation physique",
+                        "q17": "difficulté à pratiquer des activités de loisirs calmement",
+                        "q18": "inconfort à rester assis",
+                        "q19": "tendance à parler excessivement",
+                        "q20": "terminer les phrases des autres ou répondre impulsivement",
+                        "q21": "difficulté à attendre votre tour",
+                        "q22": "tendance à interrompre"
+                    },
+                    "default_text": "Ces symptômes ont-ils persisté pendant une période d'au moins 6 mois au cours de votre vie ?",
+                    "template": "Vous avez mentionné que vous {conditions}. Ces symptômes ont-ils persisté pendant une période d'au moins 6 mois au cours de votre vie ?"
+                }
+            },
+            "prolonged_grief_disorder": {
+                "conditions": {
+                    "q3": "tu as eu l'impression qu'une partie de toi-même était morte",
+                    "q4": "on n'arrive pas à croire que ça se soit produit",
+                    "q5": "tu as essayé d'éviter tout ce qui te rappelait la mort",
+                    "q6": "vous avez vécu une grande souffrance émotionnelle",
+                    "q7": "vous avez eu de la difficulté à entretenir des relations avec vos amis ou à vous adonner à d’autres passe-temps",
+                    "q8": "tu te sens émotionnellement engourdi",
+                    "q9": "vous avez eu l'impression que la vie n'avait plus de sens à la suite de cette perte",
+                    "q10": "tu ressens une solitude intense"
+                },
+                "default_text": "Avez-vous éprouvé l’un de ces sentiments presque tous les jours depuis au moins un mois ?",
+                "template": "Vous avez indiqué qu’à la suite du décès de votre proche, vous avez éprouvé {conditions}. Avez-vous éprouvé l’un de ces sentiments presque tous les jours au cours du dernier mois au moins ?"
+            }
+        }
+    },
+    "Followup": {
+        "Card": {
+            "added": "Ajouté",
+            "days_ago": "Il y a quelques jours",
+            "today": "Aujourd'hui",
+            "last_activity": "Dernière activité",
+            "completed": "Terminé"
+        }
+    },
+    "PWA": {
+        "update_confirm": "Du nouveau contenu est disponible. Voulons-nous actualiser la page ?"
+    },
+    "Popups": {
+        "PatientDetails": {
+            "title": "Détails du patient",
+            "error_loading": "Échec du chargement des informations relatives au patient",
+            "try_again": "Réessayer",
+            "email": "Courriel",
+            "phone": "Téléphone",
+            "preferred_comms": "Communications préférées",
+            "date_of_reg": "Date d'enregistrement",
+            "interviews": "Entretiens",
+            "notes": "Remarques",
+            "intake_note": "Note d'admission",
+            "no_notes": "Aucune note disponible",
+            "remove_patient": "Supprimer le patient",
+            "removing": "Suppression…",
+            "patient_removed": "Patient retiré",
+            "download_report": "Télécharger le rapport",
+            "error_generate": "Erreur lors de la génération du rapport",
+            "error_status": "État du rapport de vérification des erreurs",
+            "error_download": "Erreur lors du téléchargement du rapport",
+            "error_generic": "Une erreur s'est produite",
+            "preferred_language": "Langue préférée"
+        },
+        "NewTest": {
+            "title": "Questionnaire biographique CISM™ pour adultes",
+            "allotted_on": "Test attribué le"
+        },
+        "AddAdmin": {
+            "title": "Ajouter un nouvel administrateur",
+            "make_director": "Directeur de production",
+            "select_gender": "Sélectionnez le pronom de genre",
+            "full_name_label": "Nom complet",
+            "full_name_placeholder": "Entrez votre nom complet",
+            "email_label": "Courriel",
+            "email_placeholder": "Entrez votre adresse e-mail",
+            "gender_label": "Pronom de genre",
+            "submit_button": "Ajouter un administrateur",
+            "submit_loading": "Création de l'administrateur…",
+            "submit_success": "Admin créé !",
+            "validation": {
+                "full_name_required": "Le nom complet est obligatoire",
+                "email_required": "Une adresse e-mail est requise",
+                "email_invalid": "Veuillez saisir une adresse e-mail valide",
+                "gender_required": "Veuillez sélectionner un pronom de genre",
+                "email_exists": "Même adresse e-mail déjà utilisée",
+                "create_error": "Échec de la création de l'administrateur",
+                "generic_error": "Erreur lors de la création de l'administrateur"
+            },
+            "gender_options": {
+                "he": "Il",
+                "she": "Elle",
+                "they": "Ils",
+                "ze": "Ze"
+            }
+        },
+        "PrintReport": {
+            "loading": "Chargement des affectations…",
+            "no_assignments": "Aucune tâche terminée n'a été trouvée pour ce patient.",
+            "summary_report": "Rapport sommaire ?",
+            "debug": "Débogage",
+            "back": "Retour",
+            "download_pdf": "Télécharger le PDF",
+            "download_docx": "Télécharger Docx",
+            "error_no_patient": "Aucun patient sélectionné",
+            "default_patient_name": "Patiente",
+            "error_load_assignments": "Échec du chargement des devoirs",
+            "error_select_item": "Veuillez sélectionner au moins un élément à imprimer",
+            "error_generate_report": "Échec de la génération du rapport",
+            "error_print_items": "Impossible d'imprimer les éléments sélectionnés",
+            "patient_selection": "Sélection des patients",
+            "field_available": "Rapport disponible",
+            "field_selected": "Sélectionné pour téléchargement"
+        },
+        "Updates": {
+            "title": "mises à jour",
+            "no_updates": "Aucun nouveau test <br> n'a été attribué récemment."
+        },
+        "DiagnosticTest": {
+            "title": "Envoyer le patient pour un entretien Administrateurs",
+            "searching": "Recherche en cours…",
+            "search_placeholder": "Recherche par nom, numéro de téléphone, adresse e-mail ou identifiant",
+            "search_input_placeholder": "Commencez à taper pour rechercher…",
+            "table": {
+                "name": "Nom",
+                "email": "Courriel",
+                "phone": "Téléphone",
+                "user_id": "Identifiant utilisateur",
+                "actions": "Actions"
+            },
+            "next": "Suivant",
+            "available_interviews": "Entretiens disponibles pour",
+            "loading_interviews": "Chargement des interviews disponibles…",
+            "no_interviews": "Aucun entretien non attribué disponible pour ce patient",
+            "email_interviews": "Entretiens par e-mail",
+            "allocate_button": "Attribuer les entretiens sélectionnés",
+            "emailing": "Entretiens par e-mail…",
+            "email_sent": "E-mail envoyé !",
+            "back": "Précédent"
+        },
+        "Intake": {
+            "title": "Admission des patients",
+            "select_comm": "Sélectionnez votre mode de communication préféré",
+            "notes_label": "Notes d'admission",
+            "next": "Suivant",
+            "back": "Retour",
+            "loading_interviews": "Chargement des interviews…",
+            "no_interviews": "Aucune interview disponible",
+            "confirm_title": "Confirmer les informations du patient",
+            "first_name_label": "Prénom",
+            "first_name_placeholder": "Entrez votre prénom",
+            "last_name_label": "Nom de famille",
+            "last_name_placeholder": "Entrez votre nom de famille",
+            "email_label": "Courriel",
+            "email_placeholder": "Entrez votre adresse e-mail",
+            "phone_label": "Numéro de téléphone",
+            "phone_placeholder": "Entrez le numéro de téléphone",
+            "gender_label": "Pronom de genre",
+            "select_gender": "Sélectionnez le pronom de genre",
+            "preferred_comm_label": "Communication préférée",
+            "notes_placeholder": "Saisir les notes d'admission",
+            "user_id_label": "Identifiant utilisateur",
+            "user_id_placeholder": "1111",
+            "available_interviews": "Entretiens disponibles",
+            "selected_interviews_label": "Entretiens sélectionnés",
+            "creating": "Créer un patient…",
+            "created": "Créé par un patient !",
+            "confirm_create": "Confirmer et créer un patient",
+            "confirm": {
+                "gender_pronoun": "Pronom de genre :",
+                "name": "Nom :",
+                "email": "Courriel :",
+                "phone": "Numéro de téléphone :",
+                "preferred_comm": "Mode de communication préféré :",
+                "user_id": "Identifiant utilisateur :",
+                "notes": "Notes d'admission :",
+                "selected_interviews": "Entretiens sélectionnés :",
+                "preferred_language": "Langue préférée:"
+            },
+            "preferred_language_label": "Langue préférée"
+        },
+        "SearchPatient": {
+            "title": "Rechercher un patient pour afficher les rapports",
+            "search_placeholder": "Recherche par nom, numéro de téléphone, adresse e-mail ou identifiant",
+            "search_input_placeholder": "Commencez à taper pour rechercher…",
+            "searching": "Recherche en cours…",
+            "table": {
+                "name": "Nom",
+                "email": "Courriel",
+                "phone": "Téléphone",
+                "user_id": "Identifiant utilisateur",
+                "actions": "Actions"
+            },
+            "next": "Suivant"
+        }
+    },
+    "PatientDetails": {
+        "summary_error": "Une erreur s'est produite, veuillez réessayer de générer le rapport récapitulatif"
+    },
+    "Common": {
+        "ReCaptcha": {
+            "load_error": "Échec du chargement du script reCAPTCHA",
+            "execution_error": "Échec de l'exécution de reCAPTCHA",
+            "label": "Je ne suis pas un robot"
+        },
+        "Time": {
+            "years": "années",
+            "months": "mois",
+            "days_ago": "il y a quelques jours"
+        },
+        "na": "Sans objet"
+    },
+    "Reports": {
+        "AdultBio": {
+            "exercise_routine": "Programme d'entraînement :",
+            "current_occupation": "Profession actuelle :",
+            "primary_caregiver": "Principal responsable : ",
+            "secondary_caregiver": "Aidant secondaire : ",
+            "siblings_count": "Nombre d'enfants dans la famille : ",
+            "not_provided": "Non fourni",
+            "yes": "Oui",
+            "no": "De",
+            "na": "Sans objet",
+            "none": "Aucun",
+            "unknown": "Inconnu",
+            "age_label": "Âge :",
+            "phone_label": "Téléphone :",
+            "email_label": "Courriel :",
+            "notes_label": "Remarques :",
+            "close_friends": "amis proches",
+            "friendly_acquaintances": "connaissances amicales",
+            "has": "A",
+            "and": "et",
+            "socializes_approx": "Socialise approximativement",
+            "years_old": "ans",
+            "prescribed_by": "– Prescrit par le Dr.",
+            "for": "pour",
+            "reason": "Raison :",
+            "duration": "Durée :",
+            "location": "Emplacement :",
+            "times_per_occasion": "fois par occasion",
+            "times_per_week": "fois par semaine",
+            "at_age": "à l'âge de",
+            "alcohol_consumption": "Consommation d'alcool",
+            "no_alcohol": "Pas de consommation d'alcool",
+            "marijuana_use": "Consommation de marijuana",
+            "no_marijuana": "Pas de consommation de marijuana",
+            "stimulants_use": "Consommation de stimulants",
+            "no_stimulants": "Pas d'utilisation de stimulants",
+            "other_substance_use": "Autre consommation de substances",
+            "no_other_substance": "Aucune autre consommation de substances",
+            "frequency": "Fréquence :",
+            "days_per_week": "jours par semaine",
+            "intensity": "Intensité :",
+            "sleep_pattern": "Habitudes de sommeil :",
+            "dietary_habits": "Habitudes alimentaires :",
+            "dob": "Date de naissance :",
+            "gender": "Sexe :",
+            "not_specified": "Non spécifié",
+            "marital_status": "Situation familiale :",
+            "spouse_occupation": "Profession du conjoint :",
+            "none_reported": "Aucun signalé",
+            "children": "Enfants :",
+            "insurance_provider": "Assureur :",
+            "emergency_contact": "Contact en cas d'urgence :",
+            "personal_info": "Informations personnelles",
+            "highest_education": "Niveau d'études le plus élevé :",
+            "career_training": "Formation professionnelle :",
+            "job_satisfaction": "Satisfaction au travail :",
+            "low": "Faible",
+            "moderate": "Modéré",
+            "high": "Élevé",
+            "prof_edu_background": "Parcours professionnel et formation",
+            "primary_physician": "Médecin traitant :",
+            "dr": "Médecin",
+            "current_medications": "Médicaments actuels :",
+            "past_medical_procedures": "Antécédents médicaux",
+            "no_major_procedures": "Aucune intervention médicale majeure signalée",
+            "medical_history": "Antécédents médicaux",
+            "hospitalized_psych": "A été hospitalisé pour des problèmes psychologiques",
+            "no_hospitalized_psych": "Aucune hospitalisation antérieure pour des problèmes psychologiques",
+            "prior_therapy": "A déjà suivi une thérapie individuelle ou de groupe",
+            "no_prior_therapy": "Aucune thérapie individuelle ou de groupe préalable",
+            "current_treatment": "Actuellement en traitement ou en thérapie ailleurs",
+            "no_current_treatment": "Aucun traitement ou thérapie en cours ailleurs",
+            "psychological_history": "Histoire psychologique",
+            "substance_use": "Consommation de substances :",
+            "address": "Adresse :",
+            "reason_conflict_interest": "Raison du conflit d'intérêts :",
+            "yes_no_details": "Oui, mais aucun détail fourni"
+        }
+    },
+    "Email": {
+        "NewTests": {
+            "subject": "Nouvelle entrevue diagnostique numérique disponible",
+            "preheader": "Vous avez {{testCount}} {{interviewWord}} diagnostique(s) numérique(s) en attente.",
+            "title": "Nouvelles entrevues disponibles",
+            "greeting": "Bonjour {{fullName}},",
+            "body": "Vous avez {{testCount}} {{interviewWord}} diagnostique(s) numérique(s) à compléter. Veuillez les compléter dès que possible.",
+            "button": "Voir les entrevues",
+            "link_trouble": "Si vous avez de la difficulté à cliquer sur le bouton, copiez et collez ce lien dans votre navigateur :",
+            "expiry": "Ce lien expirera dans 1 heure pour des raisons de sécurité.",
+            "ignore": "Si vous n'avez pas fait cette demande, veuillez ignorer ce courriel.",
+            "footer": "Ceci est un message automatique, veuillez ne pas répondre.",
+            "interview_singular": "nouvelle entrevue",
+            "interview_plural": "nouvelles entrevues"
+        },
+        "ResetPassword": {
+            "subject_new_user": "Bienvenue sur PsyMatch - Définissez votre mot de passe",
+            "subject_reset": "Demande de réinitialisation du mot de passe PsyMatch",
+            "subject_admin_invite": "PsyMatch vous invite en tant que {{role}}",
+            "title_new_user": "Bienvenue sur PsyMatch",
+            "title_admin_invite": "PsyMatch vous invite en tant que {{role}}",
+            "title_reset": "Réinitialisez votre mot de passe",
+            "greeting": "Bonjour {{fullName}},",
+            "message_new_user": "Bienvenue sur PsyMatch ! Pour commencer, veuillez définir votre mot de passe en cliquant sur le bouton ci-dessous :",
+            "message_admin_invite": "Vous avez été invité(e) à rejoindre PsyMatch en tant que {{role}}. Pour commencer, veuillez définir votre mot de passe en cliquant sur le bouton ci-dessous :",
+            "message_reset": "Vous avez demandé la réinitialisation de votre mot de passe. Cliquez sur le bouton ci-dessous pour définir un nouveau mot de passe :",
+            "button_set": "Définir le mot de passe",
+            "button_reset": "Réinitialiser le mot de passe",
+            "link_trouble": "Si vous avez de la difficulté à cliquer sur le bouton, copiez et collez ce lien dans votre navigateur :",
+            "expiry_7day": "Ce lien expirera dans 7 jours pour des raisons de sécurité.",
+            "expiry_1hour": "Ce lien expirera dans 1 heure pour des raisons de sécurité.",
+            "ignore": "Si vous n'avez pas fait cette demande, veuillez ignorer ce courriel.",
+            "footer": "Ceci est un message automatique, veuillez ne pas répondre.",
+            "role_director": "Directeur",
+            "role_admin": "Administrateur"
+        }
+    },
+    "Legal": {
+        "modal": {
+            "eyebrow": "psymatch · Centre de thérapie cognitive",
+            "title": "Conditions d'utilisation",
+            "intro": "Veuillez examiner les conditions ci-dessous avant de continuer vers votre compte.",
+            "footer_confirm": "En acceptant, vous confirmez avoir lu et accepté les Conditions d'utilisation.",
+            "section": {
+                "privacy_heading": "Contact de confidentialité",
+                "jurisdiction_heading": "Avis réglementaire"
+            },
+            "meta": {
+                "effective_prefix": "En vigueur",
+                "reading_time": "Temps de lecture estimé : {minutes} min"
+            },
+            "button": {
+                "accept": "Tout accepter",
+                "saving": "Enregistrement…",
+                "logout": "Se déconnecter",
+                "download": "Télécharger le PDF",
+                "download_short": "PDF",
+                "downloading": "Préparation…"
+            },
+            "privacy_label": {
+                "name": "Nom :",
+                "email": "Courriel :",
+                "phone": "Téléphone :",
+                "mailing_address": "Adresse postale :"
+            },
+            "download_filename": "psymatch-conditions",
+            "error_generic": "Impossible d'enregistrer votre acceptation. Veuillez réessayer.",
+            "error_download": "Impossible de télécharger le PDF. Veuillez réessayer."
+        },
+        "admin": {
+            "page_title": "Juridique",
+            "subtitle": "Contact de confidentialité et paramètres de juridiction.",
+            "card": {
+                "privacy_officer": {
+                    "title": "Contact de confidentialité",
+                    "description": "La personne ou le rôle responsable de répondre aux questions et plaintes relatives à la confidentialité. Affiché à chaque patient sur l'écran de consentement."
+                },
+                "jurisdiction": {
+                    "title": "Pieds de page par juridiction",
+                    "description": "Choisissez-en un. Le pied de page sélectionné s'affiche pour tous les patients de ce déploiement."
+                }
+            },
+            "privacy": {
+                "field": {
+                    "name": "Nom ou titre",
+                    "email": "Courriel",
+                    "phone": "Téléphone",
+                    "mailing_address": "Adresse postale"
+                },
+                "placeholder": {
+                    "name": "Dr. Sarah Chen",
+                    "email": "privacy@clinique.exemple",
+                    "phone": "+1 (416) 555-0182",
+                    "mailing_address": "200, avenue University, bureau 1400\nToronto, ON  M5H 3C6\nCanada"
+                },
+                "help": {
+                    "name": "Personne réelle ou rôle nommé (ex. « Agent de confidentialité »). Les adresses de rôle conviennent si elles sont surveillées.",
+                    "email": "Boîte courriel surveillée. Les adresses de rôle conviennent si elles sont redirigées.",
+                    "phone": "Ligne directe ou ligne principale avec poste.",
+                    "mailing_address": "Adresse professionnelle. Pas une adresse résidentielle."
+                }
+            },
+            "button": {
+                "save": "Enregistrer",
+                "saving": "Enregistrement",
+                "discard": "Annuler"
+            },
+            "toast": {
+                "saved": "Enregistré {version}"
+            },
+            "error": {
+                "save_failed": "Échec de l'enregistrement. Veuillez réessayer."
+            },
+            "jurisdiction": {
+                "ontario": "Ontario",
+                "canada": "Canada",
+                "us": "États-Unis",
+                "other": "Autre / par défaut"
+            }
+        }
+    }
+}

@@ -1,0 +1,4597 @@
+{
+	"logical_operations": {
+		"description": "Defines all possible logical operations",
+		"comparison_operators": [">", "<", ">=", "<=", "==", "!="],
+		"logical_operators": ["&&", "||", "!"],
+		"count_operators": {
+			"description": "For counting operations over ranges",
+			"types": ["count_positive", "count_all", "count_range"]
+		}
+	},
+	"test_evaluation": {
+		"variables": [
+			{
+				"name": "DepLast",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q16"
+					},
+					"operator": "<",
+					"right_operand": {
+						"type": "question",
+						"test_code": "manic_test",
+						"value": "q20"
+					}
+				}
+			},
+			{
+				"name": "ManLast",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q16"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "question",
+						"test_code": "manic_test",
+						"value": "q20"
+					}
+				}
+			},
+			{
+				"name": "Pleas",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q3"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"name": "Wt",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q4"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q5"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"name": "Symp",
+				"operation": {
+					"operator": "+",
+					"operands": [
+						{
+							"type": "range",
+							"start": "q6",
+							"end": "q11",
+							"operator": "count_positive"
+						},
+						{
+							"type": "question",
+							"value": "q1"
+						},
+						{
+							"type": "question",
+							"value": "q2"
+						},
+						{
+							"type": "variable",
+							"value": "Pleas"
+						},
+						{
+							"type": "variable",
+							"value": "Wt"
+						}
+					]
+				}
+			},
+			{
+				"name": "MA",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q20"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q21"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"name": "MB",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"type": "range",
+							"start": "q12",
+							"end": "q27",
+							"operator": "count_positive"
+						}
+					},
+					"operator": ">=",
+					"right_operand": {
+						"type": "numerical",
+						"value": 3
+					}
+				}
+			},
+			{
+				"name": "SP",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"type": "range",
+									"start": "q12",
+									"end": "q27",
+									"operator": "count_positive"
+								}
+							},
+							"operator": ">=",
+							"right_operand": {
+								"type": "numerical",
+								"value": 4
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q32"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"name": "AD",
+				"operation": {
+					"type": "range",
+					"start": "q15",
+					"end": "q19",
+					"operator": "count_range",
+					"thresholds": [
+						{
+							"min": 2,
+							"max": 2,
+							"value": "Mild"
+						},
+						{
+							"min": 3,
+							"max": 3,
+							"value": "Moderate"
+						},
+						{
+							"min": 4,
+							"max": 4,
+							"value": "Moderately-Severe"
+						},
+						{
+							"min": 5,
+							"value": "Severe"
+						}
+					]
+				}
+			},
+			{
+				"name": "HypomanicSymptomCount",
+				"operation": {
+					"type": "range",
+					"start": "q15",
+					"end": "q19",
+					"operator": "count_positive"
+				}
+			},
+			{
+				"name": "ManicNewAct",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"test_code": "manic_test",
+								"value": "q13"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"test_code": "manic_test",
+								"value": "q14"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"name": "ManicSymptomCount",
+				"operation": {
+					"operator": "+",
+					"operands": [
+						{
+							"operation": {
+								"type": "range",
+								"start": "q7",
+								"end": "q11",
+								"test_code": "manic_test",
+								"operator": "count_positive"
+							}
+						},
+						{
+							"type": "question",
+							"value": "q14"
+						},
+						{
+							"type": "variable",
+							"value": "ManicNewAct"
+						}
+					]
+				}
+			},
+			{
+				"id": "Hypomanic Criterion A",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "ManicNewAct"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Hypomanic Criterion B1",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "HypomanicSymptomCount"
+					},
+					"operator": ">=",
+					"right_operand": {
+						"type": "numerical",
+						"value": 3
+					}
+				}
+			},
+			{
+				"id": "Hypomanic Criterion B2",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "HypomanicSymptomCount"
+					},
+					"operator": ">=",
+					"right_operand": {
+						"type": "numerical",
+						"value": 4
+					}
+				}
+			},
+			{
+				"id": "Hypomanic Criterion C",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "ManicNewAct"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 1
+					}
+				}
+			},
+			{
+				"id": "Hypomanic Criterion D",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "ManicNewAct"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"name": "Severity",
+				"operation": {
+					"left_operand": {
+						"type": "range",
+						"start": "q1",
+						"end": "q11",
+						"operator": "count_all"
+					},
+					"operator": "/",
+					"right_operand": {
+						"type": "range",
+						"start": "q1",
+						"end": "q11",
+						"operator": "count_positive"
+					},
+					"thresholds": [
+						{
+							"max": 0.5,
+							"value": "Minimal"
+						},
+						{
+							"max": 1.5,
+							"value": "Mild"
+						},
+						{
+							"max": 2.5,
+							"value": "Moderate"
+						},
+						{
+							"default": "Severe"
+						}
+					]
+				}
+			}
+		],
+		"criteria": [
+			{
+				"id": "Major Depressive Disorder Positive A1",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q1"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q2"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Major Depressive Disorder Positive A2",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "Symp"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 5
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q12"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q14"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q13"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Melancholic Features",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "MA"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Seasonal Pattern",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "SP"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Anxious Distress",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "AD"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Negative Depression A",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Symp"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 5
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q12"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									},
+									"operator": "||",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q14"
+													},
+													"operator": "==",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											},
+											"operator": "||",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "question",
+														"value": "q13"
+													},
+													"operator": "==",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Negative Depression B",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "Symp"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Negative Depression C",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "Symp"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Manic_Criterion_A",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q1"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									},
+									"operator": "||",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q2"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								},
+								"operator": "||",
+								"right_operand": {
+									"operation": {
+										"left_operand": {
+											"type": "question",
+											"value": "q3"
+										},
+										"operator": ">",
+										"right_operand": {
+											"type": "numerical",
+											"value": 0
+										}
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q17"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Manic_Criterion_B1",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						},
+						"operator": "||",
+						"right_operand": {
+							"operation": {
+								"left_operand": {
+									"type": "question",
+									"value": "q3"
+								},
+								"operator": ">",
+								"right_operand": {
+									"type": "numerical",
+									"value": 0
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "SymptomCount"
+							},
+							"operator": ">=",
+							"right_operand": {
+								"type": "numerical",
+								"value": 3
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Manic_Criterion_B2",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						},
+						"operator": "&&",
+						"right_operand": {
+							"operation": {
+								"left_operand": {
+									"type": "question",
+									"value": "q3"
+								},
+								"operator": ">",
+								"right_operand": {
+									"type": "numerical",
+									"value": 0
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "SymptomCount"
+							},
+							"operator": ">=",
+							"right_operand": {
+								"type": "numerical",
+								"value": 4
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Manic_Criterion_C",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q16"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "||",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q17"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Manic_Criterion_D",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q19"
+					},
+					"operator": "==",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Hypomanic_Criterion_A",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q1"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									},
+									"operator": "||",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q2"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								},
+								"operator": "||",
+								"right_operand": {
+									"operation": {
+										"left_operand": {
+											"type": "question",
+											"value": "q3"
+										},
+										"operator": ">",
+										"right_operand": {
+											"type": "numerical",
+											"value": 0
+										}
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								}
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q6"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Hypomanic_Criterion_B",
+				"operation": {
+					"left_operand": {
+						"type": "variable",
+						"value": "SymptomCount"
+					},
+					"operator": ">=",
+					"right_operand": {
+						"type": "numerical",
+						"value": 3
+					}
+				}
+			},
+			{
+				"id": "Hypomanic_Criterion_C",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q15"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Hypomanic_Criterion_D",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q18"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			},
+			{
+				"id": "Hypomanic_Criterion_E",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q16"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q17"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			{
+				"id": "Hypomanic_Criterion_F",
+				"operation": {
+					"left_operand": {
+						"type": "question",
+						"value": "q19"
+					},
+					"operator": "==",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				}
+			}
+		],
+		"report_title": "PsyMatch C-DIS-5",
+		"outcomes": [
+			{
+				"type": "Major Depressive Disorder",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criterion",
+								"value": "Major Depressive Disorder Positive A1"
+							},
+							"operator": "||",
+							"right_operand": {
+								"type": "criterion",
+								"value": "Major Depressive Disorder Positive A2"
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "criterion",
+																"value": "Manic_Criterion_A",
+																"test_code": "manic_test"
+															},
+															"operator": "==",
+															"right_operand": {
+																"type": "numerical",
+																"value": 0
+															}
+														}
+													},
+													"operator": "&&",
+													"right_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "criterion",
+																"value": "Manic_Criterion_B",
+																"test_code": "manic_test"
+															},
+															"operator": "==",
+															"right_operand": {
+																"type": "numerical",
+																"value": 0
+															}
+														}
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "criterion",
+														"value": "Manic_Criterion_C",
+														"test_code": "manic_test"
+													},
+													"operator": "==",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "criterion",
+												"value": "Manic_Criterion_D",
+												"test_code": "manic_test"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								}
+							},
+							"operator": "&&",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"operation": {
+															"left_operand": {
+																"operation": {
+																	"left_operand": {
+																		"operation": {
+																			"left_operand": {
+																				"type": "criterion",
+																				"value": "Hypomanic_Criterion_A",
+																				"test_code": "manic_test"
+																			},
+																			"operator": "==",
+																			"right_operand": {
+																				"type": "numerical",
+																				"value": 0
+																			}
+																		}
+																	},
+																	"operator": "&&",
+																	"right_operand": {
+																		"operation": {
+																			"left_operand": {
+																				"type": "criterion",
+																				"value": "Hypomanic_Criterion_B",
+																				"test_code": "manic_test"
+																			},
+																			"operator": "==",
+																			"right_operand": {
+																				"type": "numerical",
+																				"value": 0
+																			}
+																		}
+																	}
+																}
+															},
+															"operator": "&&",
+															"right_operand": {
+																"operation": {
+																	"left_operand": {
+																		"type": "criterion",
+																		"value": "Hypomanic_Criterion_C",
+																		"test_code": "manic_test"
+																	},
+																	"operator": "==",
+																	"right_operand": {
+																		"type": "numerical",
+																		"value": 0
+																	}
+																}
+															}
+														}
+													},
+													"operator": "&&",
+													"right_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "criterion",
+																"value": "Hypomanic_Criterion_D",
+																"test_code": "manic_test"
+															},
+															"operator": "==",
+															"right_operand": {
+																"type": "numerical",
+																"value": 0
+															}
+														}
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "criterion",
+														"value": "Hypomanic_Criterion_E",
+														"test_code": "manic_test"
+													},
+													"operator": "==",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "criterion",
+												"value": "Hypomanic_Criterion_F",
+												"test_code": "manic_test"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Mood Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Mood Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 criteria for Major Depressive Disorder .",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.31 (F33.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.32 (F33.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.33 (F33.2)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.21 (F32.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.22 (F32.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.23 (F32.3)"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "{first_name} reported feeling depressed mood most of the day, nearly every day for at least 2 weeks ",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q15"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 3
+							}
+						},
+						"text": "during the past 30 days",
+						"continued": true,
+						"addPeriod": true,
+						"summary": true
+					},
+					{
+						"text": "During this time following symptoms were reported:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Depressed mood"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss of Interest"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss of pleasure"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Weight loss or gain"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss or increased appetite"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Insomnia or hypersomnia"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling very 1restless or sluggish"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Fatigue or loss of energy"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling worthless or guilty"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Concentration difficulties or indecisive"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q11"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Thoughts of death or thoughts of suicide or suicide attempts"
+							}
+						]
+					},
+					{
+						"text": "{first_name} reported that the symptoms were not the result of a substance, bereavement or a physical disorder.",
+						"italic": true
+					},
+					{
+						"text": "The depression was accompanied by melancholic features during the worst period.",
+						"summary": true,
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "MA"
+									},
+									"operator": "+",
+									"right_operand": {
+										"type": "variable",
+										"value": "MB"
+									}
+								}
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 2
+							}
+						},
+						"italic": true
+					},
+					{
+						"text": "The depression has seasonal patterns (Seasonal Affective Disorder).",
+						"continued": true,
+						"summary": true,
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "SP"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 1
+							}
+						},
+						"italic": true
+					},
+					{
+						"text": "The depression was accompanied by Anxious Distress that would be considered",
+						"continued": true,
+						"summary": true,
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "AD"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "Moderately-Severe"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "variable",
+												"value": "AD"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 4
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q16"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									}
+								},
+								"text": "Severe"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true,
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "AD"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					{
+						"text": "The average severity of reported symptoms was",
+						"continued": true,
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "He has indicated that {pronouns.subject} experienced the symptoms of depression ",
+						"summary": true,
+						"italic": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "within the last few days"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "within the last week"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "within the last month"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "within 6 months"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "longer than 6 months ago"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"italic": true
+					}
+				]
+			},
+			{
+				"type": "Major Depressive Episode",
+				"operation": {
+					"left_operand": {
+						"operation": {
+							"left_operand": {
+								"type": "criterion",
+								"value": "Major Depressive Disorder Positive A1"
+							},
+							"operator": "||",
+							"right_operand": {
+								"type": "criterion",
+								"value": "Major Depressive Disorder Positive A2"
+							}
+						}
+					},
+					"operator": "&&",
+					"right_operand": {
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "criterion",
+																"value": "Manic_Criterion_A",
+																"test_code": "manic_test"
+															},
+															"operator": ">",
+															"right_operand": {
+																"type": "numerical",
+																"value": 0
+															}
+														}
+													},
+													"operator": "&&",
+													"right_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "criterion",
+																"value": "Manic_Criterion_B",
+																"test_code": "manic_test"
+															},
+															"operator": ">",
+															"right_operand": {
+																"type": "numerical",
+																"value": 0
+															}
+														}
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "criterion",
+														"value": "Manic_Criterion_C",
+														"test_code": "manic_test"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "criterion",
+												"value": "Manic_Criterion_D",
+												"test_code": "manic_test"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								}
+							},
+							"operator": "||",
+							"right_operand": {
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"operation": {
+															"left_operand": {
+																"operation": {
+																	"left_operand": {
+																		"operation": {
+																			"left_operand": {
+																				"type": "criterion",
+																				"value": "Hypomanic_Criterion_A",
+																				"test_code": "manic_test"
+																			},
+																			"operator": ">",
+																			"right_operand": {
+																				"type": "numerical",
+																				"value": 0
+																			}
+																		}
+																	},
+																	"operator": "&&",
+																	"right_operand": {
+																		"operation": {
+																			"left_operand": {
+																				"type": "criterion",
+																				"value": "Hypomanic_Criterion_B",
+																				"test_code": "manic_test"
+																			},
+																			"operator": ">",
+																			"right_operand": {
+																				"type": "numerical",
+																				"value": 0
+																			}
+																		}
+																	}
+																}
+															},
+															"operator": "&&",
+															"right_operand": {
+																"operation": {
+																	"left_operand": {
+																		"type": "criterion",
+																		"value": "Hypomanic_Criterion_C",
+																		"test_code": "manic_test"
+																	},
+																	"operator": ">",
+																	"right_operand": {
+																		"type": "numerical",
+																		"value": 0
+																	}
+																}
+															}
+														}
+													},
+													"operator": "&&",
+													"right_operand": {
+														"operation": {
+															"left_operand": {
+																"type": "criterion",
+																"value": "Hypomanic_Criterion_D",
+																"test_code": "manic_test"
+															},
+															"operator": ">",
+															"right_operand": {
+																"type": "numerical",
+																"value": 0
+															}
+														}
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "criterion",
+														"value": "Hypomanic_Criterion_E",
+														"test_code": "manic_test"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0
+													}
+												}
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "criterion",
+												"value": "Hypomanic_Criterion_F",
+												"test_code": "manic_test"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 0
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Mood Disorders Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Mood Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} meets DSM-5 criteria for Major Depressive Episode ",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.31 (F33.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.32 (F33.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.33 (F33.2)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.21 (F32.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.22 (F32.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.23 (F32.3)"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "{first_name} reported feeling depressed mood most of the day, nearly every day for at least 2 weeks ",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"operation": {
+							"left_operand": {
+								"type": "question",
+								"value": "q15"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 3
+							}
+						},
+						"text": "during the past 30 days",
+						"continued": true,
+						"addPeriod": true,
+						"summary": true
+					},
+					{
+						"text": "During this time following symptoms were reported:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Depressed mood"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss of Interest"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss of pleasure"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Weight loss or gain"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss or increased appetite"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Insomnia or hypersomnia"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling very 1restless or sluggish"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Fatigue or loss of energy"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling worthless or guilty"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Concentration difficulties or indecisive"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q11"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Thoughts of death or thoughts of suicide or suicide attempts"
+							}
+						]
+					},
+					{
+						"text": "{first_name} reported that the symptoms were not the result of a substance, bereavement or a physical disorder.",
+						"italic": true
+					},
+					{
+						"text": "The depression was accompanied by melancholic features during the worst period.",
+						"summary": true,
+						"operation": {
+							"left_operand": {
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "MA"
+									},
+									"operator": "+",
+									"right_operand": {
+										"type": "variable",
+										"value": "MB"
+									}
+								}
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 2
+							}
+						},
+						"italic": true
+					},
+					{
+						"text": "The depression has seasonal patterns (Seasonal Affective Disorder).",
+						"continued": true,
+						"summary": true,
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "SP"
+							},
+							"operator": "==",
+							"right_operand": {
+								"type": "numerical",
+								"value": 1
+							}
+						},
+						"italic": true
+					},
+					{
+						"text": "The depression was accompanied by Anxious Distress that would be considered",
+						"continued": true,
+						"summary": true,
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "AD"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "Moderately-Severe"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "variable",
+												"value": "AD"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 4
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q16"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									}
+								},
+								"text": "Severe"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "AD"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true,
+						"operation": {
+							"left_operand": {
+								"type": "variable",
+								"value": "AD"
+							},
+							"operator": ">",
+							"right_operand": {
+								"type": "numerical",
+								"value": 0
+							}
+						}
+					},
+					{
+						"text": "The average severity of reported symptoms was",
+						"continued": true,
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "He has indicated that {pronouns.subject} experienced the symptoms of depression ",
+						"summary": true,
+						"italic": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "within the last few days"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "within the last week"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "within the last month"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "within 6 months"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "longer than 6 months ago"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"italic": true
+					}
+				]
+			},
+			{
+				"type": "Depression Negative A",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Negative Depression A"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Mood Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Mood Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} fails to meet DSM-5 criteria for Major Depressive Disorder ",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.31 (F33.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.32 (F33.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.33 (F33.2)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.21 (F32.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.22 (F32.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.23 (F32.3)"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "{first_name} meets the symptom criteria for Major Depressive Episode, but does not fulfil all of the criteria necessary for the diagnosis.",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"text": "The following depressive symptoms were reported:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q1"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Depressed mood"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q2"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss of Interest"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss of pleasure"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Weight loss or gain"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss or increased appetite"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Insomnia or hypersomnia"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling worthless or excessive guilt"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Concentration difficulties"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Thoughts of death or suicide"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Concentration difficulties or indecisive"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q11"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Thoughts of death or thoughts of suicide or suicide attempts"
+							}
+						]
+					},
+					{
+						"text": "The average severity of reported symptoms was",
+						"continued": true,
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "The diagnosis was not assigned because:"
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q12"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The symptoms were not reported to interfere with social or work participation"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q13"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "The symptoms were not present during the same 2 week period"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q14"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported that the symptoms were not the result of a substance, bereavement or a physical disorder"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q14"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "{first_name} reported that the symptoms were the result of a substance, bereavement or a physical disorder"
+							}
+						]
+					},
+					{
+						"text": "{pronouns.subject} has indicated that {pronouns.subject} experienced the symptoms of depression ",
+						"summary": true,
+						"italic": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "within the last few days"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1
+									}
+								},
+								"text": "within the last week"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2
+									}
+								},
+								"text": "within the last month"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 3
+									}
+								},
+								"text": "within 6 months"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q16"
+									},
+									"operator": "==",
+									"right_operand": {
+										"type": "numerical",
+										"value": 4
+									}
+								},
+								"text": "longer than 6 months ago"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"italic": true
+					}
+				]
+			},
+			{
+				"type": "Depression Negative B",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Negative Depression B"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Mood Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Mood Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} fails to meet DSM-5 criteria for Major Depressive Episode because the mood change and loss of interest criteria were not met.",
+						"summary": true
+					},
+					{
+						"text": "However, {pronouns.subject} did report the following depressive symptoms:",
+						"continued": true,
+						"italic": true,
+						"summary": true
+					},
+					{
+						"bullet_points": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q3"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss of pleasure"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q4"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Weight loss or gain"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q5"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Loss or increased appetite"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q6"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Insomnia or hypersomnia"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q7"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling restless or sluggish"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q8"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Fatigue or loss of energy"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q9"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Feeling worthless or guilty"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q10"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Concentration difficulties or indecisive"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "question",
+										"value": "q11"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0
+									}
+								},
+								"text": "Thoughts of death or thoughts of suicide or suicide attempts"
+							}
+						]
+					},
+					{
+						"text": "The average severity of reported symptoms was",
+						"continued": true,
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 0.5
+									}
+								},
+								"text": "Minimal"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 1.5
+									}
+								},
+								"text": "Mild"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": "<=",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Moderate"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"type": "variable",
+										"value": "Severity"
+									},
+									"operator": ">",
+									"right_operand": {
+										"type": "numerical",
+										"value": 2.5
+									}
+								},
+								"text": "Severe"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					}
+				]
+			},
+			{
+				"type": "Depression Negative C",
+				"operation": {
+					"left_operand": {
+						"type": "criterion",
+						"value": "Negative Depression C"
+					},
+					"operator": ">",
+					"right_operand": {
+						"type": "numerical",
+						"value": 0
+					}
+				},
+				"report_sections": [
+					{
+						"heading": "Mood Disorder Full Report",
+						"bold": true
+					},
+					{
+						"heading": "Mood Disorder Brief Summary Report",
+						"bold": true,
+						"onlySummary": true
+					},
+					{
+						"text": "{first_name} fails to meet DSM-5 criteria for Major Depressive Disorder ",
+						"summary": true
+					},
+					{
+						"single_word": [
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.31 (F33.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.32 (F33.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": ">",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.33 (F33.2)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 0.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.21 (F32.0)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 1.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.22 (F32.1)"
+							},
+							{
+								"operation": {
+									"left_operand": {
+										"operation": {
+											"left_operand": {
+												"type": "question",
+												"value": "q15"
+											},
+											"operator": "==",
+											"right_operand": {
+												"type": "numerical",
+												"value": 1
+											}
+										}
+									},
+									"operator": "&&",
+									"right_operand": {
+										"operation": {
+											"left_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": ">",
+													"right_operand": {
+														"type": "numerical",
+														"value": 2.5
+													}
+												}
+											},
+											"operator": "&&",
+											"right_operand": {
+												"operation": {
+													"left_operand": {
+														"type": "variable",
+														"value": "Severity"
+													},
+													"operator": "<=",
+													"right_operand": {
+														"type": "numerical",
+														"value": 3.0
+													}
+												}
+											}
+										}
+									}
+								},
+								"text": "296.23 (F32.3)"
+							}
+						],
+						"continued": true,
+						"summary": true,
+						"addPeriod": true
+					},
+					{
+						"text": "No depressive symptoms were reported during the assessment.",
+						"italic": true,
+						"summary": true
+					}
+				]
+			}
+		]
+	}
+}

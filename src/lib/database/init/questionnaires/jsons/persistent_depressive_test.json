@@ -1,0 +1,170 @@
+{
+	"test_structure": {
+		"description": "DSM-5 Persistent Depressive Disorder Diagnostic Test",
+		"test_metadata": {
+			"super_test_name": "DSM-5 Persistent Depressive Disorder Diagnostic Test",
+			"test_name": "Persistent Depressive Test",
+			"test_code": "persistent_depressive_test",
+			"display_text_before_questions": "Please indicate below whether you have experienced the following over the past 2 years:"
+		},
+		"questions": {
+			"question_template": [
+				{
+					"id": "q1",
+					"description_for_subsequent_question": "",
+					"text": "Have you found yourself feeling somewhat down for most of the day, day after day, for at least the past two years ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "No",
+					"question_display_logic_to_check": null,
+					"is_a_permanent_question": "Yes"
+				},
+				{
+					"id": "q2",
+					"description_for_subsequent_question": "When in a depressed mood have you experienced following: ",
+					"text": "Poor Appetite or overeating ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q3",
+					"description_for_subsequent_question": "When in a depressed mood have you experienced following: ",
+					"text": "Insomnia or hyper-somnia (that is over sleeping) ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q4",
+					"description_for_subsequent_question": "When in a depressed mood have you experienced following: ",
+					"text": "Lower energy or fatigue ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q5",
+					"description_for_subsequent_question": "When in a depressed mood have you experienced following: ",
+					"text": "Low self esteem ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q6",
+					"description_for_subsequent_question": "When in a depressed mood have you experienced following: ",
+					"text": "Poor concentration or difficulty making decisions ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q7",
+					"description_for_subsequent_question": "When in a depressed mood have you experienced following: ",
+					"text": "Feelings of hopelessness ?",
+					"text_voice_over_url": "",
+					"answer_type": "scale",
+					"scale": [
+						{ "0": "Not at all" },
+						{ "1": "A little" },
+						{ "2": "Quite a bit" },
+						{ "3": "A lot" }
+					],
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q8",
+					"description_for_subsequent_question": "",
+					"text": "During the period of at least 2 years that you were feeling down, you reported that you (if Q2>0) had a poor appetite or were were overeating, (if Q3>0) experienced insomnia or hypersomnia, (if Q4>0) experienced low energy or fatigue, (if Q5>0) low self esteem, (if Q6>0) poor concentration or difficulty making decisions if Q7>0 and feelings of hopelessness. During the 2 years of feeling depressed was there a period of 2 months or more when you did not experience any of these symptoms?",
+					"text_voice_over_url": "",
+					"answer_type": "boolean",
+					"answer_values": "['Yes','No']",
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "[1,2]",
+					"is_a_permanent_question": "No"
+				},
+				{
+					"id": "q9",
+					"description_for_subsequent_question": "",
+					"text": "Did the symptoms cause you significant distress or impairment areas of functioning ?",
+					"text_voice_over_url": "",
+					"answer_type": "boolean",
+					"answer_values": "['Yes','No']",
+					"check_for_question_display_logic": "Yes",
+					"question_display_logic_to_check": "1",
+					"is_a_permanent_question": "No"
+				}
+			]
+		},
+		"question_display_logic": {
+			"description": "Array of objects defining when questions should be displayed",
+			"logic_template": [
+				{
+					"logic_id": "1",
+					"condition": "answer.q1 == 'Not at all'",
+					"next_question": "skip out of PDD",
+					"exit_action": "continue the test from que 2"
+				},
+				{
+					"logic_id": "2",
+					"condition": "count((q2 > 0) + (q3 > 0) + (q4 > 0) + (q5 > 0) + (q6 > 0) + (q7 > 0)) > 2",
+					"next_question": "display the que 8",
+					"exit_action": "skip que 8 and move to next question"
+				}
+			]
+		}
+	},
+	"implementation_notes": [
+		"for que 8 (summary kind of question) - For questions 2 to 7, only display the symptoms where the user's answer is greater than 0.",
+		"for displaying question 8 both the conditions need to be fulfill "
+	]
+}
