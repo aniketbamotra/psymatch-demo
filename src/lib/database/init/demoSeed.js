@@ -16,6 +16,9 @@ import { loadQuestionnaireData } from './questionnaires/loader.js';
 import { testLogics } from './test_logics/index.js';
 import { seedLegalDocs } from './legalSeed.js';
 import { fetchCurrentLegalBundle, buildSnapshotFromBundle } from '../../utils/legal.js';
+import { processAlgorithmicFields } from '../../utils/anonymization/algorithmicProcessor.js';
+import { buildRedactionRules, NO_AI_RESULT } from '../../utils/anonymization/redactionRules.js';
+import adultBioDefinition from './questionnaires/jsons/adult_bio.json';
 import demoData from '../../demo/demo-data.json';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -53,6 +56,30 @@ export function toQuestionnaireDoc(q) {
 				question.description_for_subsequent_question
 			),
 			scale: question.scale.map((item) => ({ num: item.num, text: bilingual(item.text) }))
+		})),
+		questionDisplayLogic: []
+	};
+}
+
+// The Adult Biographical interview's authoring file differs from the scored
+// interviews: special input types, option lists, and a scale already in
+// { num, text } form. It has no scoring rules (its report has its own processor).
+export function toAdultBioDoc(raw) {
+	const { test_metadata, questions } = raw.test_structure;
+	return {
+		title: bilingual('Adult Biographical Interview'),
+		test_code: test_metadata.test_code,
+		displayTextBeforeQuestions: bilingual(test_metadata.display_text_before_questions),
+		questions: questions.question_template.map((q) => ({
+			id: q.id,
+			text: bilingual(q.text),
+			description_for_subsequent_question: bilingual(''),
+			answer_type: q.answer_type,
+			input_type: q.input_type,
+			...(q.options && { options: q.options.map(bilingual) }),
+			...(q.fields && { fields: q.fields }),
+			...(q.conditional && { conditional: q.conditional }),
+			scale: (q.scale || []).map((item) => ({ num: item.num, text: bilingual(item.text) }))
 		})),
 		questionDisplayLogic: []
 	};
@@ -155,9 +182,10 @@ export async function seedDemoData({ reset = false } = {}) {
 	}
 
 	// 1) Interviews and their scoring rules
-	const questionnaires = await Questionnaire.insertMany(
-		(await loadQuestionnaireData()).map(toQuestionnaireDoc)
-	);
+	const questionnaires = await Questionnaire.insertMany([
+		...(await loadQuestionnaireData()).map(toQuestionnaireDoc),
+		toAdultBioDoc(adultBioDefinition)
+	]);
 	const byCode = new Map(questionnaires.map((q) => [q.test_code, q]));
 	await ReportLogic.insertMany(
 		Object.entries(testLogics)
@@ -233,6 +261,7 @@ export async function seedDemoData({ reset = false } = {}) {
 
 		const assignmentIds = [];
 		const assignmentStatuses = [];
+		let adultBioResponses = null;
 		let lastActivity = daysAgo(patient.createdDaysAgo);
 
 		for (const a of patient.assignments) {
@@ -251,13 +280,24 @@ export async function seedDemoData({ reset = false } = {}) {
 
 			if (a.progress !== 'not_started') {
 				const submittedAt = daysAgo(a.completedDaysAgo ?? Math.max(0, a.assignedDaysAgo - 1));
-				await Response.create({
-					assignmentId: assignment._id,
-					responses: buildAnswers(questionnaire, a, `${patient.email}:${a.test}`),
-					submittedAt
-				});
+				const responses = buildAnswers(questionnaire, a, `${patient.email}:${a.test}`);
+				await Response.create({ assignmentId: assignment._id, responses, submittedAt });
 				if (submittedAt > lastActivity) lastActivity = submittedAt;
+				if (a.test === 'ADULT_BIO') adultBioResponses = responses;
 			}
+		}
+
+		// Redaction profile, built the way /api/anonymization/process does in demo mode
+		if (patient.redactionProfile && adultBioResponses) {
+			const algResults = processAlgorithmicFields(user._id.toString(), adultBioResponses);
+			const rules = buildRedactionRules(algResults, NO_AI_RESULT, adultBioResponses);
+			user.patientProfile.anonymizationProfile = {
+				status: 'completed',
+				generatedAt: lastActivity,
+				version: 2,
+				...rules
+			};
+			await user.save();
 		}
 
 		await Status.create({

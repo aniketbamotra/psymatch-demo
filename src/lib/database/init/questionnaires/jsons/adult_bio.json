@@ -1,0 +1,376 @@
+{
+	"test_structure": {
+		"description": "DSM-5 Adult Biographical Interview",
+		"test_metadata": {
+			"super_test_name": "DSM-5 Adult Biographical Interview",
+			"test_name": "Adult Biographical",
+			"test_code": "ADULT_BIO",
+			"display_text_before_questions": "Please provide the following biographical information. All information will be kept confidential."
+		},
+		"questions": {
+			"question_template": [
+				{
+					"id": "name",
+					"text": "Name",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "mobileno",
+					"text": "Mobile No.",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "email",
+					"text": "Email",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "address",
+					"text": "Address",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "dob",
+					"text": "Date of Birth",
+					"answer_type": "special",
+					"input_type": "date"
+				},
+				{
+					"id": "gender",
+					"text": "Gender",
+					"answer_type": "special",
+					"input_type": "select",
+					"options": ["Male", "Female", "Trans", "Non Binary"]
+				},
+				{
+					"id": "pronouns",
+					"text": "Preferred Pronouns",
+					"answer_type": "special",
+					"input_type": "select",
+					"options": ["he/him", "she/her", "they/them", "other"]
+				},
+				{
+					"id": "insurance",
+					"text": "Insurance",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "referred_by",
+					"text": "Referred By",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "emergency_contacts",
+					"text": "Emergency Contacts",
+					"answer_type": "special",
+					"input_type": "contacts",
+					"fields": ["name", "relationship", "phone"]
+				},
+				{
+					"id": "education_level",
+					"text": "Highest educational level obtained",
+					"answer_type": "special",
+					"input_type": "select",
+					"options": [
+						"High School",
+						"Some College",
+						"Associate's Degree",
+						"Bachelor's Degree",
+						"Master's Degree",
+						"Doctoral Degree",
+						"Other"
+					]
+				},
+				{
+					"id": "career",
+					"text": "Career",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "work_hours",
+					"text": "Work hours",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "marital_status",
+					"text": "Marital Status",
+					"answer_type": "special",
+					"input_type": "select",
+					"options": ["Single", "Married", "Divorced", "Separated", "Widowed", "Other"]
+				},
+				{
+					"id": "spouse_occupation",
+					"text": "Spouse/Life Partner's Occupation",
+					"answer_type": "special",
+					"input_type": "text",
+					"conditional": {
+						"dependsOn": "marital_status",
+						"showIf": ["Married"]
+					}
+				},
+				{
+					"id": "children",
+					"text": "Do you have children?",
+					"answer_type": "special",
+					"input_type": "children_list",
+					"fields": ["name", "age"]
+				},
+				{
+					"id": "family_doctor",
+					"text": "Family Doctor",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "medications",
+					"text": "Are you on any medication?",
+					"answer_type": "special",
+					"input_type": "medication_list",
+					"fields": ["name", "dosage", "frequency"]
+				},
+				{
+					"id": "major_illness_history",
+					"text": "History of major illnesses or injury?",
+					"answer_type": "special",
+					"input_type": "boolean"
+				},
+				{
+					"id": "psych_hospitalization",
+					"text": "Have you ever been hospitalized for psychological concerns?",
+					"answer_type": "special",
+					"input_type": "boolean"
+				},
+				{
+					"id": "past_therapy",
+					"text": "Have you ever participated in group or individual psychotherapy ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "current_therapy",
+					"text": "Are you receiving treatment / therapy from anywhere else right now ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "substance_use_header",
+					"text": "Now we would like to ask about your use of alcohol and other drugs.",
+					"answer_type": "special",
+					"input_type": "header"
+				},
+				{
+					"id": "alcohol_use",
+					"text": "Alcohol",
+					"answer_type": "special",
+					"input_type": "boolean"
+				},
+				{
+					"id": "marijuana_use",
+					"text": "Marijuana",
+					"answer_type": "special",
+					"input_type": "boolean"
+				},
+				{
+					"id": "stimulants_use",
+					"text": "Stimulants (cocaine, speed other stimulants)",
+					"answer_type": "special",
+					"input_type": "boolean"
+				},
+				{
+					"id": "non_stimulants_use",
+					"text": "Other Non-Stimulants (e.g. codeine, percocet, oxycontin)",
+					"answer_type": "special",
+					"input_type": "boolean"
+				},
+				{
+					"id": "family_at_occt",
+					"text": "In order to avoid a conflict of interest, could you please let us know if you have any family members or friends who currently attend or have attended therapy at CCT. If so, please provide us with their name and therapist’s name (if known)",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "reasons_for_cct",
+					"text": "Please tell us if any of the following categories are associated with the reason you are coming to the CCT. Please check all that apply.",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "additional_details",
+					"text": "Please tell us more about your reason for coming to our clinic",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "main_goals",
+					"text": "List your present main concerns, or problems and what you hope to change by coming to therapy",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "concerns_duration",
+					"text": "How long have you had these problems or concerns ?",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "motivation_level",
+					"text": "Can you rate your level of motivation to participate in Cognitive Therapy?",
+					"answer_type": "scale",
+					"scale": [
+						{
+							"num": 1,
+							"text": "Minimally Motivated"
+						},
+						{
+							"num": 2,
+							"text": "Mildly Motivated"
+						},
+						{
+							"num": 3,
+							"text": "Moderately Motivated"
+						},
+						{
+							"num": 4,
+							"text": "Highly Motivated"
+						},
+						{
+							"num": 5,
+							"text": "Extremely Motivated"
+						}
+					]
+				},
+				{
+					"id": "problems_worse",
+					"text": "What makes your problem worse?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "problems_better",
+					"text": "Under what conditions are things better ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "social_interactions",
+					"text": "How would you describe your social interactions ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "social_difficulties",
+					"text": "Do you experience any social difficulties?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "interests_hobbies",
+					"text": "List some of your interests, hobbies, sports, things you enjoy",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "exercise_days",
+					"text": "How many days a week you exercise, are physically active",
+					"answer_type": "special",
+					"input_type": "number"
+				},
+				{
+					"id": "exercise_duration",
+					"text": "On average, how much time do you spend exercising on these days",
+					"answer_type": "special",
+					"input_type": "text"
+				},
+				{
+					"id": "exercise_intensity",
+					"text": "At what intensity would you say you exercise?",
+					"answer_type": "special",
+					"input_type": "select",
+					"options": ["Light", "Moderate", "Vigorous"]
+				},
+				{
+					"id": "sleep_pattern",
+					"text": "Please describe your typical sleep pattern ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "nutrition_pattern",
+					"text": "Please describe your general nutritional pattern ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+
+				{
+					"id": "adopted",
+					"text": "Were you adopted ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "primary_caregiver_occupation_growing_up",
+					"text": "Primary caregiver's / parent's occupation while growing up",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "siblings_count",
+					"text": "How many children were in your family growing up ?",
+					"answer_type": "special",
+					"input_type": "number"
+				},
+				{
+					"id": "siblings_relationship",
+					"text": "How did you get along with them growing up ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "siblings_occupation",
+					"text": "What are their occupations ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "family_emotional_problems",
+					"text": "Do you have any members of your family or relatives who have or have had serious emotional problems ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "religion",
+					"text": "How religious are you ?",
+					"answer_type": "special",
+					"input_type": "textarea",
+					"options": [
+						"Atheist",
+						"Agnostic",
+						"Not Religious",
+						"Somewhat Religious",
+						"Highly Religious"
+					]
+				},
+				{
+					"id": "significant_events",
+					"text": "Please indicate any notable events with family, friends or community members that had a noteworthy effect on you. Please take the time to elaborate as thoroughly as possible",
+					"answer_type": "special",
+					"input_type": "textarea"
+				},
+				{
+					"id": "other_info",
+					"text": "Is there anything else you’d like to share about yourself that you feel might be helpful ?",
+					"answer_type": "special",
+					"input_type": "textarea"
+				}
+			]
+		}
+	}
+}

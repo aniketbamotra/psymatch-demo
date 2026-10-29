@@ -23,6 +23,11 @@ one-click buttons for them.
 The dashboard has eight fictional patients at different stages: newly
 invited, part-way through, finished, and inactive.
 
+**Redaction:** Priya Sharma and Samuel Rivera have completed the Adult
+Biographical interview and already have a redaction profile (open the patient →
+Redaction Profile, or print a report with redaction on). Noah Williams has
+completed Adult Bio but has no profile yet, so you can generate one live.
+
 ## What demo mode changes
 
 Demo mode is on by default (set `PUBLIC_DEMO_MODE=false` to turn it off):
@@ -33,8 +38,13 @@ Demo mode is on by default (set `PUBLIC_DEMO_MODE=false` to turn it off):
 - **Email** is never sent. When staff create a patient, the account-setup link
   is shown in the popup instead.
 - **reCAPTCHA** is skipped.
-- **AI reports and redaction** are disabled, because they depend on AWS and a separate
-  agent service. Algorithmic (rule-based) reports still work.
+- **AI reports** are disabled, because they depend on a separate agent service.
+  Algorithmic (rule-based) reports still work.
+- **Redaction profiles** are generated without the AI phase (AWS Bedrock and
+  Comprehend). The rule-based replacements still apply: patient, children and
+  family surnames, phones, emails, address, date of birth, insurance and doctors.
+  Free-text answers are not rewritten, and an emergency contact's first name is
+  kept (only the surname changes). Profiles can still be reviewed and edited by hand.
 
 ## Running it
 
@@ -73,8 +83,8 @@ npm run demo:reset
 
 ## Known limitations
 
-- Only 7 of the production interviews are included (depression, persistent
-  depressive, manic, generalized anxiety, panic, social anxiety, sleep). French
-  text falls back to English for interview content.
+- Only 8 of the production interviews are included: Adult Biographical,
+  depression, persistent depressive, manic, generalized anxiety, panic, social
+  anxiety and sleep. French text falls back to English for interview content.
 - The depression interview's scoring rules in this repository are an older
   version, so its section is left out of the algorithmic report.

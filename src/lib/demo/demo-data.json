@@ -1,5 +1,5 @@
 {
-	"_readme": "Synthetic demo data. Every person, email and note here is fictional. Dates are relative (days before the seed runs) so the dashboard always looks current. Answer 'profile' picks how high scale answers lean: severe | moderate | mild | minimal. 'answered' is the fraction of questions answered for in_progress assignments.",
+	"_readme": "Synthetic demo data. Every person, email and note here is fictional. Dates are relative (days before the seed runs) so the dashboard always looks current. Answer 'profile' picks how high scale answers lean: severe | moderate | mild | minimal. 'answered' is the fraction of questions answered for in_progress assignments. Adult Bio answers (test ADULT_BIO) are written by hand; 'redactionProfile': true pre-generates that patient's redaction profile.",
 	"admins": [
 		{
 			"email": "director@example.com",
@@ -185,6 +185,165 @@
 			],
 			"assignments": [
 				{
+					"test": "ADULT_BIO",
+					"assignedDaysAgo": 21,
+					"progress": "completed",
+					"completedDaysAgo": 19,
+					"answers": {
+						"q1": {
+							"firstName": "Priya",
+							"middleName": "",
+							"lastName": "Sharma"
+						},
+						"q2": {
+							"primaryPhone": "647-555-0103",
+							"primaryPhoneCountryCode": "+1",
+							"otherPhone": "416-555-0177",
+							"otherPhoneCountryCode": "+1"
+						},
+						"q3": {
+							"primaryEmail": "priya.sharma@example.com",
+							"otherEmail1": "",
+							"otherEmail2": ""
+						},
+						"q4": {
+							"line1": "42 Maple Grove Avenue",
+							"line2": "Unit 5",
+							"city": "Toronto",
+							"province": "Ontario",
+							"postalCode": "M4C 1A1",
+							"country": "Canada"
+						},
+						"q5": "1991-04-12",
+						"q6": "Female",
+						"q7": "she/her",
+						"q8": "Sun Life group benefits, plan 55021",
+						"q9": "Self from doctor referral",
+						"q10": {
+							"name": "Arjun Sharma",
+							"relationship": "Husband",
+							"phone": "647-555-0144",
+							"email": "arjun.sharma@example.com",
+							"notes": "Prefers text messages during work hours"
+						},
+						"q11": "Master's Degree",
+						"q12": {
+							"trainedOccupation": "Civil engineer",
+							"currentOccupation": "Project manager at a construction firm",
+							"workSatisfaction": "2"
+						},
+						"q13": "Full Time",
+						"q14": "Married",
+						"q15": "High school science teacher",
+						"q16": [
+							{
+								"name": "Anika Sharma",
+								"age": "6",
+								"gender": "Female",
+								"details": "Started grade one this fall"
+							}
+						],
+						"q17": "Dr. Elaine Foster",
+						"q18": [
+							{
+								"name": "Sertraline",
+								"dosage": "50 mg",
+								"frequency": "Once daily",
+								"doctor": "Dr. Elaine Foster",
+								"prescribedFor": "Low mood"
+							}
+						],
+						"q19": {
+							"answer": "false",
+							"details": {}
+						},
+						"q20": {
+							"answer": "false",
+							"details": {}
+						},
+						"q21": {
+							"answer": "true",
+							"details": {
+								"reason": "Counselling through work after a difficult year",
+								"length": "6 sessions",
+								"location": "Employee assistance program"
+							}
+						},
+						"q22": {
+							"answer": "false",
+							"details": {}
+						},
+						"q23": "",
+						"q24": {
+							"answer": "true",
+							"details": {
+								"amount": "One glass of wine",
+								"frequency": "Two evenings a week"
+							}
+						},
+						"q25": {
+							"answer": "false",
+							"details": {}
+						},
+						"q26": {
+							"answer": "false",
+							"details": {}
+						},
+						"q27": {
+							"answer": "false",
+							"details": {}
+						},
+						"q28": {
+							"answer": "false",
+							"details": ""
+						},
+						"q29": [
+							"Depression",
+							"Anxiety",
+							"Stress"
+						],
+						"q30": "For about a year I have felt flat and tired most days. Panic comes on at work before big meetings.",
+						"q31": "Get my energy back, stop dreading Mondays, and be more present with my daughter.",
+						"q32": "About a year",
+						"q33": "4",
+						"q34": "Tight project deadlines and poor sleep",
+						"q35": "Weekends away from work and walks with family",
+						"q36": {
+							"mainDescription": "Mostly with family; I have pulled back from friends",
+							"closeFriends": "2",
+							"friendlyAcquaintances": "5",
+							"meetupFrequency": "Once a month"
+						},
+						"q37": "I cancel plans more often than I used to.",
+						"q38": "Gardening, cooking, badminton",
+						"q39": 2,
+						"q40": "30 minutes",
+						"q41": "Moderate",
+						"q42": "Fall asleep around midnight, wake at 4 am and cannot get back to sleep.",
+						"q43": "Skip breakfast, irregular lunches, eat late dinners.",
+						"q44": {
+							"answer": "false",
+							"details": {}
+						},
+						"q45": {
+							"primaryCaregiverOccupation": "Accountant",
+							"primaryCaregiverRelationship": "Mother",
+							"secondaryCaregiverOccupation": "Electrician",
+							"secondaryCaregiverRelationship": "Father"
+						},
+						"q46": 3,
+						"q47": "Close to my younger sister, less so to my brother.",
+						"q48": "Nurse and software developer",
+						"q49": "An aunt was treated for depression.",
+						"q50": {
+							"religiosity": "Somewhat Religious",
+							"religionName": "Hindu"
+						},
+						"q51": "Moved to Toronto from Calgary in 2019. Promotion last year doubled my workload.",
+						"q52": "Mornings are hardest."
+					}
+				},
+				{
 					"test": "depression_test",
 					"assignedDaysAgo": 21,
 					"progress": "completed",
@@ -301,7 +460,8 @@
 						"q17": "3"
 					}
 				}
-			]
+			],
+			"redactionProfile": true
 		},
 		{
 			"email": "samuel.rivera@example.com",
@@ -317,6 +477,145 @@
 			"createdDaysAgo": 35,
 			"tosAccepted": true,
 			"assignments": [
+				{
+					"test": "ADULT_BIO",
+					"assignedDaysAgo": 35,
+					"progress": "completed",
+					"completedDaysAgo": 31,
+					"answers": {
+						"q1": {
+							"firstName": "Samuel",
+							"middleName": "",
+							"lastName": "Rivera"
+						},
+						"q2": {
+							"primaryPhone": "905-555-0104",
+							"primaryPhoneCountryCode": "+1",
+							"otherPhone": "",
+							"otherPhoneCountryCode": "+1"
+						},
+						"q3": {
+							"primaryEmail": "samuel.rivera@example.com",
+							"otherEmail1": "",
+							"otherEmail2": ""
+						},
+						"q4": {
+							"line1": "18 Lakeshore Road West",
+							"line2": "",
+							"city": "Oakville",
+							"province": "Ontario",
+							"postalCode": "L6K 1E1",
+							"country": "Canada"
+						},
+						"q5": "2003-09-02",
+						"q6": "Male",
+						"q7": "he/him",
+						"q8": "University student health plan",
+						"q9": "Self from external website (RateMD etc)",
+						"q10": {
+							"name": "Maria Rivera",
+							"relationship": "Mother",
+							"phone": "905-555-0188",
+							"email": "maria.rivera@example.com",
+							"notes": ""
+						},
+						"q11": "Bachelor's Degree",
+						"q12": {
+							"trainedOccupation": "Computer science student",
+							"currentOccupation": "Part-time library assistant",
+							"workSatisfaction": "3"
+						},
+						"q13": "Part Time",
+						"q14": "Single",
+						"q15": "",
+						"q16": [],
+						"q17": "Dr. Kevin Osei",
+						"q18": [],
+						"q19": {
+							"answer": "false",
+							"details": {}
+						},
+						"q20": {
+							"answer": "false",
+							"details": {}
+						},
+						"q21": {
+							"answer": "false",
+							"details": {}
+						},
+						"q22": {
+							"answer": "false",
+							"details": {}
+						},
+						"q23": "",
+						"q24": {
+							"answer": "true",
+							"details": {
+								"amount": "Two beers",
+								"frequency": "Once a month"
+							}
+						},
+						"q25": {
+							"answer": "false",
+							"details": {}
+						},
+						"q26": {
+							"answer": "false",
+							"details": {}
+						},
+						"q27": {
+							"answer": "false",
+							"details": {}
+						},
+						"q28": {
+							"answer": "false",
+							"details": ""
+						},
+						"q29": [
+							"Anxiety",
+							"Social difficulties"
+						],
+						"q30": "I avoid speaking in seminars and skip group projects when I can. My grades are dropping because of it.",
+						"q31": "Be able to present in class and make a few friends at university.",
+						"q32": "Since high school",
+						"q33": "3",
+						"q34": "Being called on unexpectedly, group work",
+						"q35": "Small groups with people I already know",
+						"q36": {
+							"mainDescription": "Few friends, mostly online",
+							"closeFriends": "1",
+							"friendlyAcquaintances": "3",
+							"meetupFrequency": "Rarely"
+						},
+						"q37": "I freeze when meeting new people and worry about saying something wrong.",
+						"q38": "Video games, running, guitar",
+						"q39": 4,
+						"q40": "40 minutes",
+						"q41": "Moderate",
+						"q42": "Usually sleep 1 am to 9 am.",
+						"q43": "Mostly fine, a lot of takeout.",
+						"q44": {
+							"answer": "false",
+							"details": {}
+						},
+						"q45": {
+							"primaryCaregiverOccupation": "Dental hygienist",
+							"primaryCaregiverRelationship": "Mother",
+							"secondaryCaregiverOccupation": "",
+							"secondaryCaregiverRelationship": ""
+						},
+						"q46": 2,
+						"q47": "Good with my older brother.",
+						"q48": "Paramedic",
+						"q49": "None that I know of.",
+						"q50": {
+							"religiosity": "Not Religious",
+							"religionName": ""
+						},
+						"q51": "Changed schools in grade nine.",
+						"q52": ""
+					}
+				},
 				{
 					"test": "social_anxiety_test",
 					"assignedDaysAgo": 35,
@@ -355,7 +654,8 @@
 						"q10": "3"
 					}
 				}
-			]
+			],
+			"redactionProfile": true
 		},
 		{
 			"email": "taylor.brooks@example.com",
@@ -492,6 +792,166 @@
 			"createdDaysAgo": 16,
 			"tosAccepted": true,
 			"assignments": [
+				{
+					"test": "ADULT_BIO",
+					"assignedDaysAgo": 16,
+					"progress": "completed",
+					"completedDaysAgo": 13,
+					"answers": {
+						"q1": {
+							"firstName": "Noah",
+							"middleName": "",
+							"lastName": "Williams"
+						},
+						"q2": {
+							"primaryPhone": "416-555-0108",
+							"primaryPhoneCountryCode": "+1",
+							"otherPhone": "",
+							"otherPhoneCountryCode": "+1"
+						},
+						"q3": {
+							"primaryEmail": "noah.williams@example.com",
+							"otherEmail1": "",
+							"otherEmail2": ""
+						},
+						"q4": {
+							"line1": "7 Birchmount Crescent",
+							"line2": "",
+							"city": "Ottawa",
+							"province": "Ontario",
+							"postalCode": "K1N 5T2",
+							"country": "Canada"
+						},
+						"q5": "1986-11-23",
+						"q6": "Male",
+						"q7": "he/him",
+						"q8": "Manulife, certificate 88-2041",
+						"q9": "Self from friend/family recommendation",
+						"q10": {
+							"name": "Grace Williams",
+							"relationship": "Wife",
+							"phone": "416-555-0131",
+							"email": "grace.williams@example.com",
+							"notes": ""
+						},
+						"q11": "Bachelor's Degree",
+						"q12": {
+							"trainedOccupation": "Accountant",
+							"currentOccupation": "Senior accountant at a logistics company",
+							"workSatisfaction": "3"
+						},
+						"q13": "Full Time",
+						"q14": "Married",
+						"q15": "Physiotherapist",
+						"q16": [
+							{
+								"name": "Liam Williams",
+								"age": "9",
+								"gender": "Male",
+								"details": ""
+							},
+							{
+								"name": "Ella Williams",
+								"age": "4",
+								"gender": "Female",
+								"details": ""
+							}
+						],
+						"q17": "Dr. Hannah Mbeki",
+						"q18": [
+							{
+								"name": "Lorazepam",
+								"dosage": "0.5 mg",
+								"frequency": "As needed",
+								"doctor": "Dr. Ravi Patel",
+								"prescribedFor": "Panic attacks"
+							}
+						],
+						"q19": {
+							"answer": "false",
+							"details": {}
+						},
+						"q20": {
+							"answer": "false",
+							"details": {}
+						},
+						"q21": {
+							"answer": "false",
+							"details": {}
+						},
+						"q22": {
+							"answer": "false",
+							"details": {}
+						},
+						"q23": "",
+						"q24": {
+							"answer": "true",
+							"details": {
+								"amount": "Two drinks",
+								"frequency": "Weekends"
+							}
+						},
+						"q25": {
+							"answer": "false",
+							"details": {}
+						},
+						"q26": {
+							"answer": "false",
+							"details": {}
+						},
+						"q27": {
+							"answer": "false",
+							"details": {}
+						},
+						"q28": {
+							"answer": "false",
+							"details": ""
+						},
+						"q29": [
+							"Anxiety",
+							"Sleep"
+						],
+						"q30": "Sudden attacks of a racing heart and dizziness. I now avoid highways and crowded stores.",
+						"q31": "Drive to work again without fear and sleep through the night.",
+						"q32": "Eight months",
+						"q33": "5",
+						"q34": "Driving, caffeine, busy shopping malls",
+						"q35": "Being at home with family, slow breathing",
+						"q36": {
+							"mainDescription": "Good friends from university",
+							"closeFriends": "3",
+							"friendlyAcquaintances": "10",
+							"meetupFrequency": "Every couple of weeks"
+						},
+						"q37": "Not really.",
+						"q38": "Hockey, woodworking, camping",
+						"q39": 3,
+						"q40": "45 minutes",
+						"q41": "High",
+						"q42": "Takes over an hour to fall asleep; wake two or three times.",
+						"q43": "Balanced, cooking at home most nights.",
+						"q44": {
+							"answer": "false",
+							"details": {}
+						},
+						"q45": {
+							"primaryCaregiverOccupation": "Teacher",
+							"primaryCaregiverRelationship": "Mother",
+							"secondaryCaregiverOccupation": "Mechanic",
+							"secondaryCaregiverRelationship": "Father"
+						},
+						"q46": 2,
+						"q47": "Close to my sister.",
+						"q48": "Pharmacist",
+						"q49": "Father had anxiety later in life.",
+						"q50": {
+							"religiosity": "Not Religious",
+							"religionName": ""
+						},
+						"q51": "First panic attack happened while driving on the highway last winter.",
+						"q52": ""
+					}
+				},
 				{
 					"test": "panic_test",
 					"assignedDaysAgo": 16,
@@ -640,6 +1100,7 @@
 			"set_name": "Full intake",
 			"status": "active",
 			"tests": [
+				"ADULT_BIO",
 				"depression_test",
 				"manic_test",
 				"generalized_anxiety_test",
@@ -657,6 +1118,7 @@
 		}
 	],
 	"questionnaireOrder": [
+		"ADULT_BIO",
 		"depression_test",
 		"persistent_depressive_test",
 		"manic_test",

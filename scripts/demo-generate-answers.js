@@ -104,6 +104,8 @@ const summary = [];
 for (const patient of data.patients) {
 	const completed = [];
 	for (const a of patient.assignments) {
+		// Interviews without scoring rules (Adult Bio) keep their hand-written answers
+		if (!logic.has(a.test)) continue;
 		delete a.answers;
 		if (a.progress === 'not_started') continue;
 

@@ -16,9 +16,10 @@ function ensureDatabaseInitialized() {
 	return databaseReady;
 }
 
-// AI report generation and redaction call AWS and the separate psymatch-agent
-// service, neither of which the demo has. Reads still work; actions are refused.
-const DEMO_DISABLED_API = /^\/api\/(comprehensive-report|ai-report|anonymization|generative-summary)(\/|$)/;
+// AI report generation calls the separate psymatch-agent service, which the
+// demo doesn't have. Reads still work; actions are refused. (Redaction runs in
+// demo mode without its AI phase; see api/anonymization/process.)
+const DEMO_DISABLED_API = /^\/api\/(comprehensive-report|ai-report|generative-summary)(\/|$)/;
 
 async function getUserFromSession(sessionId) {
 	try {
@@ -36,7 +37,7 @@ export async function handle({ event, resolve }) {
 	try {
 		if (DEMO_MODE && event.request.method !== 'GET' && DEMO_DISABLED_API.test(event.url.pathname)) {
 			return Response.json(
-				{ success: false, error: 'AI reports and redaction are disabled in this demo.' },
+				{ success: false, error: 'AI reports are disabled in this demo.' },
 				{ status: 503 }
 			);
 		}
