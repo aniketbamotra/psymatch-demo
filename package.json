@@ -49,7 +49,10 @@
 		"workbox-window": "^7.3.0"
 	},
 	"overrides": {
-		"lodash": "4.17.21"
+		"lodash": "4.17.21",
+		"vite": {
+			"rollup": "4.45.1"
+		}
 	},
 	"type": "module",
 	"dependencies": {
